@@ -21,7 +21,9 @@ class IndexSlider(models.Model):
 
 class WhoWeAre(models.Model):
     title = models.CharField(max_length=500)
-    text = models.TextField()
+    # text = models.TextField()
+    text = RichTextField()
+
     experience = models.IntegerField()
     image = models.FileField()
     title1 = models.CharField(max_length=200,null=True)
@@ -83,9 +85,10 @@ class ServiceOffers(models.Model):
 
 class WhyUs(models.Model):
     title = models.CharField(max_length=300)
-    text = models.TextField()
+    # text = models.TextField()
     video_link = models.TextField(null=True)
     video_image = models.ImageField(upload_to="VideoImage",null=True)
+    text = RichTextField()
 
     class Meta:
         verbose_name = "Why Us"
@@ -94,7 +97,9 @@ class WhyUs(models.Model):
 
 class WhyOffers(models.Model):
     title = models.CharField(max_length=300)
-    text = models.TextField()
+    # text = models.TextField()
+    text = RichTextField()
+
     why = models.ForeignKey(WhyUs,on_delete=models.CASCADE, related_name="offers")
 
     def __str__(self):
@@ -108,7 +113,9 @@ class WhyOffers(models.Model):
 
 
 class Testimonial(models.Model):
-    text = models.TextField()
+    text = RichTextField()
+
+    # text = models.TextField()
     author = models.CharField(max_length=300)
     position = models.CharField(max_length=300)
 

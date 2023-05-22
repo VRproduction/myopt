@@ -8,16 +8,18 @@
         <!-- Page Title -->
         <section class="page-title">
 
-            {% comment %}
-                <div class="bg-layer" style="background-image: url(images/background/page-title.jpg);"></div>
-            {% endcomment %}
 
+            <div class="bg-layer" style="background-image: url(images/background/ocki.jpg);"></div>
+
+            {
             {% for data in whoweare %}
                 <figure class="image">
                         <div class="bg-layer" style="background-image: url({{data.image.url}});"></div>
 
                 </figure>
             {% endfor %}
+
+
 
             <div class="auto-container">
                 <div class="content-box">

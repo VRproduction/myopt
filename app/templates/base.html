@@ -261,17 +261,13 @@
         <div class="auto-container">
             <div class="top-inner">
                 <ul class="footer-menu">
-                    {% comment %} <li><a href="index-2.html">Management</a></li>
-                    <li><a href="{% url 'about' %}">Haqqımızda</a></li>
-                    <li><a href="index-2.html">Şirkət</a></li> {% endcomment %}
+
                 </ul>
-                <div class="footer-logo">
-                    {% for setting in general_settings %}
-                    {% if setting.footer_logo %}
-                    <figure class="logo"><a href="index-2.html"><img style="width:183px ;height:90px; object-fit:cover;" src="{{setting.footer_logo.url}}" alt=""></a></figure>
-                    {% endif %}
-                    {% endfor %}
-                </div>
+
+
+
+
+
                 <ul class="footer-menu">
                     {% comment %} <li><a href="index-2.html"></a></li>
                     <li><a href="index-2.html">Location</a></li>
@@ -280,6 +276,16 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
 
     <div class="widget-section">
         <div class="auto-container">
@@ -290,15 +296,29 @@
                             <h3>Haqqımda</h3>
                         </div>
                         <div class="widget-content">
+
+
+                             <div class="footer-logo">
+                                {% for setting in general_settings %}
+                                {% if setting.footer_logo %}
+                                <figure class="logo"><a href="index-2.html"><img style="width:183px ;height:90px; object-fit:cover;" src="{{setting.footer_logo.url}}" alt=""></a></figure>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+
+
                             {% for setting in general_settings %}
                             <p>{{setting.footer_text}}</p>
                             <ul class="social-links clearfix">
+
                                 {% if setting.facebook %}
                                 <li><a href="{{setting.facebook}}"><i class="fab fa-facebook-f"></i></a></li>
                                 {% endif %}
+
                                 {% if setting.instagram %}
                                 <li><a href="{{setting.instagram}}"><i class="fab fa-instagram"></i></a></li>
                                 {% endif %}
+
                                 {% if setting.linkedin %}
                                 <li><a href="{{setting.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
                                 {% endif %}
