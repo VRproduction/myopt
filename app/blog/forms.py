@@ -21,7 +21,7 @@ class AppointmentForm(forms.ModelForm):
 
         'type': 'email',
         'name':'email',
-        'placeholder':'Sizin email'
+        'placeholder':'Sizin e-mail'
 
 
     }
@@ -32,7 +32,7 @@ class AppointmentForm(forms.ModelForm):
 
         'type': 'text',
         'name':'date',
-        'placeholder':'Gorus Tarixi',
+        'placeholder':'Görüş tarixi',
         'id':'datepicker'
     }))
 
