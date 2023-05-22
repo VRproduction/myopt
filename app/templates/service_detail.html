@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+
+
+        <!-- Page Title -->
+        <section class="page-title">
+
+            {% comment %}
+            <div class="bg-layer" style="background-image: url(galleriesimages/background/page-title.jpg);"></div>
+
+              <div class="article-content rte">
+                <p><img src="{{ detail_news.image.url }}" alt=""></p>
+                {{ detail_news.about_text }}
+              </div>
+
+            {% endcomment %}
+
+            <div class="bg-layer" style="background-image: {{service.name}} ;"></div>
+
+
+            <div class="auto-container">
+                <div class="content-box">
+                    <h1>{{service.name}}</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
+                        <li>{{service.name}}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+
+
+        <!-- service-details -->
+        <section class="service-details p_relative">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="service-sidebar mr_40">
+                            <div class="text">
+                                <h3>Xidmətlər</h3>
+
+
+                            </div>
+                            <ul class="category-list clearfix">
+                            <li><a href="{% url 'services' %}">Bütün Xidmətlər</a></li>
+                            {% for data in services %}
+                            {% if data.id == service.id %}
+                                <li><a href="{{data.get_absolute_url}}" class="current">{{data.name}}</a></li>
+                                {% else %}
+                                <li><a href="{{data.get_absolute_url}}">{{data.name}}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="service-details-content">
+                            <div class="content-one">
+
+                                <figure class="image-box"><img src="{{service.image.url}}" alt=""></figure>
+                            </div>
+                            <div class="content-two">
+                                <div class="text">
+                                    <h3>{{service.title}}</h3>
+                                    <p>{{service.text|safe}}</p>
+
+                                </div>
+                            </div>
+
+                            <div class="content-four">
+                                <div class="text">
+
+                                    <ul class="list-style-one clearfix">
+                                        {% for offer in service.offers.all %}
+                                            <li>{{offer.title}}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- service-details end -->
+
+
+        <!-- subscribe-section -->
+        {% comment %} <section class="subscribe-section p_relative bg-color-2">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 text-column">
+                        <div class="text">
+                            <h2><i class="icon-41"></i>Join Us & Increase Your <br />Business.</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner ml_30 mt_5">
+                            <form action="http://azim.commonsupport.com/Optcare/index-3.html" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your email address" required="">
+                                    <button type="submit" class="theme-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!-- subscribe-section end -->
+
+
+        {% endblock body %}

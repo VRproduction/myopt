@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+
+
+        <!-- Page Title -->
+        <section class="page-title">
+            <div class="bg-layer" style="background-image: url({% static 'images/background/page-title.jpg' %});"></div>
+            <div class="auto-container">
+                <div class="content-box">
+                    <h1>Daha Ətraflı</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
+                        <li>Daha Ətraflı</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+
+
+        <!-- sidebar-page-container -->
+        <section class="sidebar-page-container p_relative">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="blog-details-content">
+                            <div class="news-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <img style="width:850px ;height:550px;object-fit:cover;" src="{{blog.image.url}}" alt="">
+                                    </figure>
+                                    <div class="lower-content">
+                                        <div class="inner">
+                                            <div class="category"><a href="{{blog.category.get_absolute_url}}">{{blog.category.name}}</a></div>
+                                            <h3>{{blog.title}}</h3>
+                                            <ul class="post-info clearfix">
+                                                <li><i class="icon-34"></i>{{blog.date}}</li>
+                                                <li><i class="icon-35"></i><a href="blog-details.html">{{blog.author}}</a></li>
+                                            </ul>
+                                            <p>{{blog.context|safe}}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% comment %} <div class="content-one">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 text-column">
+                                        <div class="text mr_30">
+                                            <h3>Comprehensive Eye Exams</h3>
+                                            <p>Lorem ipsum dolor sit amet consectur adipisicing elit sed do eiusmod tempor incidunt labore dolore magna aliqua enim minim veniam, quis nostrud ex ercitation ullamco laboris nisi ut aliquip exea com modo consequat duis aute irure dolor in reprehend erit in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            <p>Sed perspiciatis unde omnis iste natus error sit vol uptatem accusantium doloremque laudantium totam rem aperiam eaque.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 image-column">
+                                        <figure class="image-box"><img src="images/news/news-18.jpg" alt=""></figure>
+                                    </div>
+                                </div>
+                            </div> {% endcomment %}
+                            {% comment %} <blockquote>
+                                <div class="shape" style="background-image: url(images/shape/shape-54.png);"></div>
+                                <div class="icon-box"><i class="icon-29"></i></div>
+                                <p>Lorem ipsum dolor amet con sectur elitadicing elit sed do usmod tempor uincididunt <br />enim minim veniam nostrud.</p>
+                                <h5>Kevin Spacey</h5>
+                            </blockquote> {% endcomment %}
+                            {% comment %} <div class="content-two">
+                                <h3>Surgical Procedures</h3>
+                                <p>Consectur adipisicing elit sed do eiusmod tempor aliqua nisenim ad minim veniam quis nostrud exercitation ulamo laboris nisi aliquip ecommodo consequat duis aute reprehenderit in voluptate velit esse cillum dolore euga fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+                            </div> {% endcomment %}
+                            {% comment %} <div class="post-tags">
+                                <ul class="tags-list clearfix">
+                                    <li><h5>Tags:</h5></li>
+                                    <li><a href="blog-details.html">Eyecare</a></li>
+                                    <li><a href="blog-details.html">Glass</a></li>
+                                    <li><a href="blog-details.html">Lens</a></li>
+                                </ul>
+                            </div> {% endcomment %}
+                            <div class="author-box">
+                                <figure class="author-thumb"><img style="width:100px ;height:100px;object-fit:cover;" src="{{blog.author.image.url}}" alt=""></figure>
+                                <h3>{{blog.author.name}}</h3>
+                                <p>{{blog.author.about}}</p>
+                            </div>
+
+
+
+                            <div class="comments-form-area">
+                                <h3>Şərh Yaz</h3>
+                                <div class="form-inner">
+                                    <form method="post" action="http://azim.commonsupport.com/Optcare/sendemail.php" id="contact-form">
+                                        <div class="row clearfix">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                                <input type="text" name="username" placeholder="Adınız" required="">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                                <input type="email" name="email" placeholder="E-poçt" required="">
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                                <input type="text" name="phone" required="" placeholder="Telefon">
+                                            </div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                                <textarea name="message" placeholder="Mesaj"></textarea>
+                                            </div>
+
+
+                                            {% comment %} <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                                <div class="check-box">
+                                                    <input class="check" type="checkbox" id="checkbox">
+                                                    <label for="checkbox">I agree that my submitted data is being collected and stored. *</label>
+                                                </div>
+                                            </div> {% endcomment %}
+
+
+                                            <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn mr-0">
+                                                <button class="theme-btn btn-one" type="submit" name="submit-form">Göndər</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+
+
+
+                        <div class="blog-sidebar ml_40">
+                            {% comment %} <div class="sidebar-widget search-widget">
+                                <div class="widget-title">
+                                    <h3>Search</h3>
+                                </div>
+                                <div class="search-form">
+                                    <form action="http://azim.commonsupport.com/Optcare/blog-2.html" method="post">
+                                        <div class="form-group">
+                                            <input type="search" name="search-field" placeholder="Search" required="">
+                                            <button type="submit"><i class="icon-50"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div> {% endcomment %}
+
+                            <div class="sidebar-widget category-widget">
+                                <div class="widget-title">
+                                    <h3>Kateqoriyalar</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="category-list clearfix">
+                                        {% for category in categories %}
+                                        <li><a href="{{category.get_absolute_url}}">{{category.name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sidebar-widget post-widget">
+                                <div class="widget-title">
+                                    <h3>Son Postlar</h3>
+                                </div>
+                                <div class="post-inner">
+                                    {% for latest in latests|slice:':3' %}
+                                    <div class="post">
+                                        <figure class="post-thumb"><a href="{{latest.get_absolute_url}}"><img style="width:80px ;height:80px;object-fit:cover;" src="{{latest.image.url}}" alt=""></a></figure>
+                                        <h4><a href="{{latest.get_absolute_url}}">{{latest.title}}</a></h4>
+                                        <span class="post-date"><i class="icon-34"></i>{{latest.date}}</span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            {% comment %} <div class="sidebar-widget archives-widget">
+                                <div class="widget-title">
+                                    <h3>Archives</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="archives-list clearfix">
+                                        <li><a href="blog-details.html">November 2016 (3)</a></li>
+                                        <li><a href="blog-details.html">December 2017 (8)</a></li>
+                                        <li><a href="blog-details.html">January 2018 (2)</a></li>
+                                        <li><a href="blog-details.html">February 2019 (10)</a></li>
+                                        <li><a href="blog-details.html">March 2020 (2)</a></li>
+                                    </ul>
+                                </div>
+                            </div> {% endcomment %}
+                            {% comment %} <div class="sidebar-widget tags-widget">
+                                <div class="widget-title">
+                                    <h3>Tags</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="tags-list clearfix">
+                                        <li><a href="blog-details.html">Eyecare</a></li>
+                                        <li><a href="blog-details.html">Glass</a></li>
+                                        <li><a href="blog-details.html">Lens</a></li>
+                                        <li><a href="blog-details.html">Surgery</a></li>
+                                        <li><a href="blog-details.html">Medicine</a></li>
+                                    </ul>
+                                </div>
+                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sidebar-page-container end -->
+
+
+        {% comment %}
+        <!-- subscribe-section -->
+        <section class="subscribe-section p_relative bg-color-2">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 text-column">
+                        <div class="text">
+                            <h2><i class="icon-41"></i>Join Us & Increase Your <br />Business.</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner ml_30 mt_5">
+                            <form action="http://azim.commonsupport.com/Optcare/index-3.html" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your email address" required="">
+                                    <button type="submit" class="theme-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endcomment %}
+        <!-- subscribe-section end -->
+
+        {% endblock body %}

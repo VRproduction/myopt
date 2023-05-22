@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+
+        <!-- Page Title -->
+        <section class="page-title">
+            <div class="bg-layer" style="background-image: url(images/background/page-title.jpg);"></div>
+            <div class="auto-container">
+                <div class="content-box">
+                    <h1>{{category.name}}</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'index' %}">Ev</a></li>
+                        <li>{{category.name}}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+
+
+        <!-- news-section -->
+        <section class="news-section blog-grid p_relative">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    {% for blog in blogs %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                        <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <img src="{{blog.image.url}}" alt="">
+                                    <a href="{{blog.get_absolute_url}}"><i class="fas fa-link"></i></a>
+                                </figure>
+                                <div class="lower-content">
+                                    <div class="inner">
+                                        <div class="category"><a href="{{blog.category.get_absolute_url}}">{{blog.category.name}}</a></div>
+                                        <h3><a href="blog-details.html">{{blog.title}}</a></h3>
+                                        <ul class="post-info clearfix">
+                                            <li><i class="icon-34"></i>{{blog.date}}</li>
+                                            <li><i class="icon-35"></i><a href="blog-details.html">{{blog.author}}</a></li>
+                                        </ul>
+                                        <p>{{blog.context|truncatechars_html:50|safe}}</p>
+                                        <div class="link"><a href="{{blog.get_absolute_url}}">Davamını Oxu</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% if blogs.has_other_pages %}
+                <div class="pagination-wrapper centred centred">
+                    <ul class="pagination clearfix">
+                        {% if blogs.has_previous %}
+                        <li><a href="?page={{blogs.previous_page_number}}"><i class="fas fa-angle-left"></i></a></li>
+                        {% endif %}
+                        {% for pg in blogs.paginator.page_range %}
+                        {% if blogs.number == pg %}
+                        <li><a href="?page={{pg}}" class="current">{{pg}}</a></li>
+                        {% else %}
+                        <li><a href="?page={{pg}}">{{pg}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                        {% if blogs.has_next %}
+                        <li><a href="?page={{blogs.next_page_number}}"><i class="fas fa-angle-right"></i></a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+        <!-- news-section end -->
+
+
+        <!-- subscribe-section -->
+        {% comment %} <section class="subscribe-section p_relative bg-color-2">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 text-column">
+                        <div class="text">
+                            <h2><i class="icon-41"></i>Join Us & Increase Your <br />Business.</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner ml_30 mt_5">
+                            <form action="http://azim.commonsupport.com/Optcare/index-3.html" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your email address" required="">
+                                    <button type="submit" class="theme-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!-- subscribe-section end -->
+
+
+        {% endblock body %}
+

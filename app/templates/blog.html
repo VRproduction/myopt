@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+
+        <!-- Page Title -->
+        <section class="page-title">
+            <div class="bg-layer" style="background-image: url(assets/images/background/page-title.jpg);"></div>
+
+            <div class="auto-container">
+                <div class="content-box">
+                    <h1>Bloqlar</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="index-2.html">Ana Səhifə</a></li>
+                        <li> Bloqlar </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+
+
+        <!-- news-section -->
+        <section class="news-section blog-grid p_relative">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    {% for blog in blogs %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                        <div class="news-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+
+                                <figure class="image-box">
+                                    <img style="width:352px ;height:244px;object-fit:cover;" src="{{blog.image.url}}" alt="">
+                                    <a href="{{blog.get_absolute_url}}"><i class="fas fa-link"></i></a>
+                                </figure>
+
+                                <div class="lower-content">
+                                    <div class="inner">
+
+                                        <h3><a href="{{blog.get_absolute_url}}">{{blog.title}}</a></h3>
+                                         <p class="p_relative d_block">{{blog.context|truncatechars_html:50|safe}}</p>
+                                        <div class="link p_relative d_block"><a href="{{blog.get_absolute_url}}">Davamını Oxu</a></div>
+
+                                        <ul class="post-info clearfix">
+                                            <li><i class="icon-34"></i>09 Oct, 2021</li>
+                                            <li><i class="icon-35"></i><a href="blog-details.html">Ashley Bronks</a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+
+                <div class="pagination-wrapper centred centred">
+                    <ul class="pagination clearfix">
+                        <li><a href="blog.html" class="current">1</a></li>
+                        <li><a href="blog.html">2</a></li>
+                        <li><a href="blog.html">3</a></li>
+                        <li class="dot">...</li>
+                        <li><a href="blog.html">9</a></li>
+                        <li><a href="blog.html"><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <!-- news-section end -->
+
+
+{% endblock body %}

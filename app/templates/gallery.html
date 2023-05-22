@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block body %}
+
+
+        <!-- Page Title -->
+        <section class="page-title">
+            <div class="bg-layer" style="background-image: url(assets/images/background/page-title.jpg);"></div>
+            <div class="auto-container">
+                <div class="content-box">
+                    <h1>Qalereya</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="index-2.html">Ana Səhifə</a></li>
+                        <li>Qalereya</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+
+
+        <!-- portfolio-page-section -->
+        <section class="portfolio-page-section p_relative">
+            <div class="auto-container">
+                <div class="sortable-masonry">
+
+                    <div class="items-container row clearfix">
+                        {% for gallery in galleries %}
+                        <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column">
+                            <div class="project-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box"><img style="width:410px ;height:410px;object-fit:cover;" src="{{gallery.image.url}}" alt=""></figure>
+                                    <div class="view-btn"><a href="{{gallery.image.url}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-33"></i></a></div>
+                                    <div class="text">
+                                        <h3><a href="{{gallery.link}}" target="_blank">{{gallery.link_name}}</a></h3>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% if galleries.has_other_pages %}
+                <div class="pagination-wrapper centred centred">
+                    <ul class="pagination clearfix">
+                        {% if galleries.has_previous %}
+                        <li><a href="?page={{galleries.previous_page_number}}"><i class="fas fa-angle-left"></i></a></li>
+                        {% endif %}
+                        {% for pg in galleries.paginator.page_range %}
+                        {% if galleries.number == pg %}
+                        <li><a href="?page={{pg}}" class="current">{{pg}}</a></li>
+                        {% else %}
+                        <li><a href="?page={{pg}}">{{pg}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                        {% if galleries.has_next %}
+                        <li><a href="?page={{galleries.next_page_number}}"><i class="fas fa-angle-right"></i></a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                {% endif %}
+        </section>
+        <!-- portfolio-page-section end -->
+
+
+        <!-- subscribe-section -->
+        {% comment %} <section class="subscribe-section p_relative bg-color-2">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 text-column">
+                        <div class="text">
+                            <h2><i class="icon-41"></i>Join Us & Increase Your <br />Business.</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner ml_30 mt_5">
+                            <form action="http://azim.commonsupport.com/Optcare/index-3.html" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your email address" required="">
+                                    <button type="submit" class="theme-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!-- subscribe-section end -->
+
+
+        {% endblock body %}

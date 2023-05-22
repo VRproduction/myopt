@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block body %}
+
+{% include "messages.html" %}
+        <!-- Page Title -->
+        <section class="page-title">
+            <div class="bg-layer" style="background-image: url({% static 'images/background/page-title.jpg' %});"></div>
+            <div class="auto-container">
+                <div class="content-box">
+                    <h1>Görüş təyin et</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
+                        <li>Görüş</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+
+
+        <!-- appointment-section -->
+        <section class="appointment-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 calander-column">
+                        <div class="calander-inner mr_20">
+                            <div class="datepicker" id="dp1682597335728">
+                                <div class="datepicker-header"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner ml_40">
+                            <h3>Görüş Formunu Doldurun</h3>
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        {{form.name|as_crispy_field}}
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        {{form.email|as_crispy_field}}
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        {{form.phone|as_crispy_field}}
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <div class="icon"><i class="icon-42"></i></div>
+                                        {{form.date|as_crispy_field}}
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        {{form.message|as_crispy_field}}
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                        <button type="submit" class="theme-btn btn-one">Görüşü Təyin Et</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- appointment-section end -->
+
+
+        {% comment %} <!-- subscribe-section -->
+        <section class="subscribe-section p_relative bg-color-2">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 text-column">
+                        <div class="text">
+                            <h2><i class="icon-41"></i>Join Us & Increase Your <br />Business.</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner ml_30 mt_5">
+                            <form action="http://azim.commonsupport.com/Optcare/index-3.html" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your email address" required="">
+                                    <button type="submit" class="theme-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!-- subscribe-section end -->
+
+
+        {% endblock body %}

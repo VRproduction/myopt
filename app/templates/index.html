@@ -1,0 +1,543 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+
+{% block body %}
+
+{% include "messages.html" %}
+        <!-- banner-section -->
+        <section class="banner-section p_relative">
+                <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
+
+                {% for slider in sliders %}
+                <div class="slide-item p_relative">
+                    <div class="pattern-layer">
+                        <div class="pattern-1" style="background-image: url(images/shape/shape-2.png);"></div>
+                        <div class="pattern-2" style="background-image: url(images/shape/shape-3.png);"></div>
+                        <div class="eye-icon rotate-me" style="background-image: url(images/icons/icon-1.png);"></div>
+                    </div>
+                    <div class="auto-container">
+                        <div class="banner-content p_relative d_block">
+                            <div class="content-box p_relative d_block z_5">
+                                <h3>{{slider.little_title}}</h3>
+                                <h2 class="p_relative d_block fs_70 lh_80 fw_bold">{{slider.big_title}}</h2>
+                                <p class="p_relative d_block fs_18">{{slider.description}}</p>
+                                <div class="btn-box">
+                                    <a href="{% url 'contact' %}" class="theme-btn btn-one">İndi Əlaqə Saxlayın</a>
+                                </div>
+                                <ul class="icon-list clearfix">
+                                    <li><i class="icon-8"></i></li>
+                                    <li><i class="icon-9"></i></li>
+                                    <li><i class="icon-10"></i></li>
+                                    <li><i class="icon-11"></i></li>
+                                </ul>
+                            </div>
+                            <div class="image-box">
+                                <div class="shape">
+                                    <div class="shape-1" style="background-image: url({% static 'images/shape/shape-1.png' %});"></div>
+                                    <div class="shape-2"></div>
+                                </div>
+                                <figure class="image"><img style="width:550px ;height:616px;object-fit:cover;padding-top:50px;" src="{{slider.image.url}}" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!-- banner-section end -->
+
+
+
+
+        <!-- service-section -->
+        <section class="service-section p_relative bg-color-1">
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url({% static 'images/shape/shape-4.png' %});"></div>
+                <div class="pattern-2" style="background-image: url({% static 'images/shape/shape-5.png' %});"></div>
+            </div>
+            <div class="auto-container">
+                <div class="sec-title centred mb_50">
+                    <span class="sub-title">Bizim Xidmətlərimiz</span>
+                    <h2>Dünyaya sizin gözlərinizdən <br />baxırıq</h2>
+                </div>
+                <div class="tabs-box">
+                    <div class="tab-btn-box p_relative d_block mb_70 centred">
+                        <ul class="tab-btns tab-buttons clearfix">
+
+
+
+                            {% for service in services %}
+                            {% if forloop.counter == 1 %}
+                            <li style="width:180px ;height:220px;" class="tab-btn active-btn" data-tab="#tab-{{service.id}}">
+                                <div class="icon-box"><i class="icon-17"></i></div>
+                                <h4>{{service.name}}</h4>
+                            </li>
+                            {% else %}
+                            <li style="width:180px ;height:220px;" class="tab-btn" data-tab="#tab-{{service.id}}">
+                                <div class="icon-box"><i class="icon-17"></i></div>
+
+                            {% comment %}
+                                <h4>  {{service.name}}  </h4>
+                            {% endcomment %}
+
+                            <h4 style="text-align:center">  {{service.name}}  </h4>
+                            </li>
+
+                            {% endif %}
+                            {% endfor %}
+
+
+                            {% comment %}
+                                <a href="{% url 'services' %}" class="default-btn"> <h5> <br> <br> Daha çox .... </h5> </a>
+                            {% endcomment %}
+
+
+                            <a href="{% url 'services' %}" class="default-btn">
+                            <button class="theme-btn btn-one" type="submit" name="submit-form">Daha çox ... </button>
+                            </a>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="tabs-content">
+                        {% for service in services %}
+                        {% if forloop.counter == 1 %}
+                        <div class="tab active-tab" id="tab-{{service.id}}">
+                            <div class="inner-box">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                                        <div class="content_block_two">
+                                            <div class="content-box">
+                                                <div class="text">
+                                                    <h3>{{service.title}}</h3>
+                                                    <p>{{service.text|safe}}</p>
+                                                </div>
+                                                <ul class="list-style-one clearfix">
+                                                    {% for offer in service.offers.all %}
+                                                    <li>{{offer.title}}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                                        <div class="image_block_two">
+                                            <div class="image-box p_relative d_block">
+                                                <figure class="image p_relative d_block"><img src="{{service.image.url}}" alt=""></figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="tab" id="tab-{{service.id}}">
+                            <div class="inner-box">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                                        <div class="content_block_two">
+                                            <div class="content-box">
+                                                <div class="text">
+                                                    <h3>{{service.title}}</h3>
+                                                    <p>{{service.text|safe}}</p>
+                                                </div>
+                                                <ul class="list-style-one clearfix">
+                                                    {% for offer in service.offers.all %}
+                                                    <li>{{offer.title}}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                                        <div class="image_block_two">
+                                            <div class="image-box p_relative d_block">
+                                                <figure class="image p_relative d_block"><img src="{{service.image.url}}" alt=""></figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- service-section end -->
+
+        <!-- about-section -->
+        <section class="about-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                        <div class="image_block_one">
+                            <div class="image-box mr_30 pr_130 pb_100">
+                                <div class="shape" style="background-image: url({% static 'images/shape/shape-1.png' %});"></div>
+                                {% for data in whoweare %}
+                                <figure class="image"><img style="width:470px ;height:470px;object-fit:cover;" src="{{data.image.url}}" alt=""></figure>
+                                <div class="text p_absolute r_0 b_0">
+                                    {% comment %}
+                                    <h4>Bu sahədə</h4>
+                                    {% endcomment %}
+                                    <h2>{{data.experience}}</h2>
+
+                                    <h4><strong>illik</strong> Təcrübə</h4>
+                                    {% comment %} <h4>Təcrübə</h4> {% endcomment %}
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content_block_one">
+                            {% for data in whoweare  %}
+                            <div class="content-box ml_30">
+                                <div class="sec-title left p_relative d_block mb_25">
+                                    <span class="sub-title">Mən kiməm?</span>
+                                    <h2>{{data.title}}</h2>
+                                </div>
+                                <div class="text p_relative d_block">
+                                    <p>{{data.text}}.</p>
+                                </div>
+                                <div class="inner-box">
+                                    <div class="row clearfix">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                            <div class="single-item">
+                                                <h3>{{data.title1}}</h3>
+                                                <ul class="list-style-one clearfix">
+                                                    {% for title1 in data.title_1.all %}
+                                                    <li>{{title1.name}}</li>
+
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                            <div class="single-item">
+                                                <h3>{{data.title2}}</h3>
+                                                <ul class="list-style-one clearfix">
+                                                    {% for title2 in data.title_2.all %}
+                                                    <li>{{title2.name}}</li>
+                                                    {% endfor %}
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-section end -->
+
+
+
+
+
+        <!-- funfact-section -->
+        {% comment %} <section class="funfact-section p_relative bg-color-2">
+            <div class="auto-container">
+                <div class="inner-container">
+                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="icon-box p_relative d_block fs_60"><i class="icon-25"></i></div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="1500" data-stop="90">0</span>
+                            </div>
+                            <p>Expert Doctors</p>
+                        </div>
+                    </div>
+                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="icon-box p_relative d_block fs_60"><i class="icon-26"></i></div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="1500" data-stop="2.6">0</span>
+                            </div>
+                            <p>Diffrent Services</p>
+                        </div>
+                    </div>
+                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="icon-box p_relative d_block fs_60"><i class="icon-27"></i></div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="1500" data-stop="35">0</span>
+                            </div>
+                            <p>Happy Patients</p>
+                        </div>
+                    </div>
+                    <div class="counter-block-one wow slideInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="icon-box p_relative d_block fs_60"><i class="icon-28"></i></div>
+                            <div class="count-outer count-box">
+                                <span class="count-text" data-speed="1500" data-stop="10">0</span>
+                            </div>
+                            <p>Awards Win</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!-- funfact-section end -->
+
+
+        <!-- chooseus-section -->
+        <section class="chooseus-section p_relative">
+            <div class="bg-layer" style="background-image: url({% static 'images/background/chooseus-bg.jpg' %});"></div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 offset-lg-6 content-column">
+                        <div class="content_block_three">
+                            {% for data in whyus %}
+                            <div class="content-box ml_30">
+                                <div class="sec-title left mb_25">
+                                    <span class="sub-title">Niyə Biz</span>
+                                    <h2>{{data.title}}</h2>
+                                </div>
+                                <div class="text">
+                                    <p>{{data.text}}</p>
+                                </div>
+                                <div class="inner-box">
+                                    <div class="row clearfix">
+                                        {% for offer in data.offers.all %}
+                                        <div class="col-lg-6 col-md-6 col-sm-12 single-column">
+                                            <div class="single-item p_relative d_block">
+                                                <h4>{{offer.title}}</h4>
+                                                <p>{{offer.text}}</p>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- chooseus-section end -->
+
+
+        <!-- testimonial-section -->
+        <section class="testimonial-section p_relative centred">
+            <div class="pattern-layer" style="background-image: url({% static 'images/shape/shape-6.png' %});"></div>
+            <div class="auto-container">
+                <div class="sec-title mb_60">
+                    <span class="sub-title">Rəylər</span>
+                    <h2>Pasiyent Rəyləri</h2>
+                </div>
+                <div class="two-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
+                    {% for data in testimonials %}
+                    <div class="testimonial-block-one">
+                        <div class="inner-box p_relative d_block">
+                            <div class="icon-box"><i class="icon-29"></i></div>
+                            <p>{{data.text}}</p>
+                            <h4>{{data.author}}</h4>
+                            <span class="designation">{{data.position}}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- testimonial-section end -->
+
+
+        <!-- contact-section -->
+        <section class="contact-section p_relative">
+            <div class="bg-layer"></div>
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url({% static 'images/shape/shape-7.png' %});"></div>
+                <div class="pattern-2" style="background-image: url({% static 'images/shape/shape-8.png' %});"></div>
+            </div>
+            <div class="auto-container">
+                <div class="sec-title centred light mb_45">
+
+                    {% comment %}
+                    <span class="sub-title">Operator Xidməti</span>
+                    {% endcomment %}
+
+                    <h2>Əlaqə üçün:</h2>
+                </div>
+                <div class="support-box p_relative centred">
+                    <div class="icon-box"><img src="{% static 'images/icons/icon-2.png' %}" alt=""></div>
+                    {% for setting in general_settings %}
+                    <h3>Zəng et: <a>{{setting.number}}</a></h3>
+                    {% endfor %}
+                </div>
+
+
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner">
+                            <h3><span>Konsultasiya</span> üçün formu doldur</h3>
+                            <form method="post" class="default-form">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    {{form.name|as_crispy_field}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.email|as_crispy_field}}
+                                </div>
+                                <div class="form-group">
+                                    <div class="icon"><i class="far fa-angle-down"></i></div>
+                                    {{form.date|as_crispy_field}}
+                                </div>
+                                <div class="form-group message-btn">
+                                    <button type="submit" class="theme-btn btn-two">Görüşü Təyin Et</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12 video-column">
+                        <div class="video-inner" style="background-image: url({% static 'images/background/video-bg.jpg' %});">
+                            <div class="video-btn">
+
+                                {% comment %}
+                                <a href="https://www.youtube.com/watch?v=uAbgUTw_lzk" class="lightbox-image" data-caption=""><i class="fas fa-play"></i></a>
+                                {% endcomment %}
+
+                                {% for setting in general_settings %}
+                                    <iframe width="100%" height="300"
+                                            src="{{ setting.youtube.url }}">
+                                    </iframe>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-section end -->
+
+
+
+
+
+
+
+
+        <!-- project-section -->
+        <section class="project-section p_relative">
+            <div class="outer-container">
+                <div class="project-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
+                    {% for gallery in galleries %}
+                    <div class="project-block-one">
+                        <div class="inner-box">
+                            <figure class="image-box"><img style="width:480px ;height:565px;object-fit:cover;" src="{{gallery.image.url}}" alt=""></figure>
+                            <div class="view-btn"><a href="{{gallery.image.url}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-33"></i></a></div>
+                            <div class="text">
+                                <h3><a href="{{gallery.link}}">{{gallery.link_name}}</a></h3>
+                                {% comment %} <span>Re  sidential</span> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- project-section end -->
+
+
+        <!-- news-section -->
+        <section class="news-section p_relative">
+            <div class="auto-container">
+                <div class="sec-title centred mb_50">
+                    <span class="sub-title">Bloqlar</span>
+                    <h2>Bloqları Oxu</h2>
+                </div>
+                <div class="row clearfix">
+                    {% for article in articles|slice:':3' %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                        <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <img style="width:410px ;height:300px;object-fit:cover;" src="{{article.image.url}}" alt="">
+                                    <a href="{{article.get_absolute_url}}"><i class="fas fa-link"></i></a>
+                                </figure>
+                                <div class="lower-content">
+                                    <div class="inner">
+                                        <div class="category"><a href="blog-details.html">{{article.category.name}}</a></div>
+                                        <h3><a href="{{article.get_absolute_url}}">{{article.title|truncatechars:36}}</a></h3>
+                                        <ul class="post-info clearfix">
+                                            <li><i class="icon-34"></i>{{article.date}}</li>
+                                            <li><i class="icon-35"></i><a href="blog-details.html">{{article.author}}</a></li>
+                                        </ul>
+                                        <p>{{article.context|truncatechars_html:50|safe}}</p>
+                                        <div class="link"><a href="{{article.get_absolute_url}}">Davamını Oxu</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+        <!-- news-section end -->
+
+
+        <!-- google-map-section -->
+        <section class="google-map-section p_relative">
+            <div class="custom-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.734503927645!2d49.843083299999996!3d40.3925765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d15af3ae5fd%3A0xae6e3ed3b55935a8!2zQmF0xLFnw7Z6IEF6ZXJiYXljYW4!5e0!3m2!1saz!2saz!4v1683547478076!5m2!1saz!2saz"
+                width="2000"
+                height="700"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
+
+
+            <div class="content-inner">
+                <div class="auto-container">
+                    <div class="content-box p_relative d_block">
+
+
+                        {% comment %}
+                        <div class="title p_relative d_block">
+                            <h3>Working Hours</h3>
+                        </div>
+                        <div class="schedule-box p_relative d_block">
+                            <ul class="schedule-list clearfix">
+                                <li>Mon - Wed:  8:00AM - 7:00PM</li>
+                                <li>Thu:  8:00AM - 7:00PM</li>
+                                <li>Fri:  8:00AM - 7:00PM</li>
+                                <li>Sat - Sun:  8:00AM - 7:00PM</li>
+                            </ul>
+                        </div>
+                        {% endcomment %}
+
+
+                        <div class="contact-info p_relative d_block">
+                            <h3>Əlaqə Məlumatı</h3>
+                            {% for setting  in general_settings %}
+                            <ul class="info-list clearfix">
+                                <li><i class="fas fa-envelope"></i>E-poçt: <a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
+                                <li><i class="icon-3"></i>Zəng: <a>{{setting.number}}</a></li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- google-map-section end -->
+
+
+        {% endblock body %}

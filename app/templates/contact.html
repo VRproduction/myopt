@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block body %}
+
+{% include "messages.html" %}
+        <!-- Page Title -->
+        <section class="page-title">
+            <div class="bg-layer" style="background-image: url(images/background/page-title.jpg);"></div>
+            <div class="auto-container">
+                <div class="content-box">
+                    <h1>Əlaqə</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
+                        <li>Əlaqə</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+
+
+        <!-- contact-info-section -->
+        {% for setting in general_settings %}
+        <section class="contact-info-section centred">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                        <div  class="single-item">
+                            <div class="icon-box"><i class="icon-57"></i></div>
+                            <h3>Adres</h3>
+                            <p>{{setting.adress}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                        <div class="single-item">
+                            <div class="icon-box"><i class="icon-58"></i></div>
+                            <h3>E-poçt</h3>
+                            <p><a href="mailto:{{setting.email}}">{{setting.email}}</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                        <div class="single-item">
+                            <div class="icon-box"><i class="icon-59"></i></div>
+                            <h3>Əlaqə nömrələri</h3>
+                            <p><a>{{setting.number}}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-info-section end -->
+        {% endfor %}
+
+
+        <!-- contact-style-two -->
+        <section class="contact-style-two p_relative">
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url(images/shape/shape-55.png);"></div>
+                <div class="pattern-2" style="background-image: url(images/shape/shape-56.png);"></div>
+            </div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-12 col-sm-12 big-column offset-lg-2">
+                        <div class="form-inner">
+
+                            <h2>İndi Əlaqə Saxlayın</h2>
+                            <form method="post"  id="contact-form">
+                                {% csrf_token %}
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        {{form.name|as_crispy_field}}
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        {{form.email|as_crispy_field}}
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        {{form.phone|as_crispy_field}}
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        {{form.subject|as_crispy_field}}
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        {{form.message|as_crispy_field}}
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn mr-0 centred">
+                                        <button class="theme-btn btn-one" type="submit" name="submit-form">Göndər</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-style-two end -->
+
+
+        <!-- google-map-section -->
+        <section class="google-map-section p_relative">
+            <div class="map-inner p_relative d_block">
+                {% comment %} <div
+                    class="google-map"
+                    id="contact-google-map"
+                    data-map-lat="40.712776"
+                    data-map-lng="-74.005974"
+                    data-icon-path="images/icons/map-marker-2.png"
+                    data-map-title="Brooklyn, New York, United Kingdom"
+                    data-map-zoom="12"
+                    data-markers='{
+                        "marker-1": [40.712776, -74.005974, "<h4>Branch Office</h4><p>77/99 New York</p>","images/icons/map-marker-2.png"]
+                    }'>
+                </div> {% endcomment %}
+
+                {% comment %}
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.734503927645!2d49.843083299999996!3d40.3925765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d15af3ae5fd%3A0xae6e3ed3b55935a8!2zQmF0xLFnw7Z6IEF6ZXJiYXljYW4!5e0!3m2!1saz!2saz!4v1683547478076!5m2!1saz!2saz"
+                width="2000"
+                height="700"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+                {% endcomment %}
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.7345052162636!2d49.840508376081516!3d40.39257647144351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d15af3ae5fd%3A0xae6e3ed3b55935a8!2zQmF0xLFnw7Z6IEF6ZXJiYXljYW4!5e0!3m2!1sen!2saz!4v1684708419430!5m2!1sen!2saz"
+                        width="2000"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </section>
+        <!-- google-map-section end -->
+
+
+        <!-- subscribe-section -->
+        {% comment %} <section class="subscribe-section p_relative bg-color-2">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 text-column">
+                        <div class="text">
+                            <h2><i class="icon-41"></i>Join Us & Increase Your <br />Business.</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner ml_30 mt_5">
+                            <form action="http://azim.commonsupport.com/Optcare/index-3.html" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your email address" required="">
+                                    <button type="submit" class="theme-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+        <!-- subscribe-section end -->
+
+
+        {% endblock body %}
