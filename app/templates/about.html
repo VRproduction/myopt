@@ -7,7 +7,18 @@
 
         <!-- Page Title -->
         <section class="page-title">
-            <div class="bg-layer" style="background-image: url(images/background/page-title.jpg);"></div>
+
+            {% comment %}
+                <div class="bg-layer" style="background-image: url(images/background/page-title.jpg);"></div>
+            {% endcomment %}
+
+            {% for data in whoweare %}
+                <figure class="image">
+                        <div class="bg-layer" style="background-image: url({{data.image.url}});"></div>
+
+                </figure>
+            {% endfor %}
+
             <div class="auto-container">
                 <div class="content-box">
                     <h1>Haqqımda</h1>
@@ -30,7 +41,11 @@
                             <div class="image-box mr_30 pr_130 pb_100">
                                 <div class="shape" style="background-image: url({% static 'images/shape/shape-1.png' %});"></div>
                                 {% for data in whoweare %}
-                                <figure class="image"><img style="width:470px ;height:470px;object-fit:cover;" src="{{data.image.url}}" alt=""></figure>
+
+                                <figure class="image">
+                                    <img style="width:470px ;height:470px;object-fit:cover;" src="{{data.image.url}}" alt="">
+                                </figure>
+
                                 <div class="text p_absolute r_0 b_0">
                                     <h4>Bu sahədə</h4>
                                     <h2>{{data.experience}}</h2>

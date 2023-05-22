@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+    {% extends 'base.html' %}
 {% load static %}
 
 
@@ -7,23 +7,23 @@
         <!-- Page Title -->
         <section class="page-title">
 
-
             {% comment %}
                     <div class="bg-layer" style="background-image: url({% static 'images/background/page-title.jpg' %});"></div>
                     <div class="bg-layer" style="background-image: url({{service.service_banner}});"></div>
-
                 {% for service in services %}
                     <img src="{{ service.service_banner.url }}">
                 {% endfor %}
-
                  <div class="bg-layer" style="background-image: url({{ service.service_banner.url }});"></div>
-
             {% endcomment %}
 
-
+            <div class="bg-layer" style="background-image: url({% static 'images/background/page-title.jpg' %});"></div>
+            <div class="bg-layer" style="background-image: url({{service.service_banner}});"></div>
 
 
             <div class="auto-container">
+
+                <div class="bg-layer" style="background-image: url({% static 'images/background/page-title.jpg' %});"></div>
+
                 <div class="content-box">
                     <h1>Xidmətlər</h1>
                     <ul class="bread-crumb clearfix">

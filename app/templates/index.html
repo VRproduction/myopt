@@ -322,7 +322,16 @@
 
         <!-- chooseus-section -->
         <section class="chooseus-section p_relative">
+
+            {% comment %}
             <div class="bg-layer" style="background-image: url({% static 'images/background/chooseus-bg.jpg' %});"></div>
+            {% endcomment %}'
+
+            {% for i in whyus %}
+            <br>
+            <div class="bg-layer" style="background-image: url({{ i.video_image.url }});"></div>
+            {% endfor %}
+
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-12 col-sm-12 offset-lg-6 content-column">
@@ -445,15 +454,19 @@
                         <div class="video-inner" style="background-image: url({% static 'images/background/video-bg.jpg' %});">
                             <div class="video-btn">
 
-                                {% comment %}
-                                <a href="https://www.youtube.com/watch?v=uAbgUTw_lzk" class="lightbox-image" data-caption=""><i class="fas fa-play"></i></a>
-                                {% endcomment %}
 
+
+
+                                <a href="https://www.youtube.com/watch?v=uAbgUTw_lzk" class="lightbox-image" data-caption=""><i class="fas fa-play"></i></a>
+
+                                {% comment %}
                                 {% for setting in general_settings %}
                                     <iframe width="100%" height="300"
                                             src="{{ setting.youtube.url }}">
                                     </iframe>
                                 {% endfor %}
+                                {% endcomment %}
+
                             </div>
                         </div>
                     </div>

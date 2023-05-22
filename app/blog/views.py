@@ -152,7 +152,6 @@ def blogs(request):
     blogs = Article.objects.all()
     context["blogs"] = blogs
     return render(request, "blog.html", context)
-    # return HttpResponse('BLOGS ARE HERE')
 
 
 

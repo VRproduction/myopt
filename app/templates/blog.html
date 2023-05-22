@@ -3,11 +3,9 @@
 
 
 {% block body %}
-
         <!-- Page Title -->
         <section class="page-title">
-            <div class="bg-layer" style="background-image: url(assets/images/background/page-title.jpg);"></div>
-
+            <div class="bg-layer" style="background-image: url({% static 'images/background/page-title.jpg' %});"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <h1>Bloqlar</h1>
@@ -55,17 +53,6 @@
                     {% endfor %}
                 </div>
 
-
-                <div class="pagination-wrapper centred centred">
-                    <ul class="pagination clearfix">
-                        <li><a href="blog.html" class="current">1</a></li>
-                        <li><a href="blog.html">2</a></li>
-                        <li><a href="blog.html">3</a></li>
-                        <li class="dot">...</li>
-                        <li><a href="blog.html">9</a></li>
-                        <li><a href="blog.html"><i class="fas fa-angle-right"></i></a></li>
-                    </ul>
-                </div>
 
             </div>
         </section>
