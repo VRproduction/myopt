@@ -80,11 +80,13 @@
                             <li style="width:180px ;height:220px;" class="tab-btn" data-tab="#tab-{{service.id}}">
                                 <div class="icon-box"><i class="icon-17"></i></div>
 
+
                             {% comment %}
                                 <h4>  {{service.name}}  </h4>
                             {% endcomment %}
 
                             <h4 style="text-align:center">  {{service.name}}  </h4>
+
                             </li>
 
                             {% endif %}
@@ -92,13 +94,15 @@
 
 
                             {% comment %}
-                                <a href="{% url 'services' %}" class="default-btn"> <h5> <br> <br> Daha çox .... </h5> </a>
+                                <a href="{% url 'services' %}" class="default-btn"> <h5> <br> <br> Daha çox </h5> </a>
                             {% endcomment %}
 
 
-                            <a href="{% url 'services' %}" class="default-btn">
-                            <button class="theme-btn btn-one" type="submit" name="submit-form">Daha çox ... </button>
+                            <a href="{% url 'services' %}" class="default-btn"> <br> <br>
+                                <button class="theme-btn btn-one" type="submit" name="submit-form"> Daha çox </button>
                             </a>
+
+
 
                         </ul>
                     </div>
@@ -195,6 +199,9 @@
                             </div>
                         </div>
                     </div>
+
+
+
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content_block_one">
                             {% for data in whoweare  %}
