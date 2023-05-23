@@ -334,9 +334,20 @@
             <div class="bg-layer" style="background-image: url({% static 'images/background/chooseus-bg.jpg' %});"></div>
             {% endcomment %}'
 
+
+
+
+
             {% for i in whyus %}
             <br>
+            {% comment %}
             <div class="bg-layer" style="background-image: url({{ i.video_image.url }});"></div>
+            {% endcomment %}
+
+            <div class="bg-layer" style="background-image: url({% static 'images/background/chooseus-bg.jpg' %});"></div>
+
+            style="background-image: url(assets/images/background/chooseus-bg.jpg);"
+
             {% endfor %}
 
             <div class="auto-container">
@@ -373,6 +384,9 @@
             </div>
         </section>
         <!-- chooseus-section end -->
+
+
+
 
 
 

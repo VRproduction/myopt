@@ -209,7 +209,10 @@ class GeneralSettings(models.Model):
 
     site_title = models.CharField(max_length=1500, verbose_name="Saytın başlığı")
     email = models.CharField(max_length=1500, verbose_name="Email", null=True,blank=True)
-    number = models.CharField(max_length=1500, verbose_name="Nömrə", null=True,blank=True)
+    number_1 = models.CharField(max_length=1500, verbose_name="Nömrə", null=True,blank=True)
+    number_2 = models.CharField(max_length=1500, verbose_name="Nömrə", null=True,blank=True)
+    number_3 = models.CharField(max_length=1500, verbose_name="Nömrə", null=True,blank=True)
+
     adress = models.CharField(max_length=1500, verbose_name="Ünvan", null=True)
     g_adress = models.CharField(max_length=1500, verbose_name="Google Map linki", null=True,blank=True)
     logo = models.FileField(verbose_name="logo(138x35)", blank=True,upload_to="general_settings")

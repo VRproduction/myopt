@@ -38,15 +38,21 @@
         <section class="about-section">
             <div class="auto-container">
                 <div class="row clearfix">
+
+
                     <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                         <div class="image_block_one">
                             <div class="image-box mr_30 pr_130 pb_100">
                                 <div class="shape" style="background-image: url({% static 'images/shape/shape-1.png' %});"></div>
                                 {% for data in whoweare %}
 
+
+                                {% comment %}
                                 <figure class="image">
                                     <img style="width:470px ;height:470px;object-fit:cover;" src="{{data.image.url}}" alt="">
                                 </figure>
+                                {% endcomment %}
+
 
                                 <div class="text p_absolute r_0 b_0">
                                     <h4>Bu sahədə</h4>
@@ -58,6 +64,8 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content_block_one">
                             {% for data in whoweare  %}
@@ -142,10 +150,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- chooseus-style-two -->
         {% for data in whyus %}
         <section class="chooseus-style-two about-page p_relative">
+
+
             <div class="shape-3 p_absolute t_0 r_0" style="background-image: url(images/shape/shape-51.png);"></div>
+
             <div class="shape-2" style="background-image: url(images/shape/shape-21.png);"></div>
             <div class="video-column" style="background-image: url({{data.video_image.url}});">
                 <div class="video-inner">
@@ -154,6 +179,10 @@
                     </div>
                 </div>
             </div>
+
+
+
+
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
@@ -187,6 +216,23 @@
         </section>
         {% endfor %}
         <!-- chooseus-style-two end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <!-- funfact-section -->
@@ -286,7 +332,6 @@
                                         {% endcomment %}
 
                                         <figure class="image"><img src="assets/images/shape/shape-24.png" alt=""></figure>
-                                        <figure class="image"><img style="width:170px ;height:170px;object-fit:cover background-image: url(assets/images/shape/shape-24.png);"  alt=""></figure>
                                     </div>
                                     <h3>{{offer.title}}</h3>
                                     <p>{{offer.text}}</p>
