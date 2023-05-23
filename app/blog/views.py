@@ -81,6 +81,7 @@ def about(request):
     context["services"] = services
     context["offers"] = offers
 
+    # return render(request,"about.html",context)
     return render(request,"about.html",context)
 
 

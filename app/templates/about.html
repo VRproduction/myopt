@@ -8,16 +8,16 @@
         <!-- Page Title -->
         <section class="page-title">
 
+            <div class="bg-layer" style="background-image: url({% static 'images/background/ocki.jpg' %});"></div>
 
-            <div class="bg-layer" style="background-image: url(images/background/ocki.jpg);"></div>
-
-            {
+            {% comment %}
             {% for data in whoweare %}
                 <figure class="image">
                         <div class="bg-layer" style="background-image: url({{data.image.url}});"></div>
 
                 </figure>
             {% endfor %}
+            {% endcomment %}
 
 
 
@@ -235,6 +235,11 @@
         <!-- funfact-section end -->
 
 
+
+
+
+
+
         <!-- process-section -->
         <section class="process-section p_relative centred">
             <div class="pattern-layer">
@@ -242,10 +247,27 @@
             </div>
             <div class="auto-container">
                 <div class="sec-title centred mb_85">
-                    <span class="sub-title">Bu Necə Işləyir</span>
-                    <h2>Sağlamlığınızı Qorumağa Necə Kömək Edir</h2>
 
+                    {% comment %}
+                    <span class="sub-title">Bu Necə Işləyir</span>
+                    {% endcomment %}
+
+                    <h2>Sağlamlığınızı Qorumağa Necə Kömək Edirik</h2>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="inner-container p_relative">
                     <div class="shape" style="background-image: url(images/shape/shape-24.png);"></div>
                     <div class="row clearfix">
@@ -255,7 +277,16 @@
                                 <div class="inner-box">
                                     <div class="image-box">
                                         <span class="count-text">{{forloop.counter}}</span>
-                                        <figure class="image"><img style="width:170px ;height:170px;object-fit:cover;" src="{{offer.image.url}}" alt=""></figure>
+
+
+                                        {% comment %}
+                                            style="background-image: url(assets/images/shape/shape-24.png);"
+                                            <figure class="image"><img style="width:170px ;height:170px;object-fit:cover;"  alt=""></figure>
+                                            <figure class="image"><img style="width:170px ;height:170px;object-fit:cover;" src="{{offer.image.url}}" alt=""></figure>
+                                        {% endcomment %}
+
+                                        <figure class="image"><img src="assets/images/shape/shape-24.png" alt=""></figure>
+                                        <figure class="image"><img style="width:170px ;height:170px;object-fit:cover background-image: url(assets/images/shape/shape-24.png);"  alt=""></figure>
                                     </div>
                                     <h3>{{offer.title}}</h3>
                                     <p>{{offer.text}}</p>
@@ -263,22 +294,88 @@
                             </div>
                         </div>
                         {% endfor %}
-
                     </div>
                 </div>
+
+
             </div>
         </section>
         <!-- process-section end -->
 
 
-        <!-- cta-section -->
-
-        <!-- cta-section end -->
 
 
-        <!-- team-style-two -->
 
-        <!-- team-style-two end -->
+
+
+
+
+
+
+
+
+
+
+
+
+        {% comment %}
+        <!-- process-section -->
+        <section class="process-section p_relative centred">
+            <div class="pattern-layer">
+                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-25.png);"></div>
+            </div>
+            <div class="auto-container">
+                <div class="sec-title centred mb_85">
+                    <span class="sub-title">How It Works</span>
+                    <h2>How it Helps You to <br />Keep Healthy</h2>
+                </div>
+                <div class="inner-container p_relative">
+                    <div class="shape" style="background-image: url(assets/images/shape/shape-24.png);"></div>
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div class="process-block-one">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <span class="count-text">01</span>
+                                        <figure class="image"><img src="assets/images/resource/process-1.png" alt=""></figure>
+                                    </div>
+                                    <h3>Get Appointment</h3>
+                                    <p>Book & pay online. We’ll match you with a trusted house cleaner</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div class="process-block-one">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <span class="count-text">02</span>
+                                        <figure class="image"><img src="assets/images/resource/process-2.png" alt=""></figure>
+                                    </div>
+                                    <h3>Start Check-Up</h3>
+                                    <p>Every cleaner is friendly and reliable.They have been experts</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div class="process-block-one">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <span class="count-text">03</span>
+                                        <figure class="image"><img src="assets/images/resource/process-3.png" alt=""></figure>
+                                    </div>
+                                    <h3>Enjoy Healthy Life</h3>
+                                    <p>Quisqu tell us risus adpis viera bibe um urna.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- process-section end -->
+        {% endcomment %}
+
+
 
 
         {% endblock body %}

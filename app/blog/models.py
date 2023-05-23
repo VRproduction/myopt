@@ -28,6 +28,7 @@ class WhoWeAre(models.Model):
     image = models.FileField()
     title1 = models.CharField(max_length=200,null=True)
     title2 = models.CharField(max_length=200,null=True)
+    # banner = models.FileField()
 
     class Meta:
         verbose_name = "Who We Are"
