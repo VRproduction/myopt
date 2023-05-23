@@ -8,7 +8,7 @@
 
         <!-- Page Title -->
         <section class="page-title">
-            <div class="bg-layer" style="background-image: url({% static 'images/background/page-title.jpg' %});"></div>
+            <div class="bg-layer" style="background-image: url({% static 'images/background/ocki_2.jpg' %});"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <h1>Daha Ətraflı</h1>
@@ -39,7 +39,6 @@
                                             <h3>{{blog.title}}</h3>
                                             <ul class="post-info clearfix">
                                                 <li><i class="icon-34"></i>{{blog.date}}</li>
-                                                <li><i class="icon-35"></i><a href="blog-details.html">{{blog.author}}</a></li>
                                             </ul>
                                             <p>{{blog.context|safe}}</p>
 
@@ -47,6 +46,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             {% comment %} <div class="content-one">
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 text-column">
@@ -88,6 +88,10 @@
                                 <p>{{blog.author.about}}</p>
                             </div>
                             {% endcomment %}
+
+
+
+
 
 
                             <div class="comments-form-area">
@@ -208,7 +212,11 @@
                                     </ul>
                                 </div>
                             </div> {% endcomment %}
-                            {% comment %} <div class="sidebar-widget tags-widget">
+                            {% comment %}
+
+
+                            <div class="sidebar-widget tags-widget">
+
                                 <div class="widget-title">
                                     <h3>Tags</h3>
                                 </div>

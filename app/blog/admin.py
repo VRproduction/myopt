@@ -6,11 +6,11 @@ admin.site.register(IndexSlider)
 admin.site.register(Testimonial)
 admin.site.register(Appointment)
 admin.site.register(Gallery)
-admin.site.register(Author)
 admin.site.register(AboutOffers)
 admin.site.register(Contact)
 # admin.site.register(ArticleCategory)
 # admin.site.register(Article)
+# admin.site.register(Author)
 
 
 ####################################################################

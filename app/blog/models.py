@@ -2,8 +2,8 @@ from django.db import models
 from ckeditor.fields import RichTextField
 from .helper import seo
 from django.urls import reverse
+from datetime import date
 
-# Create your models here.
 
 
 
@@ -153,15 +153,6 @@ class Gallery(models.Model):
 
 
 
-class Author(models.Model):
-    name = models.CharField(max_length=300)
-    image = models.ImageField(upload_to="Authors")
-    about = models.TextField()
-
-    def __str__(self):
-        return self.name
-
-
 
 class ArticleCategory(models.Model):
     name = models.CharField(max_length=300,unique=True)
@@ -181,17 +172,18 @@ class ArticleCategory(models.Model):
 
 
 class Article(models.Model):
-    author = models.ForeignKey(Author,on_delete=models.CASCADE, related_name="article",null=True)
-    date = models.DateField(auto_now_add=True)
+    # author = models.ForeignKey(Author,on_delete=models.CASCADE, related_name="article",null=True)
     title = models.CharField(max_length=300,unique=True)
     image = models.FileField(upload_to="Article")
     context = RichTextField()
     slug = models.SlugField(editable=False, null=True,unique=True)
     click = models.PositiveIntegerField(default=0,editable=False)
     category = models.ForeignKey(ArticleCategory,on_delete=models.CASCADE, related_name="articles",null=True)
-
     article_banner = models.ImageField(upload_to="article_banner", null=True)
     order = models.IntegerField(('sıra'), default=0, )
+    # date = models.DateField(auto_now_add=True)
+    date = models.DateField()
+
 
     def __str__(self):
         return self.title
@@ -261,3 +253,16 @@ class Contact(models.Model):
     def __str__(self):
         return self.email
 
+
+
+"""
+
+class Author(models.Model):
+    name = models.CharField(max_length=300)
+    image = models.ImageField(upload_to="Authors")
+    about = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+"""

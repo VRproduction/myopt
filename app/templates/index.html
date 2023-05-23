@@ -211,7 +211,7 @@
                                     <h2>{{data.title}}</h2>
                                 </div>
                                 <div class="text p_relative d_block">
-                                    <p>{{data.text}}.</p>
+                                    <p>{{data.text|safe}}.</p>
                                 </div>
                                 <div class="inner-box">
                                     <div class="row clearfix">
@@ -346,7 +346,6 @@
 
             <div class="bg-layer" style="background-image: url({% static 'images/background/chooseus-bg.jpg' %});"></div>
 
-            style="background-image: url(assets/images/background/chooseus-bg.jpg);"
 
             {% endfor %}
 
@@ -361,7 +360,7 @@
                                     <h2>{{data.title}}</h2>
                                 </div>
                                 <div class="text">
-                                    <p>{{data.text}}</p>
+                                    <p>{{data.text|safe}}</p>
                                 </div>
                                 <div class="inner-box">
                                     <div class="row clearfix">
@@ -369,7 +368,7 @@
                                         <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                             <div class="single-item p_relative d_block">
                                                 <h4>{{offer.title}}</h4>
-                                                <p>{{offer.text}}</p>
+                                                <p>{{offer.text|safe}}</p>
                                             </div>
                                         </div>
                                         {% endfor %}
@@ -408,7 +407,7 @@
                     <div class="testimonial-block-one">
                         <div class="inner-box p_relative d_block">
                             <div class="icon-box"><i class="icon-29"></i></div>
-                            <p>{{data.text}}</p>
+                            <p>{{data.text|safe}}</p>
                             <h4>{{data.author}}</h4>
                             <span class="designation">{{data.position}}</span>
                         </div>

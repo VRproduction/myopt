@@ -8,7 +8,7 @@
         <!-- Page Title -->
         <section class="page-title">
 
-            <div class="bg-layer" style="background-image: url({% static 'images/background/ocki.jpg' %});"></div>
+            <div class="bg-layer" style="background-image: url({% static 'images/background/ocki_2.jpg' %});"></div>
 
             {% comment %}
             {% for data in whoweare %}
@@ -75,7 +75,7 @@
                                     <h2>{{data.title}}</h2>
                                 </div>
                                 <div class="text p_relative d_block">
-                                    <p>{{data.text}}.</p>
+                                    <p>{{data.text|safe}}.</p>
                                 </div>
                                 <div class="inner-box">
                                     <div class="row clearfix">
@@ -193,7 +193,7 @@
                                 <div class="sec-title light mb_35">
                                     <span class="sub-title">Niyə Biz ?</span>
                                     <h2 class="mb_25">{{data.title}}</h2>
-                                    <p class="pt_2">{{data.text}}</p>
+                                    <p class="pt_2">{{data.text|safe}}</p>
                                 </div>
                                 <div class="inner-box">
                                     <div class="row clearfix">
@@ -201,7 +201,7 @@
                                         <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                             <div class="single-item p_relative d_block">
                                                 <h4><a href="index-3.html">{{offer.title}}</a></h4>
-                                                <p>{{offer.text}}</p>
+                                                <p>{{offer.text|safe}}</p>
                                             </div>
                                         </div>
                                         {% endfor %}
@@ -334,7 +334,7 @@
                                         <figure class="image"><img src="assets/images/shape/shape-24.png" alt=""></figure>
                                     </div>
                                     <h3>{{offer.title}}</h3>
-                                    <p>{{offer.text}}</p>
+                                    <p>{{offer.text|safe}}</p>
                                 </div>
                             </div>
                         </div>

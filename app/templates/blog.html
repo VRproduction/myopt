@@ -5,7 +5,7 @@
 {% block body %}
         <!-- Page Title -->
         <section class="page-title">
-            <div class="bg-layer" style="background-image: url({% static 'images/background/page-title.jpg' %});"></div>
+            <div class="bg-layer" style="background-image: url({% static 'images/background/ocki_2.jpg' %});"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <h1>Bloqlar</h1>
@@ -27,24 +27,19 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 news-block">
                         <div class="news-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="inner-box">
-
                                 <figure class="image-box">
-                                    <img style="width:352px ;height:244px;object-fit:cover;" src="{{blog.image.url}}" alt="">
-                                    <a href="{{blog.get_absolute_url}}"><i class="fas fa-link"></i></a>
-                                </figure>
 
+                                    <img style="width:352px ;height:244px;object-fit:cover;" src="{{blog.image.url}}" alt="">
+                                    <a href="{{blog.get_absolute_url}}"><i class="fas fa-link"></i></a></figure>
                                 <div class="lower-content">
                                     <div class="inner">
-
                                         <h3><a href="{{blog.get_absolute_url}}">{{blog.title}}</a></h3>
                                          <p class="p_relative d_block">{{blog.context|truncatechars_html:50|safe}}</p>
                                         <div class="link p_relative d_block"><a href="{{blog.get_absolute_url}}">Davamını Oxu</a></div>
-
                                         <ul class="post-info clearfix">
-                                            <li><i class="icon-34"></i>09 Oct, 2021</li>
-                                            <li><i class="icon-35"></i><a href="blog-details.html">Ashley Bronks</a></li>
-                                        </ul>
+                                            <li><i class="icon-34"></i>{{ blog.date }}</li>
 
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
