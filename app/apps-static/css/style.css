@@ -63,6 +63,7 @@
 burani men deyisdim
  ***/
 
+
 .fa, .fas, .far, .fal, .fab {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -1916,6 +1917,8 @@ div#mCSB_1_container{
 .image_block_one .image-box .image:hover img{
   transform: scale(1.05);
 }
+
+
 
 .image_block_one .image-box .text{
   width: 250px;

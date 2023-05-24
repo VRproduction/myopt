@@ -82,6 +82,7 @@
 
 .bg-color-2{
 	background: #f17732;
+	background: pink;
 }
 
 .banner-carousel .owl-nav button:hover{
@@ -99,6 +100,7 @@
 
 .contact-section .support-box h3{
 	color: #f17732;
+
 }
 
 .contact-section .support-box h3 a{
@@ -111,6 +113,8 @@
 
 .theme-btn.btn-two{
 	background: #f17732;
+	background: pink;
+
 }
 
 .default-form .form-group input:focus,
