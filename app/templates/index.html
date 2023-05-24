@@ -328,6 +328,10 @@
 
 
 
+
+
+
+
         <!-- chooseus-section -->
         <section class="chooseus-section p_relative">
 
@@ -335,20 +339,18 @@
             <div class="bg-layer" style="background-image: url({% static 'images/background/chooseus-bg.jpg' %});"></div>
             {% endcomment %}'
 
-
-
-
-
             {% for i in whyus %}
-            <br>
-            {% comment %}
-            <div class="bg-layer" style="background-image: url({{ i.video_image.url }});"></div>
-            {% endcomment %}
+                <br>
+                {% comment %}
+                <div class="bg-layer" style="background-image: url({{ i.video_image.url }});"></div>
+                {% endcomment %}
 
             <div class="bg-layer" style="background-image: url({% static 'images/background/chooseus-bg.jpg' %});"></div>
-
-
             {% endfor %}
+
+
+
+
 
             <div class="auto-container">
                 <div class="row clearfix">
@@ -384,6 +386,10 @@
             </div>
         </section>
         <!-- chooseus-section end -->
+
+
+
+
 
 
 
@@ -539,7 +545,6 @@
                                         <h3><a href="{{article.get_absolute_url}}">{{article.title|truncatechars:36}}</a></h3>
                                         <ul class="post-info clearfix">
                                             <li><i class="icon-34"></i>{{article.date}}</li>
-                                            <li><i class="icon-35"></i><a href="blog-details.html">{{article.author}}</a></li>
                                         </ul>
                                         <p>{{article.context|truncatechars_html:50|safe}}</p>
                                         <div class="link"><a href="{{article.get_absolute_url}}">Davamını Oxu</a></div>

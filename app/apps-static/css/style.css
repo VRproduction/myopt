@@ -60,6 +60,23 @@
 
 
 /***
+burani men deyisdim
+ ***/
+
+.fa, .fas, .far, .fal, .fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    visibility: hidden!important;
+}
+
+
+
+/***
 
 ====================================================================
   Global Settings
@@ -2122,13 +2139,16 @@ div#mCSB_1_container{
   transition: all 500ms ease;
 }
 
+
 .service-section .tab-btns li h4{
+  justify-content:center;
   position: relative;
   display: flex;
   font-size: 20px;
   line-height: 26px;
   font-weight: 600;
   transition: all 500ms ease;
+
 }
 
 .service-section .tab-btns li.active-btn .icon-box,
@@ -2949,6 +2969,12 @@ div#mCSB_1_container{
   margin-left: 30px;
 }
 
+
+
+
+
+
+
 .news-block-one .inner-box .lower-content .inner{
   position: relative;
   display: block;
@@ -2959,7 +2985,14 @@ div#mCSB_1_container{
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.08);
   margin-top: -80px;
   z-index: 2;
+  min-height:310px;
 }
+
+
+
+
+
+
 
 .news-block-one .inner-box .lower-content .category a{
   position: relative;
