@@ -112,7 +112,6 @@
 
 
                         <div class="right-column">
-                            {% comment %} <div class="schedule"><i class="icon-4"></i>Sun-Thu  08:00AM-05:00PM</div> {% endcomment %}
                             <ul class="social-links clearfix">
                                 {% if setting.facebook %}
                                 <li><a href="{{setting.facebook}}"><i class="fab fa-facebook-f"></i></a></li>
@@ -150,6 +149,40 @@
                             {% endif %}
                         </div>
                         {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <div class="menu-area clearfix">
                             <!--Mobile Navigation Toggler-->
                             <div class="mobile-nav-toggler">
@@ -215,6 +248,21 @@
         </header>
         <!-- main-header end -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Mobile Menu  -->
         <div class="mobile-menu">
             <div class="menu-backdrop"></div>
@@ -223,7 +271,7 @@
             <nav class="menu-box">
                 {% for setting in general_settings %}
                 {% if setting.logo %}
-                <div class="nav-logo"><a href="{% url 'index' %}"><img style="width:90px ;height:100px;" src="{{setting.logo.url}}" alt=""></a></div>
+                <div class="nav-logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></div>
                 {% endif %}
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
@@ -303,27 +351,33 @@
     <div class="widget-section">
         <div class="auto-container">
             <div class="row clearfix">
+
+
                 <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                     <div class="about-widget footer-widget mr_40">
                         <div class="widget-title">
                             <h3>Haqqımda</h3>
                         </div>
-                        <div class="widget-content">
 
+
+
+
+                        <div class="widget-content">
 
                              <div class="footer-logo">
                                 {% for setting in general_settings %}
-                                {% if setting.footer_logo %}
-                                <figure class="logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.footer_logo.url}}" alt=""></a></figure>
-                                {% endif %}
+                                    {% if setting.footer_logo %}
+                                    <figure class="logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.footer_logo.url}}" alt=""></a></figure>
+                                    {% endif %}
                                 {% endfor %}
                             </div>
+
+
 
 
                             {% for setting in general_settings %}
                             <p>{{setting.footer_text}}</p>
                             <ul class="social-links clearfix">
-
                                 {% if setting.facebook %}
                                 <li><a href="{{setting.facebook}}"><i class="fab fa-facebook-f"></i></a></li>
                                 {% endif %}
@@ -339,12 +393,18 @@
                                 {% if setting.youtube %}
                                 <li><a href="{{setting.youtube}}"><i class="fab fa-youtube"></i></a></li>
                                 {% endif %}
-
                             </ul>
                             {% endfor %}
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                     <div class="links-widget footer-widget ml_100">
                         <div class="widget-title">
@@ -362,34 +422,69 @@
                     </div>
                 </div>
 
+
+
+
+
+
+
+
+
+
+
+
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                     <div class="contact-widget footer-widget ml_50">
                         <div class="widget-title">
                             <h3>Əlaqə</h3>
                         </div>
-
                         <div class="widget-content">
                             <ul class="info clearfix">
                                 {% for setting in general_settings %}
-
-
                                             <li> <a href="mailto:{{setting.email}}">{{setting.email}}</a> </li>
                                             <li>{{setting.adress}}</li>
                                             <li>{{setting.number_1}}</li>
                                             <li>{{setting.number_2}}</li>
                                             <li>{{setting.number_3}}</li>
-
                                 {% endfor %}
 
-
+                                {% comment %}
+                                <header class="main-header">
+                                <!-- header-top -->
+                                <div class="header-top">
+                                    {% for setting in general_settings %}
+                                    <div class="auto-container">
+                                        <div class="top-inner">
+                                            <div class="left-column">
+                                                <ul class="info clearfix">
+                                                    <li><i class="icon-1"></i>E-poçt: <a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
+                                                    <li><i class="icon-2"></i>{{setting.adress}}</li>
+                                                    <li><i class="icon-3"></i>{{ setting.number_1 }}</li>
+                                                    <li>{{ setting.number_2 }}</li>
+                                                    <li>{{ setting.number_3 }}</li>
+                                                </ul>
+                                            </div>
+                                {% endcomment %}
                             </ul>
                         </div>
-
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
     <div class="footer-bottom centred">
         <div class="auto-container">
             <div class="copyright"><p><a href="https://vrproduction.az/">VR Production</a> &copy; 2023 All Right Reserved</p></div>

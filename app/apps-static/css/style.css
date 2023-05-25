@@ -72,7 +72,6 @@ burani men deyisdim
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
-    visibility: hidden!important;
 }
 
 
@@ -1780,10 +1779,12 @@ div#mCSB_1_container{
 }
 
 .banner-carousel .owl-nav button.owl-prev{
+  visibility: hidden;
   left: 70px;
 }
 
 .banner-carousel .owl-nav button.owl-next{
+  visibility: hidden;
   right: 70px;
 }
 
