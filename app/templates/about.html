@@ -10,17 +10,6 @@
 
             <div class="bg-layer" style="background-image: url({% static 'images/background/ocki_2.jpg' %});"></div>
 
-            {% comment %}
-            {% for data in whoweare %}
-                <figure class="image">
-                        <div class="bg-layer" style="background-image: url({{data.image.url}});"></div>
-
-                </figure>
-            {% endfor %}
-            {% endcomment %}
-
-
-
             <div class="auto-container">
                 <div class="content-box">
                     <h1>Haqqımda</h1>
@@ -238,9 +227,7 @@
             <div class="auto-container">
                 <div class="sec-title centred mb_85">
 
-                    {% comment %}
                     <span class="sub-title">Bu Necə Işləyir</span>
-                    {% endcomment %}
 
                     <h2>Sağlamlığınızı Qorumağa Necə Kömək Edirik</h2>
                 </div>
@@ -251,15 +238,11 @@
 
 
 
-
-
-
-
-
-
-
                 <div class="inner-container p_relative">
-                    <div class="shape" style="background-image: url(images/shape/shape-24.png);"></div>
+
+                    <div class="shape" style="background-image: url({% static 'images/shape/shape-24.png' %});"></div>
+
+
                     <div class="row clearfix">
                         {% for offer in offers %}
                         <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
@@ -268,14 +251,8 @@
                                     <div class="image-box">
                                         <span class="count-text">{{forloop.counter}}</span>
 
-
-                                        {% comment %}
-                                            style="background-image: url(assets/images/shape/shape-24.png);"
-                                            <figure class="image"><img style="width:170px ;height:170px;object-fit:cover;"  alt=""></figure>
                                             <figure class="image"><img style="width:170px ;height:170px;object-fit:cover;" src="{{offer.image.url}}" alt=""></figure>
-                                        {% endcomment %}
 
-                                        <figure class="image"><img src="assets/images/shape/shape-24.png" alt=""></figure>
                                     </div>
                                     <h3>{{offer.title}}</h3>
                                     <p>{{offer.text|safe}}</p>
