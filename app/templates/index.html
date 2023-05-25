@@ -448,7 +448,13 @@
                 <div class="support-box p_relative centred">
                     <div class="icon-box"><img src="{% static 'images/icons/icon-2.png' %}" alt=""></div>
                     {% for setting in general_settings %}
-                    <h3>Zəng et: <a>{{setting.number}}</a></h3>
+
+                    {% comment %}
+                    <h3>Zəng et: <a>{{setting.number_1}}</a></h3>
+                    {% endcomment %}
+
+                    <h3>Zəng et: 4033 </a></h3>
+
                     {% endfor %}
                 </div>
 
@@ -587,7 +593,7 @@
                             {% for setting  in general_settings %}
                             <ul class="info-list clearfix">
                                 <li><i class="fas fa-envelope"></i>E-poçt: <a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
-                                <li><i class="icon-3"></i>Zəng: <a>{{setting.number}}</a></li>
+                                <li><i class="icon-3"></i>Zəng: 4033</a></li>
                             </ul>
                             {% endfor %}
                         </div>

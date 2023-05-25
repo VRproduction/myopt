@@ -102,7 +102,7 @@
                             <ul class="info clearfix">
                                 <li><i class="icon-1"></i>E-poçt: <a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
                                 <li><i class="icon-2"></i>{{setting.adress}}</li>
-                                <li><i class="icon-3"></i>Zəng: <a>{{setting.number}}</a></li>
+                                <li><i class="icon-3"></i>Zəng: 4033</li>
                             </ul>
                         </div>
                         <div class="right-column">
@@ -140,7 +140,7 @@
 
                         <div class="logo-box">
                             {% if setting.logo %}
-                            <figure class="logo"><a href="{% url 'index' %}"><img style="width:183px ;height:90px;object-fit:cover;" src="{{setting.logo.url}}" alt=""></a></figure>
+                            <figure class="logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></figure>
                             {% endif %}
                         </div>
                         {% endfor %}
@@ -184,7 +184,7 @@
                         {% for setting in general_settings %}
                         <div class="logo-box">
                             {% if setting.logo %}
-                            <figure class="logo"><a href="{% url 'index' %}"><img style="width:183px ;height:90px;object-fit:cover;" src="{{setting.logo.url}}" alt=""></a></figure>
+                            <figure class="logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></figure>
                             {% endif %}
                         </div>
                         {% endfor %}
@@ -364,15 +364,20 @@
                         <div class="widget-content">
                             <ul class="info clearfix">
                                 {% for setting in general_settings %}
-                                <li>{{setting.adress}}</li>
 
-
+                                    <li>{{setting.adress}}</li>
                                     <li><a>{{setting.number_1}}</a></li>
                                     <li><a>{{setting.number_2}}</a></li>
                                     <li><a>{{setting.number_3}}</a></li>
+                                    <li> <i class="icon-1"></i><a href="mailto:{{setting.email}}">{{setting.email}}</a> </li>
+
+                                {% comment %}
+                                   <li><i class="icon-1"></i>E-poçt: <a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
+                                <li><i class="icon-2"></i>{{setting.adress}}</li>
+                                <li><i class="icon-3"></i>Zəng: 4033</li>
+                                {% endcomment %}
 
 
-                                <li><a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>

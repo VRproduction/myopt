@@ -17,7 +17,7 @@
 }
 
 .theme-btn.btn-one{
-	background: #03c0b4;
+	background: #FA027A;
 }
 
 .main-header .outer-box .nav-right .search-box-outer:hover{
@@ -54,7 +54,7 @@
 
 
 .banner-carousel .image-box .shape .shape-2{
-	background: pink;
+	background: #FA027A;
 }
 
 
@@ -65,7 +65,7 @@
 
 .image_block_one .image-box .text{
 	background: #f17732;
-	background: pink;
+	background: #FA027A;
 }
 
 .list-style-one li:before{
@@ -73,7 +73,7 @@
 }
 
 .service-section .tab-btns li:before{
-	background: #03c0b4;
+	background: pink;
 }
 
 .service-section .tab-btns li:after{
@@ -82,7 +82,7 @@
 
 .bg-color-2{
 	background: #f17732;
-	background: pink;
+	background: #FA027A;
 }
 
 .banner-carousel .owl-nav button:hover{
@@ -90,7 +90,7 @@
 }
 
 .testimonial-block-one .inner-box .icon-box{
-	color: #03c0b4;
+	color: #FA027A;
 }
 
 .dots-style-one .owl-dots .owl-dot.active span,
@@ -99,7 +99,7 @@
 }
 
 .contact-section .support-box h3{
-	color: #f17732;
+	color: #FA027A;;
 
 }
 
@@ -108,12 +108,12 @@
 }
 
 .contact-section .form-inner h3 span{
-  color: #f17732;
+  color: #FA027A;
 }
 
 .theme-btn.btn-two{
 	background: #f17732;
-	background: pink;
+	background: #FA027A;
 
 }
 
@@ -124,6 +124,7 @@
 
 .scroll-top{
 	background: #f17732;
+	background: #FA027A;
 }
 
 .team-block-one .inner-box .lower-content:before{
@@ -175,7 +176,7 @@
 }
 
 .google-map-section .content-box .info-list li i{
-	color: #f17732;
+	color: #FA027A;
 }
 
 .footer-top .top-inner .footer-menu li a:hover{
@@ -229,10 +230,12 @@
 
 .image_block_three .image-box .text{
 	background: #f17732;
+
 }
 
 .service-block-one .inner-box .lower-content .icon-box{
 	background: #f17732;
+	background: #FA027A;
 }
 
 .service-block-one .inner-box .lower-content h3 a:hover{
@@ -260,7 +263,7 @@
 }
 
 .process-block-one .inner-box .image-box .count-text{
-	background: #f17732;
+	background: #FA027A;
 }
 
 .progress-box .bar-inner{
