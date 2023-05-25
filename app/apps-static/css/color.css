@@ -48,7 +48,7 @@
 }
 
 .banner-carousel .content-box h3{
-	color: #f17732;
+	color: #FA027A;
 }
 
 
@@ -69,15 +69,15 @@
 }
 
 .list-style-one li:before{
-	color: #f17732;
+	color: #FA027A;
 }
 
 .service-section .tab-btns li:before{
-	background: pink;
+	background: #FA027A;
 }
 
 .service-section .tab-btns li:after{
-	background: #03c0b4;
+	background: pink;
 }
 
 .bg-color-2{
@@ -148,7 +148,7 @@
 }
 
 .news-block-one .inner-box .lower-content .category a{
-	color: #f17732;
+	color: #FA027A;
 }
 
 .news-block-one .inner-box .lower-content .category a:hover{
@@ -331,7 +331,7 @@
 }
 
 .page-title .content-box .bread-crumb li{
-	color: #f17732;
+	color: #FA027A;
 }
 
 .page-title .content-box .bread-crumb li a:hover{

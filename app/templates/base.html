@@ -98,13 +98,19 @@
                 {% for setting in general_settings %}
                 <div class="auto-container">
                     <div class="top-inner">
+
+
                         <div class="left-column">
                             <ul class="info clearfix">
                                 <li><i class="icon-1"></i>E-poçt: <a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
                                 <li><i class="icon-2"></i>{{setting.adress}}</li>
-                                <li><i class="icon-3"></i>Zəng: 4033</li>
+                                <li><i class="icon-3"></i>{{ setting.number_1 }}</li>
+                                <li><i class="icon-3"></i>{{ setting.number_2 }}</li>
+                                <li><i class="icon-3"></i>{{ setting.number_3 }}</li>
                             </ul>
                         </div>
+
+
                         <div class="right-column">
                             {% comment %} <div class="schedule"><i class="icon-4"></i>Sun-Thu  08:00AM-05:00PM</div> {% endcomment %}
                             <ul class="social-links clearfix">
@@ -361,26 +367,24 @@
                         <div class="widget-title">
                             <h3>Əlaqə</h3>
                         </div>
+
                         <div class="widget-content">
                             <ul class="info clearfix">
                                 {% for setting in general_settings %}
 
-                                    <li>{{setting.adress}}</li>
-                                    <li><a>{{setting.number_1}}</a></li>
-                                    <li><a>{{setting.number_2}}</a></li>
-                                    <li><a>{{setting.number_3}}</a></li>
-                                    <li> <i class="icon-1"></i><a href="mailto:{{setting.email}}">{{setting.email}}</a> </li>
 
-                                {% comment %}
-                                   <li><i class="icon-1"></i>E-poçt: <a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
-                                <li><i class="icon-2"></i>{{setting.adress}}</li>
-                                <li><i class="icon-3"></i>Zəng: 4033</li>
-                                {% endcomment %}
-
+                                            <li> <i class="icon-1"></i><a href="mailto:{{setting.email}}">{{setting.email}}</a> </li>
+                                            <li>{{setting.adress}}</li>
+                                            <li>{{setting.number_1}}</li>
+                                            <li>{{setting.number_2}}</li>
+                                            <li>{{setting.number_3}}</li>
 
                                 {% endfor %}
+
+
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
