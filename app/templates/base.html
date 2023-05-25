@@ -314,7 +314,7 @@
                              <div class="footer-logo">
                                 {% for setting in general_settings %}
                                 {% if setting.footer_logo %}
-                                <figure class="logo"><a href="index-2.html"><img style="width:183px ;height:90px; object-fit:cover;" src="{{setting.footer_logo.url}}" alt=""></a></figure>
+                                <figure class="logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.footer_logo.url}}" alt=""></a></figure>
                                 {% endif %}
                                 {% endfor %}
                             </div>
