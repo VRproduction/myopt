@@ -441,13 +441,13 @@
                         <div class="widget-content">
                             <ul class="info clearfix">
                                 {% for setting in general_settings %}
-                                            <li> <a href="mailto:{{setting.email}}">{{setting.email}}</a> </li>
-                                            <li>{{setting.adress}}</li>
-                                            <li>{{setting.number_1}}</li>
-                                            <li>{{setting.number_2}}</li>
-                                            <li>{{setting.number_3}}</li>
+                                            <li><i class="icon-1"></i><a href="mailto:{{setting.email}}"> {{setting.email}}</a></li>
+                                            <li><i class="icon-2"></i> {{setting.adress}}</li>
+                                            <li><i class="icon-3"></i> {{ setting.number_1 }}</li>
+                                            <li><i class="icon-3"></i> {setting.number_2}}</li>
+                                            <li><i class="icon-3"></i> {{setting.number_3}}</li>
                                 {% endfor %}
-
+                            </ul>
                                 {% comment %}
                                 <header class="main-header">
                                 <!-- header-top -->
@@ -465,7 +465,6 @@
                                                 </ul>
                                             </div>
                                 {% endcomment %}
-                            </ul>
                         </div>
                     </div>
                 </div>
