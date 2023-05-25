@@ -105,8 +105,8 @@
                                 <li><i class="icon-1"></i>E-poçt: <a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
                                 <li><i class="icon-2"></i>{{setting.adress}}</li>
                                 <li><i class="icon-3"></i>{{ setting.number_1 }}</li>
-                                <li><i class="icon-3"></i>{{ setting.number_2 }}</li>
-                                <li><i class="icon-3"></i>{{ setting.number_3 }}</li>
+                                <li>{{ setting.number_2 }}</li>
+                                <li>{{ setting.number_3 }}</li>
                             </ul>
                         </div>
 
@@ -223,7 +223,7 @@
             <nav class="menu-box">
                 {% for setting in general_settings %}
                 {% if setting.logo %}
-                <div class="nav-logo"><a href="{% url 'index' %}"><img style="width:183px ;height:90px;object-fit:cover;" src="{{setting.logo.url}}" alt=""></a></div>
+                <div class="nav-logo"><a href="{% url 'index' %}"><img style="width:90px ;height:100px;" src="{{setting.logo.url}}" alt=""></a></div>
                 {% endif %}
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
@@ -373,7 +373,7 @@
                                 {% for setting in general_settings %}
 
 
-                                            <li> <i class="icon-1"></i><a href="mailto:{{setting.email}}">{{setting.email}}</a> </li>
+                                            <li> <a href="mailto:{{setting.email}}">{{setting.email}}</a> </li>
                                             <li>{{setting.adress}}</li>
                                             <li>{{setting.number_1}}</li>
                                             <li>{{setting.number_2}}</li>
