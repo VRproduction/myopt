@@ -335,11 +335,40 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***
 @media screen and (min-width: 500px){
     .logo-box-mobile {
         display:none;
     }
 }
+***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 500px) {
   .handle-preloader .animation-preloader .spinner {
