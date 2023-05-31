@@ -227,6 +227,7 @@
             <div class="sticky-header">
                 <div class="auto-container">
                     <div class="outer-box">
+
                         {% for setting in general_settings %}
                         <div class="logo-box">
                             {% if setting.logo %}
@@ -234,11 +235,13 @@
                             {% endif %}
                         </div>
                         {% endfor %}
+
                         <div class="menu-area clearfix">
                             <nav class="main-menu clearfix">
                                 <!--Keep This Empty / Menu will come through Javascript-->
                             </nav>
                         </div>
+
                         <div class="nav-right">
                             {% comment %} <div class="search-box-outer search-toggler">
                                 <i class="icon-5"></i>
@@ -282,7 +285,7 @@
                 {% endif %}
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
-                    <h4>Contact Info</h4>
+                    <h4>Əlaqə</h4>
                     <ul>
                         <li>{{setting.adress}}</li>
                         <li><a>{{setting.number}}</a></li>
@@ -338,8 +341,8 @@
 
                 <ul class="footer-menu">
                     {% comment %} <li><a href="index-2.html"></a></li>
-                    <li><a href="index-2.html">Location</a></li>
-                    <li><a href="index-2.html">Contact </a></li> {% endcomment %}
+                    <li><a href="index-2.html">Adres</a></li>
+                    <li><a href="index-2.html">Əlaqə </a></li> {% endcomment %}
                 </ul>
             </div>
         </div>
@@ -450,7 +453,6 @@
                                 {% for setting in general_settings %}
                                             <li><i class="icon-1"></i><a href="mailto:{{setting.email}}"> {{setting.email}}</a></li>
                                             <li><i class="icon-2"></i> {{setting.adress}}</li>
-                                            <li><i class="icon-3"></i> {{ setting.number_1 }}</li>
                                             <li><i class="icon-3"></i> {{setting.number_2}}</li>
                                             <li><i class="icon-3"></i>  {{setting.number_3}}</li>
                                 {% endfor %}
