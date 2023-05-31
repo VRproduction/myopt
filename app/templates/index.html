@@ -26,7 +26,7 @@
                     <div class="auto-container">
                         <div class="banner-content p_relative d_block">
                             <div class="content-box p_relative d_block z_5">
-                                <img src="{% static 'images/doctor.png' %}">
+                                <img class="mainimg"  style="display:none;" src="{% static 'images/doctor.png' %}">
                                 <h3>{{slider.little_title}}</h3>
                                 <h2 class="p_relative d_block fs_70 lh_80 fw_bold">{{slider.big_title}}</h2>
                                 <p class="p_relative d_block fs_18">{{slider.description}}</p>
@@ -45,7 +45,7 @@
                                     <div class="shape-1" style="background-image: url({% static 'images/shape/shape-1.png' %});"></div>
                                     <div class="shape-2"></div>
                                 </div>
-                                <figure class="image"><img style="width:550px ;height:616px;object-fit:cover;padding-top:50px;" src="{{slider.image.url}}" alt=""></figure>
+                                <figure class="image" ><img style="width:550px ;height:616px;object-fit:cover;padding-top:50px;" src="{{slider.image.url}}" alt=""></figure>
                             </div>
                         </div>
                     </div>
