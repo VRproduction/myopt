@@ -127,6 +127,36 @@ body {
   margin:0 auto;
 }
 
+.auto-container-menu {
+  position:static;
+  max-width:1320px;
+  padding:0px 15px;
+  margin:0 auto;
+}
+
+
+/***  bura ana sehifede xidmetleri slide eliyib milan***/
+@media screen and (max-width: 500px){
+    .tab-btns {
+    display: flex;
+    overflow-x: scroll;
+    gap: 14px;
+}
+}
+
+
+
+@media screen and (max-width: 1200px){
+    .auto-container-menu {
+        display: flex;
+        position: relative;
+        right: 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
 .boxed_wrapper{
   position: relative;
   margin: 0 auto;
@@ -335,41 +365,11 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***
 @media screen and (min-width: 500px){
     .logo-box-mobile {
         display:none;
     }
 }
-***/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 500px) {
   .handle-preloader .animation-preloader .spinner {
