@@ -1515,7 +1515,9 @@ div#mCSB_1_container{
   position: relative;
 }
 
-
+.manual{
+display:flex;
+flex-direction:row;}
 /** banner-section **/
 
 .banner-carousel .slide-item{
@@ -1528,11 +1530,13 @@ div#mCSB_1_container{
   clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%, 0% 0%);
 }
 
-.banner-carousel .content-box{
-  position: relative;
-  max-width: 650px;
-  padding: 87px 0px 93px 0px;
-  z-index: 5;
+.banner-carousel .content-box {
+    position: relative;
+    max-width: 650px;
+    padding: 87px 0px 93px 0px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
 }
 
 .banner-carousel .slide-item .image-layer{

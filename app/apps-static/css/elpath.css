@@ -127,6 +127,8 @@ position
 */
 .p_relative {
     position: relative;
+    display: flex;
+    flex-direction:column
 }
 .p_absolute {
     position: absolute;
