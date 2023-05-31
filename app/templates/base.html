@@ -140,7 +140,7 @@
                 <div class="auto-container-menu">
                     {% for setting in general_settings %}
 
-                        <div class="logo-box-mobile">
+                        <div class="logo-box-mobile" style="display:none;">
                             {% if setting.logo %}
                             <figure class="logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></figure>
                             {% endif %}
