@@ -204,7 +204,8 @@
   }
 
   .contact-section .form-inner{
-    margin-bottom: 30px;
+       margin-top: 32%;
+    margin-bottom: 27px;
   }
 
   .team-section .sec-title .theme-btn{
@@ -941,7 +942,10 @@
   .sidebar-page-container .news-block-one .inner-box .lower-content{
     margin: 0px;
   }
+.contact-section .form-inner h3 {
 
+    margin-bottom: 55px;
+}
   .news-block-one .inner-box .lower-content .inner{
     margin-top: 0px;
   }
@@ -949,5 +953,13 @@
   .blog-details-content .post-tags .tags-list li{
     margin-bottom: 10px;
   }
+  contact-section .bg-layer {
+    position: absolute;
+    background: #111821;
+    width: 100%;
+    height: 468px;
+    left: 0px;
+    top: 0px;
+}
 
 }
