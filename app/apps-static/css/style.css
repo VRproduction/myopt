@@ -141,8 +141,12 @@ body {
 @media screen and (max-width: 500px){
     .tab-btns {
     display: flex;
-    overflow-x: scroll;
+
     gap: 14px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
 }
 }
 
@@ -2213,13 +2217,13 @@ flex-direction:row;}
 
 
 .service-section .tab-btns li h4{
-  justify-content:center;
-  position: relative;
-  display: flex;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 600;
-  transition: all 500ms ease;
+ justify-content: center;
+    position: relative;
+    display: flex;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 600;
+    transition: all 500ms ease;
 
 }
 
@@ -8233,5 +8237,26 @@ flex-direction:row;}
   text-align: center;
   box-shadow: 6px 8px 0px 0px #ecf6f6;
 }
+.icon-box i{
+font-size:40px;}
+}
+.service-section .tab-btns li .icon-box {
+    width: 120px;
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 50px;
+    color: #141417;
+    margin-bottom: 18px;
+    transition: all 500ms ease;
+}
 
+.service-section .tab-btns li h4 {
+    justify-content: center;
+    position: relative;
+    display: flex;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 600;
+    transition: all 500ms ease;
 }

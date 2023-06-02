@@ -252,7 +252,8 @@
   background: none repeat scroll 0 0 #cda274;
 }
 .owl-carousel .owl-item .mainimg {
-max-width: 92%;
+max-width: 77%;
+bac
 }
 @media screen and (min-width: 1200px) {
 .owl-carousel .owl-item .mainimg {
