@@ -251,6 +251,9 @@
 .owl-theme .owl-dots .owl-dot.active span {
   background: none repeat scroll 0 0 #cda274;
 }
+.owl-carousel .owl-item .mainimg {
+max-width: 70%;
+}
 @media screen and (min-width: 1200px) {
 .owl-carousel .owl-item .mainimg {
 display:none;
