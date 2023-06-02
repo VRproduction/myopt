@@ -10,6 +10,7 @@ def index(request):
 
     context = {}
 
+    offers = AboutOffers.objects.all()
     whoweare = WhoWeAre.objects.all()
     sliders = IndexSlider.objects.all()
     services = Service.objects.all()[:3]
@@ -37,6 +38,7 @@ def index(request):
     context["testimonials"] = testimonials
     context["galleries"] = galleries
     context["articles"] = articles
+    context["offers"] = offers
 
     return render(request,"index.html", context)
 

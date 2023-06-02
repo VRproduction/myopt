@@ -437,6 +437,84 @@
 
 
 
+<!-- process-section -->
+        <section class="process-section p_relative centred">
+            <div class="pattern-layer">
+                <div class="pattern-2" style="background-image: url(images/shape/shape-25.png);"></div>
+            </div>
+            <div class="auto-container">
+                <div class="sec-title centred mb_85">
+
+                    <span class="sub-title">Bu Necə Işləyir</span>
+
+                    <h2>Sağlamlığınızı Qorumağa Necə Kömək Edirik</h2>
+                </div>
+
+
+
+
+
+
+
+                <div class="inner-container p_relative">
+
+                    <div class="shape" style="background-image: url({% static 'images/shape/shape-24.png' %});"></div>
+
+
+                    <div class="row clearfix">
+                        {% for offer in offers %}
+                        <div class="col-lg-4 col-md-6 col-sm-12 processing-block">
+                            <div class="process-block-one">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <span class="count-text">{{forloop.counter}}</span>
+
+                                            <figure class="image"><img style="width:170px ;height:170px;object-fit:cover;" src="{{offer.image.url}}" alt=""></figure>
+
+                                    </div>
+                                    <h3>{{offer.title}}</h3>
+                                    <p>{{offer.text|safe}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- process-section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -472,6 +550,76 @@
         <!-- testimonial-section end -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- contact-section -->
         <section class="contact-section p_relative">
             <div class="bg-layer"></div>
@@ -496,7 +644,7 @@
                     <h3>Zəng et: <a>{{setting.number_1}}</a></h3>
                     {% endcomment %}
 
-                    <h3>Zəng et: {{setting.number_1}} , {{setting.number_2}} </a></h3>
+                    <h3>Zəng et: {{setting.number_2}} , {{setting.number_3}} </a></h3>
 
                     {% endfor %}
                 </div>

@@ -9,7 +9,7 @@ class AppointmentForm(forms.ModelForm):
 
         'type': 'text',
         'name':'name',
-        'placeholder':'Sizin adınız'
+        'placeholder':'Ad, Soyad'
 
 
 
@@ -21,7 +21,7 @@ class AppointmentForm(forms.ModelForm):
 
         'type': 'email',
         'name':'email',
-        'placeholder':'Sizin e-mail'
+        'placeholder':'E-mail'
 
 
     }
@@ -59,7 +59,7 @@ class ContactForm(forms.ModelForm):
 
         'type': 'text',
         'name':'username',
-        'placeholder':'Sizin adınız'
+        'placeholder':'Adınız'
 
 
 
@@ -71,7 +71,7 @@ class ContactForm(forms.ModelForm):
 
         'type': 'email',
         'name':'email',
-        'placeholder':'Sizin email'
+        'placeholder':'E-mail'
 
 
     }
@@ -82,7 +82,7 @@ class ContactForm(forms.ModelForm):
 
         'type': 'text',
         'name':'phone',
-        'placeholder':'Sizin nömrə'
+        'placeholder':'Nömrə'
 
 
 
@@ -105,7 +105,7 @@ class ContactForm(forms.ModelForm):
 
 
         'name':'message',
-        'placeholder':'Sizin mesaj'
+        'placeholder':'Mesajınız'
 
 
 
@@ -132,7 +132,7 @@ class Appointment2Form(forms.ModelForm):
 
         'type': 'text',
         'name':'phone',
-        'placeholder':'Sizin adınız'
+        'placeholder':'Adınız'
 
 
 
@@ -144,7 +144,7 @@ class Appointment2Form(forms.ModelForm):
 
         'type': 'email',
         'name':'email',
-        'placeholder':'Sizin email'
+        'placeholder':'E-mail'
 
 
     }
@@ -155,7 +155,7 @@ class Appointment2Form(forms.ModelForm):
 
         'type': 'text',
         'name':'phone',
-        'placeholder':'Sizin nömrə'
+        'placeholder':'Nömrə'
 
 
 
@@ -165,7 +165,7 @@ class Appointment2Form(forms.ModelForm):
 
         'type': 'text',
         'name':'date',
-        'placeholder':'Gorus Tarixi',
+        'placeholder':'Görüş tarixi',
         'id':'datepicker'
     }))
 
@@ -176,7 +176,7 @@ class Appointment2Form(forms.ModelForm):
 
 
         'name':'message',
-        'placeholder':'Sizin mesaj'
+        'placeholder':'Mesajınız'
 
 
 

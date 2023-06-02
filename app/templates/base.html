@@ -101,7 +101,6 @@
                                 <li><i class="icon-1"></i>E-poçt: <a href="mailto:{{setting.email}}">{{setting.email}}</a></li>
                                 <li><i class="icon-2"></i>{{setting.adress}}</li>
                                 <li><i class="icon-3"></i>{{ setting.number_2 }}</li>
-                                <li>{{ setting.number_2 }}</li>
                                 <li>{{ setting.number_3 }}</li>
                             </ul>
                         </div>
@@ -121,16 +120,17 @@
                                 <li><a href="{{setting.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
                                 {% endif %}
 
-                                {% comment %}
+
                                 {% if setting.youtube %}
                                 <li><a href="{{setting.youtube}}"><i class="fab fa-youtube"></i></a></li>
                                 {% endif %}
-                                {% endcomment %}
 
+
+                                {% comment %}
                                 {% if setting.youtube %}
                                 <li><a href="{{setting.youtube}}"><i class="fa-brands fa-tiktok"></i></a></li>
                                 {% endif %}
-
+                                {% endcomment %}
 
                             </ul>
 
@@ -486,7 +486,7 @@
 
     <div class="footer-bottom centred">
         <div class="auto-container">
-            <div class="copyright"><p><a href="https://vrproduction.az/">VR Production</a> &copy; 2023 All Right Reserved</p></div>
+            <div class="copyright"><p><a href="https://vrproduction.az/">VR Production</a> &copy; 2023  Bütün hüquqlar qorunur</p></div>
         </div>
     </div>
 </footer>
