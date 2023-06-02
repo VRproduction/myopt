@@ -2152,16 +2152,16 @@ flex-direction:row;}
 }
 
 .service-section .tab-btns li{
-  position: relative;
-  display: inline-block;
-  width: 180px;
-  background: #ebeced;
-  border-radius: 30px;
-  padding: 36px 20px 32px 20px;
-  cursor: pointer;
-  margin: 15px 3.5px;
-  z-index: 1;
-  transition: all 500ms ease;
+      position: relative;
+    display: inline-block;
+    width: 180px;
+    background: #ebeced;
+    border-radius: 30px;
+    padding: 36px 11px 43px 20px;
+    cursor: pointer;
+    margin: 15px 3.5px;
+    z-index: 1;
+    transition: all 500ms ease;
 }
 
 .service-section .tab-btns li:before{
@@ -8241,22 +8241,23 @@ flex-direction:row;}
 font-size:40px;}
 }
 .service-section .tab-btns li .icon-box {
-    width: 120px;
+        width: 128px;
     position: relative;
     display: inline-block;
-    font-size: 30px;
-    line-height: 50px;
+    font-size: 16px;
+    line-height: 36px;
     color: #141417;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
     transition: all 500ms ease;
 }
 
 .service-section .tab-btns li h4 {
-    justify-content: center;
+        justify-content: center;
     position: relative;
     display: flex;
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 25px;
     font-weight: 600;
+    margin-top: 8%;
     transition: all 500ms ease;
 }
