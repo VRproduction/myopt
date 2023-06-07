@@ -14,7 +14,6 @@ def index(request):
     whoweare = WhoWeAre.objects.all()
     sliders = IndexSlider.objects.all()
     services = Service.objects.all().order_by('order')[:4]
-    # services = Service.objects.all()[:3]
 
     whyus = WhyUs.objects.all()
     testimonials = Testimonial.objects.all()
