@@ -59,7 +59,7 @@ class ContactForm(forms.ModelForm):
 
         'type': 'text',
         'name':'username',
-        'placeholder':'Adınız'
+        'placeholder':'Ad, Soyad'
 
 
 
@@ -132,7 +132,7 @@ class Appointment2Form(forms.ModelForm):
 
         'type': 'text',
         'name':'phone',
-        'placeholder':'Adınız'
+        'placeholder':'Ad, Soyad'
 
 
 

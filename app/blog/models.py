@@ -3,6 +3,8 @@ from ckeditor.fields import RichTextField
 from .helper import seo
 from django.urls import reverse
 from datetime import date
+from django_resized import ResizedImageField
+from django.utils.translation import gettext_lazy as _
 
 
 
@@ -254,3 +256,13 @@ class Contact(models.Model):
         return self.email
 
 
+
+class Certificate(models.Model):
+    # certificate_image = ResizedImageField(size=[410, 410], upload_to='certificate_images', blank=True, null=True)
+    certificate_image = models.ImageField(
+        _('image'),
+        upload_to='certificate_images',
+        null=True,
+        blank=True,
+        help_text=_('W: 410, H: 410')
+    )

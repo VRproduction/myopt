@@ -11,6 +11,7 @@ admin.site.register(Contact)
 # admin.site.register(ArticleCategory)
 # admin.site.register(Article)
 # admin.site.register(Author)
+admin.site.register(Certificate)
 
 
 ####################################################################

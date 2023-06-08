@@ -44,10 +44,17 @@ def index(request):
     return render(request,"index.html", context)
 
 
+"""
+def certificate(request):
+    certificates = Certificate.objects.all()
+    return render(request, 'certificates.html')
+"""
+
+
 def gallery(request):
     context={}
     galleries = Gallery.objects.all()
-
+    certificates = Certificate.objects.all()
 
     page = request.GET.get('page')
     paginator = Paginator(galleries, 9)
@@ -61,11 +68,8 @@ def gallery(request):
 
         galleries=paginator.page(paginator.num_pages)
 
-
-
-
     context["galleries"]=galleries
-
+    context["certificates"]=certificates
 
     return render(request,"gallery.html",context)
 
@@ -207,3 +211,6 @@ def categories(request):
     return HttpResponse('CATEGORIES ARE HERE')
 
 """
+
+
+
