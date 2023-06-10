@@ -120,17 +120,15 @@
                                 <li><a href="{{setting.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
                                 {% endif %}
 
-
                                 {% if setting.youtube %}
                                 <li><a href="{{setting.youtube}}"><i class="fab fa-youtube"></i></a></li>
                                 {% endif %}
 
-
-                                {% comment %}
-                                {% if setting.youtube %}
-                                <li><a href="{{setting.youtube}}"><i class="fa-brands fa-tiktok"></i></a></li>
+                                {% if setting.tiktok %}
+                                <li><a href="{{setting.youtube}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
                                 {% endif %}
-                                {% endcomment %}
+
+
 
                             </ul>
 
@@ -159,7 +157,7 @@
 
                         <div class="logo-box">
                             {% if setting.logo %}
-                            <figure class="logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></figure>
+                            <figure class="logo" style="display:none;"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></figure>
                             {% endif %}
                         </div>
                         {% endfor %}
@@ -410,6 +408,11 @@
                                 {% if setting.youtube %}
                                 <li><a href="{{setting.youtube}}"><i class="fab fa-youtube"></i></a></li>
                                 {% endif %}
+
+                                {% if setting.tiktok %}
+                                <li><a href="{{setting.youtube}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
+                                {% endif %}
+
                             </ul>
                             {% endfor %}
                         </div>

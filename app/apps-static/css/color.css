@@ -9,11 +9,11 @@
 }
 
 .header-top .info li a:hover{
-	color: #03c0b4;
+	color: #FA027A;
 }
 
 .header-top .social-links li a:hover{
-	color: #03c0b4;
+	color: #FA027A;
 }
 
 .theme-btn.btn-one{
@@ -26,7 +26,7 @@
 
 .main-menu .navigation > li.current > a,
 .main-menu .navigation > li:hover > a{
-  color: #03c0b4;
+  color: #FA027A;
 }
 
 .main-menu .navigation > li > ul,
@@ -144,7 +144,7 @@
 }
 
 .project-block-one .inner-box .image-box{
-	background: #f17732;
+	background: #FA027A;
 }
 
 .news-block-one .inner-box .lower-content .category a{
@@ -152,7 +152,7 @@
 }
 
 .news-block-one .inner-box .lower-content .category a:hover{
-  background: #f17732;
+  background: #FA027A;
 }
 
 .news-block-one .inner-box .lower-content h3 a:hover{
@@ -164,7 +164,7 @@
 }
 
 .news-block-one .inner-box .lower-content .link a:hover{
-  color: #f17732;
+  color: #FA027A;
 }
 
 .google-map-section .content-box .title{
@@ -185,11 +185,11 @@
 
 .main-footer .widget-section .about-widget .social-links li a:hover{
   border-color: #f17732;
-  background: #f17732;
+  background: #FA027A;
 }
 
 .main-footer .widget-section .links-widget .links-list li a:hover{
-  color: #f17732;
+  color: #FA027A;
 }
 
 .main-footer .widget-section .contact-widget .info li a:hover{
@@ -197,7 +197,7 @@
 }
 
 .footer-bottom a:hover{
-  color: #f17732;
+  color: #FA027A;
 }
 
 .header-style-two .header-top .info li i{
@@ -243,11 +243,11 @@
 }
 
 .service-block-one .inner-box .lower-content .link a:hover{
-  color: #03c0b4;
+  color: #FA027A;
 }
 
 .content_block_five .content-box .inner-box .single-item h4 a:hover{
-	color: #03c0b4;
+	color: #FA027A;
 }
 
 .team-block-two .inner-box .share-box .share-links li a:hover{
@@ -335,7 +335,7 @@
 }
 
 .page-title .content-box .bread-crumb li a:hover{
-  color: #f17732;
+  color: #FA027A;
 }
 
 .service-sidebar .category-list li a:hover,
@@ -524,7 +524,7 @@
 }
 
 .contact-info-section .single-item p a:hover{
-  color: #f17732;
+  color: #FA027A;
 }
 
 .contact-style-two .form-inner .form-group input:focus,

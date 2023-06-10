@@ -215,10 +215,10 @@ class GeneralSettings(models.Model):
     footer_logo = models.FileField(verbose_name="Footer logo(150x38)",help_text="Saytın aşağısındakı logo", blank=True, null=True,upload_to="general_settings")
 
     facebook = models.CharField(max_length=1500, verbose_name="Facebook", blank=True)
-    linkedin = models.CharField(max_length=1500, verbose_name="Linkedin", blank=True)
+    # linkedin = models.CharField(max_length=1500, verbose_name="Linkedin", blank=True)
     instagram = models.CharField(max_length=1500, verbose_name="Instagram", blank=True)
     youtube = models.CharField(max_length=1500, verbose_name="Youtube", blank=True)
-    # tiktok = models.CharField(max_length=1500, verbose_name="Linkedin", blank=True)
+    tiktok = models.CharField(max_length=1500, verbose_name="Linkedin", blank=True)
 
 
     footer_text = models.TextField(verbose_name="Footer Ucun tekst",null=True)
