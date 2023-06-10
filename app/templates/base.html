@@ -116,16 +116,12 @@
                                 <li><a href="{{setting.instagram}}"><i class="fab fa-instagram"></i></a></li>
                                 {% endif %}
 
-                                {% if setting.linkedin %}
-                                <li><a href="{{setting.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
-                                {% endif %}
-
                                 {% if setting.youtube %}
                                 <li><a href="{{setting.youtube}}"><i class="fab fa-youtube"></i></a></li>
                                 {% endif %}
 
                                 {% if setting.tiktok %}
-                                <li><a href="{{setting.youtube}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
+                                <li><a href="{{setting.tiktok}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
                                 {% endif %}
 
 
@@ -401,16 +397,13 @@
                                 <li><a href="{{setting.instagram}}"><i class="fab fa-instagram"></i></a></li>
                                 {% endif %}
 
-                                {% if setting.linkedin %}
-                                <li><a href="{{setting.linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
-                                {% endif %}
 
                                 {% if setting.youtube %}
                                 <li><a href="{{setting.youtube}}"><i class="fab fa-youtube"></i></a></li>
                                 {% endif %}
 
                                 {% if setting.tiktok %}
-                                <li><a href="{{setting.youtube}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
+                                <li><a href="{{setting.tiktok}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
                                 {% endif %}
 
                             </ul>
@@ -432,9 +425,10 @@
                         </div>
                         <div class="widget-content">
                             <ul class="links-list clearfix">
+                                <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
                                 <li><a href="{% url 'about' %}">Haqqımda</a></li>
                                 <li><a href="{% url 'services' %}">Xidmətlər</a></li>
-                                <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
+                                <li><a href="{% url 'blogs' %}">Bloqlar</a></li>
                                 <li><a href="{% url 'gallery' %}">Qalereya</a></li>
                                 <li><a href="{% url 'contact' %}">Əlaqə</a></li>
                             </ul>
