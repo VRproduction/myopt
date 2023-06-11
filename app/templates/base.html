@@ -121,9 +121,14 @@
                                 {% endif %}
 
                                 {% if setting.tiktok %}
-                                <li><a href="{{setting.tiktok}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
+                                <li><a href="{{setting.tiktok}}"><img src="static/images/tik-tok.png" style="width:28px;"></a></li>
                                 {% endif %}
 
+                                {% comment %}
+                                    {% if setting.tiktok %}
+                                    <li><a href="{{setting.tiktok}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
+                                    {% endif %}
+                                {% endcomment %}
 
 
                             </ul>
@@ -403,7 +408,7 @@
                                 {% endif %}
 
                                 {% if setting.tiktok %}
-                                <li><a href="{{setting.tiktok}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
+                                <li><a href="{{setting.tiktok}}"><img src="static/images/tik-tok.png" style="width:28px;"></a></li>
                                 {% endif %}
 
                             </ul>
