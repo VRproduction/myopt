@@ -124,12 +124,6 @@
                                 <li><a href="{{setting.tiktok}}"><img src="static/images/tik-tok.png" style="width:28px;"></a></li>
                                 {% endif %}
 
-                                {% comment %}
-                                    {% if setting.tiktok %}
-                                    <li><a href="{{setting.tiktok}}"><img src="/media/tik-tok.png" style="width:28px;"></a></li>
-                                    {% endif %}
-                                {% endcomment %}
-
 
                             </ul>
 
@@ -146,7 +140,7 @@
                 <div class="auto-container-menu">
                     {% for setting in general_settings %}
 
-                        <div class="logo-box-mobile" style="display:none;">
+                        <div class="logo-box-mobile">
                             {% if setting.logo %}
                             <figure class="logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></figure>
                             {% endif %}
@@ -158,7 +152,7 @@
 
                         <div class="logo-box">
                             {% if setting.logo %}
-                            <figure class="logo" style="display:none;"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></figure>
+                            <figure class="logo" ><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></figure>
                             {% endif %}
                         </div>
                         {% endfor %}
