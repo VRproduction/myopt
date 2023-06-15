@@ -282,12 +282,15 @@
         <!-- Mobile Menu  -->
         <div class="mobile-menu">
             <div class="menu-backdrop"></div>
-            <div class="close-btn"><i class="fas fa-times"></i></div>
+
 
             <nav class="menu-box">
                 {% for setting in general_settings %}
                 {% if setting.logo %}
-                <div class="nav-logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a></div>
+                <div class="nav-logo"><a href="{% url 'index' %}"><img style="width:100px ;height:90px;" src="{{setting.logo.url}}" alt=""></a>
+                 <div class="close-btn"><i class="fas fa-times" style="font-size:27px;"></i></div>
+                </div>
+
                 {% endif %}
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
