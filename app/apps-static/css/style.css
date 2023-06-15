@@ -98,14 +98,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-  @media (min-width:1200px) {
-  .container {
-    max-width: 1200px;
-    padding: 0px 15px;
-  }
 
-
-}
 
 .large-container{
   max-width: 1550px;
@@ -1305,7 +1298,7 @@ img {
   height: 100%;
   max-height: 100%;
   overflow-y: auto;
-  background: #141417;
+  background: black;
   padding: 0px 0px;
   z-index: 5;
   opacity: 0;
@@ -1676,6 +1669,7 @@ flex-direction:row;}
   -ms-transition: all 1000ms ease;
   -o-transition: all 1000ms ease;
   transition: all 1000ms ease;
+  justify-content:left;
 }
 
 .banner-carousel .active .content-box .btn-box{
@@ -1691,7 +1685,7 @@ flex-direction:row;}
   -o-transition-delay: 1000ms;
   transition-delay: 1000ms;
   display:flex;
-  justify-content:center;
+  justify-content:left;
 }
 
 .banner-carousel .content-box .icon-list{
@@ -1707,7 +1701,7 @@ flex-direction:row;}
   -o-transition-delay: 1000ms;
   transition-delay: 1000ms;
   display: flex;
-  justify-content:center;
+  justify-content:left;
 }
 
 .banner-carousel .content-box .icon-list li{
@@ -2031,17 +2025,17 @@ flex-direction:row;}
   animation: zoom-fade 4s infinite linear;
 }
 
-.sec-title .sub-title{
-  position: relative;
-  display: inline-block;
-  font-size: 90px;
-  line-height: 80px;
-  font-family: montserrat;
-  font-weight: 800;
-  background: -webkit-linear-gradient(0deg, #f8ece3, #def4f1 100%);
-  color: transparent !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+.sec-title .sub-title {
+    position: relative;
+    display: inline-block;
+    font-size: 97px;
+    line-height: 160px;
+    font-family: montserrat;
+    font-weight: 800;
+    background: -webkit-linear-gradient(0deg, #f8ece3, #def4f1 100%);
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
 }
 
 .sec-title.left .sub-title{
@@ -2415,7 +2409,8 @@ flex-direction:row;}
 /** testimonial-section **/
 
 .testimonial-section{
-  padding: 112px 0px 110px 0px;
+  padding: 0px 0px 110px 0px;
+  background-color:#F7F6FB;
   /** padding: 0px 0px 0px 0px; **/
 }
 
@@ -8263,4 +8258,19 @@ font-size:40px;}
     font-weight: 600;
     margin-top: 8%;
     transition: all 500ms ease;
+}
+
+ @media (min-width:1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0px 15px;
+  }
+.service-section .tab-btns li .icon-box {
+    width: 128px;
+    position: relative;
+    display: inline-block;
+    font-size: 44px;
+
+}
+
 }
