@@ -218,7 +218,7 @@ class GeneralSettings(models.Model):
     # linkedin = models.CharField(max_length=1500, verbose_name="Linkedin", blank=True)
     instagram = models.CharField(max_length=1500, verbose_name="Instagram", blank=True)
     youtube = models.CharField(max_length=1500, verbose_name="Youtube", blank=True)
-    tiktok = models.CharField(max_length=1500, verbose_name="Linkedin", blank=True)
+    tiktok = models.CharField(max_length=1500, verbose_name="TikTok", blank=True)
 
 
     footer_text = models.TextField(verbose_name="Footer Ucun tekst",null=True)
