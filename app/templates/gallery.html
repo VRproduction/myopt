@@ -6,232 +6,158 @@
 {% block body %}
 
 
-        <!-- Page Title -->
-        <section class="page-title">
-            <div class="bg-layer" style="background-image: url({% static 'images/baner_web.png' %});"></div>
-            <div class="auto-container">
-                <div class="content-box">
-                    <h1>Qalereya</h1>
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="index-2.html">Ana Səhifə</a></li>
-                        <li>Qalereya</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- End Page Title -->
+<!-- Page Title -->
+<section class="page-title">
+    <div class="bg-layer" style="background-image: url({% static 'images/baner_web.png' %});"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <h1>Qalereya</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href="index-2.html">Ana Səhifə</a></li>
+                <li>Qalereya</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Page Title -->
 
 
 
-
-
-
-
-                        <div class="btns-certf d-flex justify-content-center" style="width:100%; margin-top:3%;">
-                          <button type="button" class="btn ms-3" style="width:10%; margin-left:2%; height:50px; font-size:20px; border-radius:25px; background-color:#FA027A; color:white;" >Media</button>
-                            <button type="button" class="btn  ms-3" style="width:10%; margin-left:2%; height:50px; font-size:20px; border-radius:25px; background-color:#FA027A; color:white;">Sertifikatlar</button>
-
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {% comment %}
-       <h4 style="text-align:center">
-        <a href="{% url 'services' %}" class="default-btn"> <br> <br>
-            <button class="theme-btn btn-one" type="submit" name="submit-form"> Daha çox </button>
-        </a>
-        </h4>
-
-
-        <div class="tp-project-area pt-90 pb-120 p-relative" style="background: var(--gradient-primary);">
-            <div class="container">
-                <div class="row justify-content-center mb-10">
-                    <div class="col-10 p-0 text-center">
-                        <div class="nav tp-project-tab-button masonary-menu" style="border-radius: 10px;" id="nav-tab"
-                             role="tablist">
-                            <button class="nav-links active" id="nav-branding-tab" href="#digital" data-bs-toggle="tab" data-bs-target="#branding"
-                                    type="button" role="tab" aria-controls="branding" aria-selected="true">
-                                <span>Qalereya</span></button>
-
-                            <button class="nav-links" id="nav-all-tab" href="#video" data-bs-toggle="tab" data-bs-target="#all"
-                                    type="button" role="tab" aria-controls="all" aria-selected="true"><span>Sertifikatlar</span>
-                            </button>
-
-                        </div>
-                    </div>
+<section class="our-gallery pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="gallery-menu text-center">
+                    <nav>
+                        <ul>
+                            <li class="filter" data-filter="all"><a
+                                    class="btn-gallery btn-secondary btn-lg shadow">Hamısını gör</a></li>
+                            <li class="filter" data-filter="Galleries"><a
+                                    class="btn-gallery btn-secondary btn-lg shadow">Media</a></li>
+                            <li class="filter" data-filter="Sertifikat"><a
+                                    class="btn-gallery btn-secondary btn-lg shadow">Sertifikat</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
-
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-content" id="nav-tabContent5">
-                <div class="tab-pane fade  show active " id="branding" role="tabpanel" aria-labelledby="nav-branding-tab"
-                     tabindex="0">
-                        <div class="row justify-content-center mb-80">
-                            <div class="col-10 p-0 text-center">
-                                <div class="nav nav-tabs tp-project-tab-button masonary-menu project-tab-button-jesus" id="nav-branding"
-                                     role="tablist">
-                                    <button class="nav-links active" id="nav-smm-tab" href="#smm" data-bs-toggle="tab" data-bs-target="#smm"
-                                            type="button" role="tab" aria-controls="smm" aria-selected="true"><span>SMM</span>
-                                    </button>
-                                    <button class="nav-links" id="nav-tiktok-tab" href="#tiktok" data-bs-toggle="tab" data-bs-target="#tiktok"
-                                            type="button" role="tab" aria-controls="tiktok" aria-selected="true">
-                                        <span>Tik Tok</span></button>
-
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-        {% endcomment %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- portfolio-page-section -->
-        <section class="portfolio-page-section p_relative">
-            <div class="auto-container">
-                <div class="sortable-masonry">
-
-                    <div class="items-container row clearfix">
-                        {% for gallery in galleries %}
-                        <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column">
-                            <div class="project-block-one">
-                                <div class="inner-box">
-                                    <figure class="image-box"><img style="width:410px ;height:410px;object-fit:cover;" src="{{gallery.image.url}}" alt=""></figure>
-                                    <div class="view-btn"><a href="{{gallery.image.url}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-33"></i></a></div>
-                                    <div class="text">
-                                        <h3><a href="{{gallery.link}}" target="_blank">{{gallery.link_name}}</a></h3>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            {% if galleries.has_other_pages %}
-                <div class="pagination-wrapper centred centred">
-                    <ul class="pagination clearfix">
-                        {% if galleries.has_previous %}
-                        <li><a href="?page={{galleries.previous_page_number}}"><i class="fas fa-angle-left"></i></a></li>
-                        {% endif %}
-                        {% for pg in galleries.paginator.page_range %}
-                        {% if galleries.number == pg %}
-                        <li><a href="?page={{pg}}" class="current">{{pg}}</a></li>
-                        {% else %}
-                        <li><a href="?page={{pg}}">{{pg}}</a></li>
-                        {% endif %}
-                        {% endfor %}
-                        {% if galleries.has_next %}
-                        <li><a href="?page={{galleries.next_page_number}}"><i class="fas fa-angle-right"></i></a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-                {% endif %}
-        </section>
-        <!-- portfolio-page-section end -->
-
-
-        <!-- subscribe-section -->
-        {% comment %} <section class="subscribe-section p_relative bg-color-2">
-            <div class="auto-container">
-                <div class="row clearfix">
-                    <div class="col-lg-6 col-md-12 col-sm-12 text-column">
+        <div class="row" id="gallery-filter">
+            <!-- Start single gallery -->
+            {% for i in galleries %}
+            <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column mix all Galleries">
+                <div class="project-block-one">
+                    <div class="inner-box">
+                        <figure class="image-box"><img style="object-fit:cover;" src="{{i.image.url}}" alt=""></figure>
+                        <div class="view-btn"><a href="{{i.image.url}}" class="lightbox-image"
+                                data-fancybox="gallery"><i class="icon-33"></i></a></div>
                         <div class="text">
-                            <h2><i class="icon-41"></i>Join Us & Increase Your <br />Business.</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
-                        <div class="form-inner ml_30 mt_5">
-                            <form action="http://azim.commonsupport.com/Optcare/index-3.html" method="post">
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Your email address" required="">
-                                    <button type="submit" class="theme-btn">Subscribe</button>
-                                </div>
-                            </form>
+                            <h3><a href="{{i.link}}" target="_blank">{{i.link_name}}</a></h3>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </section> {% endcomment %}
-        <!-- subscribe-section end -->
+
+            {% endfor %}
+            <!-- End single gallery -->
+
+            <!-- Start single gallery -->
+            {% for i in certificates %}
+            <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column mix all Sertifikat">
+                <div class="project-block-one">
+                    <div class="inner-box">
+                        <figure class="image-box"><img style="object-fit:cover;" src="{{ i.certificate_image.url }}"
+                                alt=""></figure>
+                        <div class="view-btn"><a href="{{ i.certificate_image.url }}" class="lightbox-image"
+                                data-fancybox="gallery"><i class="icon-33"></i></a></div>
+                        <div class="text">
+                            <h3><a href="{{i.link}}" target="_blank">{{i.link_name}}</a></h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- End single gallery -->
+        </div>
+    </div>
+</section>
+<!-- End our gallery -->
 
 
-        {% endblock body %}
+
+<!-- portfolio-page-section -->
+<section class="portfolio-page-section p_relative">
+    <!-- <div class="auto-container">
+        <div class="sortable-masonry">
+
+            <div class="items-container row clearfix">
+                {% for gallery in galleries %}
+                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column">
+                    <div class="project-block-one">
+                        <div class="inner-box">
+                            <figure class="image-box"><img style="width:410px ;height:410px;object-fit:cover;"
+                                    src="{{gallery.image.url}}" alt=""></figure>
+                            <div class="view-btn"><a href="{{gallery.image.url}}" class="lightbox-image"
+                                    data-fancybox="gallery"><i class="icon-33"></i></a></div>
+                            <div class="text">
+                                <h3><a href="{{gallery.link}}" target="_blank">{{gallery.link_name}}</a></h3>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div> -->
+    {% if galleries.has_other_pages %}
+    <div class="pagination-wrapper centred centred">
+        <ul class="pagination clearfix">
+            {% if galleries.has_previous %}
+            <li><a href="?page={{galleries.previous_page_number}}"><i class="fas fa-angle-left"></i></a></li>
+            {% endif %}
+            {% for pg in galleries.paginator.page_range %}
+            {% if galleries.number == pg %}
+            <li><a href="?page={{pg}}" class="current">{{pg}}</a></li>
+            {% else %}
+            <li><a href="?page={{pg}}">{{pg}}</a></li>
+            {% endif %}
+            {% endfor %}
+            {% if galleries.has_next %}
+            <li><a href="?page={{galleries.next_page_number}}"><i class="fas fa-angle-right"></i></a></li>
+            {% endif %}
+        </ul>
+    </div>
+    {% endif %}
+</section>
+<!-- portfolio-page-section end -->
+
+
+<!-- subscribe-section -->
+{% comment %} <section class="subscribe-section p_relative bg-color-2">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-lg-6 col-md-12 col-sm-12 text-column">
+                <div class="text">
+                    <h2><i class="icon-41"></i>Join Us & Increase Your <br />Business.</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                <div class="form-inner ml_30 mt_5">
+                    <form action="http://azim.commonsupport.com/Optcare/index-3.html" method="post">
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your email address" required="">
+                            <button type="submit" class="theme-btn">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> {% endcomment %}
+<!-- subscribe-section end -->
+
+
+{% endblock body %}

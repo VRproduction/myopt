@@ -30,7 +30,6 @@ def index(request):
     else:
         form = AppointmentForm()
 
-
     context["form"] = form
     context["sliders"] = sliders
     context["whoweare"] = whoweare
@@ -41,7 +40,7 @@ def index(request):
     context["articles"] = articles
     context["offers"] = offers
 
-    return render(request,"index.html", context)
+    return render(request, "index.html", context)
 
 
 """
@@ -52,7 +51,7 @@ def certificate(request):
 
 
 def gallery(request):
-    context={}
+    context = {}
     galleries = Gallery.objects.all()
     certificates = Certificate.objects.all()
 
@@ -60,23 +59,22 @@ def gallery(request):
     paginator = Paginator(galleries, 9)
 
     try:
-        galleries=paginator.page(page)
+        galleries = paginator.page(page)
 
     except PageNotAnInteger:
-        galleries= paginator.page(1)
+        galleries = paginator.page(1)
     except EmptyPage:
 
-        galleries=paginator.page(paginator.num_pages)
+        galleries = paginator.page(paginator.num_pages)
 
-    context["galleries"]=galleries
-    context["certificates"]=certificates
+    context["galleries"] = galleries
+    context["certificates"] = certificates
 
-    return render(request,"gallery.html",context)
-
+    return render(request, "gallery.html", context)
 
 
 def about(request):
-    context={}
+    context = {}
 
     whoweare = WhoWeAre.objects.all()
     services = Service.objects.all()
@@ -89,38 +87,34 @@ def about(request):
     context["offers"] = offers
 
     # return render(request,"about.html",context)
-    return render(request,"about.html",context)
+    return render(request, "about.html", context)
 
 
 def services(request):
-    context={}
-
+    context = {}
 
     services = Service.objects.all()
 
     context["services"] = services
 
+    return render(request, "services.html", context)
 
-    return render(request,"services.html",context)
 
+def service_detail(request, slug):
+    context = {}
 
-def service_detail(request,slug):
-    context={}
-
-    service = get_object_or_404(Service,slug=slug)
+    service = get_object_or_404(Service, slug=slug)
 
     services = Service.objects.all()
 
-    context["service"]=service
-    context["services"]=services
+    context["service"] = service
+    context["services"] = services
 
-    return render(request,"service_detail.html",context)
-
-
+    return render(request, "service_detail.html", context)
 
 
 def contact(request):
-    context={}
+    context = {}
 
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -133,12 +127,11 @@ def contact(request):
         form = ContactForm()
 
     context["form"] = form
-    return render(request,"contact.html",context)
+    return render(request, "contact.html", context)
 
 
 def appointment(request):
     context = {}
-
 
     if request.method == 'POST':
         form = Appointment2Form(request.POST)
@@ -152,7 +145,7 @@ def appointment(request):
 
     context["form"] = form
 
-    return render(request,"appointment.html",context)
+    return render(request, "appointment.html", context)
 
 
 def blogs(request):
@@ -162,8 +155,7 @@ def blogs(request):
     return render(request, "blog.html", context)
 
 
-
-def blog_detail(request,slug):
+def blog_detail(request, slug):
     context = {}
 
     blog = get_object_or_404(Article, slug=slug)
@@ -177,24 +169,24 @@ def blog_detail(request,slug):
     return render(request, "blog_detail.html", context)
 
 
-def category_detail(request,slug):
+def category_detail(request, slug):
 
     context = {}
 
-    category = get_object_or_404(ArticleCategory,slug=slug)
+    category = get_object_or_404(ArticleCategory, slug=slug)
     blogs = Article.objects.filter(category_id=category.id)
 
     page = request.GET.get('page')
     paginator = Paginator(blogs, 6)
 
     try:
-        blogs=paginator.page(page)
+        blogs = paginator.page(page)
 
     except PageNotAnInteger:
-        blogs= paginator.page(1)
+        blogs = paginator.page(1)
     except EmptyPage:
 
-        blogs=paginator.page(paginator.num_pages)
+        blogs = paginator.page(paginator.num_pages)
 
     context["category"] = category
     context["blogs"] = blogs
@@ -211,6 +203,3 @@ def categories(request):
     return HttpResponse('CATEGORIES ARE HERE')
 
 """
-
-
-
