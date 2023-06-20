@@ -256,5 +256,5 @@ class Contact(models.Model):
 
 
 class Certificate(models.Model):
-    # certificate_image = ResizedImageField(size=[410, 410], upload_to='certificate_images', blank=True, null=True)
-    certificate_image = models.FileField(upload_to="certificate_image")
+    certificate_image = ResizedImageField(size=[410, 410], upload_to='certificate_images', blank=True, null=True)
+    # certificate_image = models.FileField(upload_to="certificate_image")

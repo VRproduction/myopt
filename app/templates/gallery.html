@@ -28,6 +28,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="gallery-menu text-center">
+
                     <nav>
                         <ul>
                             <li class="filter" data-filter="all"><a
@@ -38,9 +39,11 @@
                                     class="btn-gallery btn-secondary btn-lg shadow">Sertifikat</a></li>
                         </ul>
                     </nav>
+
                 </div>
             </div>
         </div>
+
         <div class="row" id="gallery-filter">
             <!-- Start single gallery -->
             {% for i in galleries %}
@@ -57,9 +60,9 @@
                     </div>
                 </div>
             </div>
-
             {% endfor %}
             <!-- End single gallery -->
+
 
             <!-- Start single gallery -->
             {% for i in certificates %}
@@ -78,8 +81,8 @@
                 </div>
             </div>
             {% endfor %}
-
             <!-- End single gallery -->
+
         </div>
     </div>
 </section>
@@ -112,6 +115,7 @@
             </div>
         </div>
     </div> -->
+
     {% if galleries.has_other_pages %}
     <div class="pagination-wrapper centred centred">
         <ul class="pagination clearfix">
