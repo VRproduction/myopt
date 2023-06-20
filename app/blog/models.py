@@ -34,6 +34,13 @@ class WhoWeAre(models.Model):
         verbose_name_plural = "Who We Are"
 
 
+
+
+
+
+
+
+
 class WhoTitle1(models.Model):
     name = models.CharField(max_length=200)
     who = models.ForeignKey(

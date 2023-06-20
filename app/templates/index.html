@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-
+{% load i18n %}
 
 
 
@@ -32,7 +32,7 @@
                                 <h2 class="p_relative d_block fs_70 lh_80 fw_bold">{{slider.big_title}}</h2>
                                 <p class="p_relative d_block fs_18">{{slider.description}}</p>
                                 <div class="btn-box">
-                                    <a href="{% url 'contact' %}" class="theme-btn btn-one">İndi Əlaqə Saxlayın</a>
+                                    <a href="{% url 'contact' %}" class="theme-btn btn-one">{% trans 'İndi Əlaqə Saxlayın' %}</a>
                                </div>
 
 

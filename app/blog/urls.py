@@ -14,7 +14,7 @@ urlpatterns = [
     path('blogs/', blogs, name="blogs"),
     path('blog_detail/<slug>/', blog_detail, name="blog_detail"),
 
-    # path('categories/', categories, name="category"),
+    path('asd/', asd, name="asd"),
     path('category_detail/<slug>/', category_detail, name="category_detail"),
 
 ]

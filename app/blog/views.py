@@ -4,6 +4,19 @@ from blog.forms import *
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from blog.views import *
+from django.urls import translate_url
+from django.conf import settings
+# from settings import EMAIL_HOST_USER
+
+def asd(request):
+    return render(request, 'asd.html')
+
+def set_language(request, lang_code):
+    url = request.META.get("HTTP_REFERER", None)
+    response = redirect(translate_url(url, lang_code))
+    response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
+
+    return response
 
 
 def index(request):
@@ -41,13 +54,6 @@ def index(request):
     context["offers"] = offers
 
     return render(request, "index.html", context)
-
-
-"""
-def certificate(request):
-    certificates = Certificate.objects.all()
-    return render(request, 'certificates.html')
-"""
 
 
 def gallery(request):
@@ -115,7 +121,33 @@ def service_detail(request, slug):
 
 def contact(request):
     context = {}
+    if request.method == 'POST':
 
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        data = {
+            'name': name,
+            'email': email,
+            'phone': phone,
+            'message': message,
+            'subject': subject,
+
+        }
+        #message = render_to_string('mail-murciyyetelaqe.html', data)
+        send_mail(
+            "Sizə gulshendikmen.az saytından müraciət gəlib",
+            data,
+            # settings.EMAIL_HOST_USER,
+            'info @ gulshendikmen.az',
+            ['info@sudvezixercengi.az'],
+            fail_silently=False, # html_message=message
+        )
+
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -125,8 +157,9 @@ def contact(request):
             return redirect(request.META['HTTP_REFERER'])
     else:
         form = ContactForm()
-
+    
     context["form"] = form
+    """
     return render(request, "contact.html", context)
 
 
