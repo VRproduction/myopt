@@ -97,6 +97,7 @@ def about(request):
     return render(request, "about.html", context)
 
 
+
 def services(request):
     context = {}
 
