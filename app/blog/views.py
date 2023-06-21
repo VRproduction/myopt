@@ -6,7 +6,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from blog.views import *
 from django.urls import translate_url
 from django.conf import settings
-# from settings import EMAIL_HOST_USER
+from django.core.mail import send_mail
+
 
 def asd(request):
     return render(request, 'asd.html')
@@ -120,7 +121,8 @@ def service_detail(request, slug):
 
 
 def contact(request):
-    context = {}
+    form = ContactForm(request.POST)
+
     if request.method == 'POST':
 
         name = request.POST.get('name')
@@ -137,15 +139,20 @@ def contact(request):
             'subject': subject,
 
         }
+        print('dasdasdasdasd', data)
+
         #message = render_to_string('mail-murciyyetelaqe.html', data)
         send_mail(
             "Sizə gulshendikmen.az saytından müraciət gəlib",
             data,
-            # settings.EMAIL_HOST_USER,
-            'info @ gulshendikmen.az',
-            ['info@sudvezixercengi.az'],
+            'info@gulshendikmen.az',
+            ['info@gulshendikmen.az'],
             fail_silently=False, # html_message=message
         )
+
+    context = {
+        'form': form
+               }
 
     """
     if request.method == 'POST':
@@ -160,7 +167,8 @@ def contact(request):
     
     context["form"] = form
     """
-    return render(request, "contact.html", context)
+
+    return render(request, "contact.html", context=context)
 
 
 def appointment(request):
