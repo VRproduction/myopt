@@ -145,7 +145,7 @@ def contact(request):
         send_mail(
             "Sizə gulshendikmen.az saytından müraciət gəlib",
             data,
-            settings.EMAIL_HOST_USER,
+            # settings.EMAIL_HOST_USER,
             # 'info@gulshendikmen.az',
             ['info@gulshendikmen.az'],
             fail_silently=False, # html_message=message
