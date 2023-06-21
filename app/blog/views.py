@@ -7,7 +7,7 @@ from blog.views import *
 from django.urls import translate_url
 from django.conf import settings
 from django.core.mail import send_mail
-
+from settings import EMAIL_HOST_USER
 
 def asd(request):
     return render(request, 'asd.html')
@@ -145,7 +145,8 @@ def contact(request):
         send_mail(
             "Sizə gulshendikmen.az saytından müraciət gəlib",
             data,
-            'info@gulshendikmen.az',
+            settings.EMAIL_HOST_USER,
+            # 'info@gulshendikmen.az',
             ['info@gulshendikmen.az'],
             fail_silently=False, # html_message=message
         )
