@@ -160,13 +160,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-
-
 CSRF_TRUSTED_ORIGINS = ['https://gulshendikmen.az']
 
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_HOST_USER = 'info@gulshendikmen.az'
 EMAIL_HOST_PASSWORD = 'gulsendikmen123'
-EMAIL_PORT = 465
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = True
+EMAIL_PORT = 2525
+DEFAULT_FROM_EMAIL = "info@gulshendikmen.az"
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+# EMAIL_PORT = 465
