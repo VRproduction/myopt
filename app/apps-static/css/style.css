@@ -99,6 +99,7 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
   -webkit-font-smoothing: antialiased;
+
 }
 
 
@@ -118,6 +119,10 @@ body {
   max-width: 1320px;
   padding: 0px 15px;
   margin: 0 auto;
+}
+
+.inner-box.services-container{
+margin: 0 auto
 }
 
 .small-container {
@@ -160,8 +165,15 @@ body {
   .logo-box-mobile {
     display: block !important;
   }
+
+  .bg-layer{
+  display:none
+  }
 }
 
+.bg-layer{
+  display: block
+  }
 
 .boxed_wrapper {
   position: relative;
@@ -408,6 +420,7 @@ h6 {
     display: none;
   }
 }
+
 
 @media screen and (max-width: 500px) {
   .handle-preloader .animation-preloader .spinner {
@@ -1911,12 +1924,35 @@ div#mCSB_1_container {
 
 
 /** feature-section **/
+.ilkin.icon-box {
+margin-left: -16px;
+margin-top: -10px;
+
+}
+
+.ilkin2.icon-box {
+margin-left: -21px;
+margin-top: -10px;
+
+}
+
+.ilkin3.icon-box {
+margin-left: 10px;
+margin-top: -10px;
+}
+
+.ilkin4.icon-box{
+margin-left: -27px;
+margin-top: -10px;
+
+}
 
 .feature-section .inner-container {
   background: #fff;
   padding: 59px 70px 70px 70px;
   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
   border-radius: 20px;
+
 }
 
 .feature-section .inner-container .shape-layer {
@@ -3313,6 +3349,9 @@ div#mCSB_1_container {
 
 .footer-top .top-inner .footer-logo {
   margin-bottom: 30px;
+}
+.widget-content .footer-logo{
+  display: flex
 }
 
 .footer-top .top-inner .footer-logo .logo {
@@ -8352,6 +8391,13 @@ div#mCSB_1_container {
 }
 
 
+
+
+
+
+
+
+
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
   .main-menu ul li {
@@ -8598,9 +8644,12 @@ div#mCSB_1_container {
     left: 39%;
   }
 
+
+
   .logo {
     text-align: center;
   }
+
 
   .single-help {
     margin-bottom: 30px;

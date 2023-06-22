@@ -2,19 +2,19 @@
 
 {% load static %}
 
-
 {% block body %}
 
 
 <!-- Page Title -->
 <section class="page-title">
-    <div class="bg-layer" style="background-image: url({% static 'images/baner_web.png' %});"></div>
+
+    <div class="bg-layer" style="background-image: url({% static 'images/mobilbaneraxirinci.png' %});"></div>
 
     <div class="auto-container">
         <div class="content-box">
             <h1>Qalereya</h1>
             <ul class="bread-crumb clearfix">
-                <li><a href="index-2.html">Ana Səhifə</a></li>
+                <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
                 <li>Qalereya</li>
             </ul>
         </div>
