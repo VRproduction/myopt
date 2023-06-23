@@ -421,6 +421,9 @@ h6 {
   }
 }
 
+.logo-box {
+    display: none;
+  }
 
 @media screen and (max-width: 500px) {
   .handle-preloader .animation-preloader .spinner {
@@ -428,13 +431,7 @@ h6 {
     width: 7em;
   }
 
-  .logo-box {
-    display: none;
-  }
 
-  .header-top {
-    display: none
-  }
 
   .handle-preloader .animation-preloader .txt-loading .letters-loading {
     font-size: 40px;
@@ -443,8 +440,20 @@ h6 {
 }
 
 
+@media (max-width: 1200px){
+
+
+  .header-top {
+    display: none
+  }
+  }
+
 .centred {
   text-align: center;
+}
+
+.tab-btn-box li{
+margin:0 auto 30px auto !important
 }
 
 .pull-left {
@@ -455,6 +464,14 @@ h6 {
   float: right;
 }
 
+.service-card {
+display: flex;
+justify-content: space-between
+}
+
+.gallery-container div{
+margin-bottom: 30px !important
+}
 
 figure {
   margin: 0px;
@@ -8250,11 +8267,31 @@ margin-top: -10px;
   transition: all 500ms ease;
 }
 
+
+  .logo-box {
+    display: block;
+  }
+
+  .nav-right{
+  display:block
+  }
+
+  @media (max-width:1200px) {
+    .logo-box, .nav-right{
+    display: none !important;
+  }
+  }
+
 @media (min-width:1200px) {
   .container {
     max-width: 1200px;
     padding: 0px 15px;
+
+    .logo-box {
+    display: block;
   }
+  }
+
 
   .service-section .tab-btns li .icon-box {
     width: 128px;
