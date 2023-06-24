@@ -6,12 +6,29 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from blog.views import set_language
 
+# from django.contrib.sitemaps.views import sitemap
+# from .sitemap import BlogSitemap, ServiceSitemap, PageSitemap, StaticSitemap
+
+
+"""
+sitemaps = {
+    'static': StaticSitemap,
+    'blog': BlogSitemap,
+    'service': ServiceSitemap,
+    'page': PageSitemap,
+}
+
+"""
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("blog.urls")),
+
     path('set_language/<str:lang_code>/', set_language, name="set_lang"),
+
+
 ]
+
 
 urlpatterns = [
     *i18n_patterns(*urlpatterns, prefix_default_language=False)
