@@ -4,28 +4,30 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from django.conf.urls.i18n import i18n_patterns
-from blog.views import set_language
+# from blog.views import set_language
 
 from django.contrib.sitemaps.views import sitemap
-# from .. sitemaps import WhoWeAreSitemap, ArticleSitemap, ServiceSitemap
+from blog.sitemap import ArticleSitemap, ServiceSitemap, ArticleCategorySitemap, StaticSitemap
+from django.views.generic import TemplateView
 
-"""
+
 sitemaps = {
-    'whoweare': WhoWeAreSitemap,
-    'article': ArticleSitemap,
-    'service': ServiceSitemap,
-} 
-"""
+    'article_sitemap': ArticleSitemap,
+    'service_sitemap': ServiceSitemap,
+    'article_category': ArticleCategorySitemap,
+    'static_sitemap': StaticSitemap,
+}
+
 
 urlpatterns = [
+    # path('set_language/<str:lang_code>/', set_language, name="set_lang"),
     path('admin/', admin.site.urls),
     path('', include("blog.urls")),
-
-    path('set_language/<str:lang_code>/', set_language, name="set_lang"),
-
-
+    path(
+        'sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'
+    ),
+    path('robots.txt/', TemplateView.as_view(template_name='robots.txt', content_type="text/plain")),
 ]
-
 
 urlpatterns = [
     *i18n_patterns(*urlpatterns, prefix_default_language=False)

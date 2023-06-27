@@ -46,6 +46,7 @@
                                         {% comment %}
                                  <img class="mainimg"  src="{% static 'images/ddd.png' %}">
                                     {% endcomment %}
+
                                     </div>
 
                                 <div>
@@ -658,8 +659,10 @@
                     <div class="icon-box"><img src="{% static 'images/icons/icon-2.png' %}" alt=""></div>
                     {% for setting in general_settings %}
 
+
+
                     {% comment %}
-                    <h3>Zəng et: <a>{{setting.number_1}}</a></h3>
+                    <h3>Zəng et: {{setting.number_2}} , {{setting.number_3}} </a></h3>
                     {% endcomment %}
 
                     <h3>Zəng et: {{setting.number_2}} , {{setting.number_3}} </a></h3>

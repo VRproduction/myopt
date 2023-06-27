@@ -9,8 +9,10 @@ from django.conf import settings
 from django.core.mail import send_mail
 # from settings import EMAIL_HOST_USER
 
+
 def asd(request):
     return render(request, 'asd.html')
+
 
 def set_language(request, lang_code):
     url = request.META.get("HTTP_REFERER", None)
@@ -142,13 +144,16 @@ def contact(request):
         }
         print('dasdasdasdasd', data)
 
-        #message = render_to_string('mail-murciyyetelaqe.html', data)
+        # message = render_to_string('mail-murciyyetelaqe.html', data)
         send_mail(
             "Sizə gulshendikmen.az saytından müraciət gəlib",
             data,
             # settings.EMAIL_HOST_USER,
-            'info@gulshendikmen.az',
-            ['info@gulshendikmen.az'],
+
+            # 'info@gulshendikmen.az',
+            # ['info@gulshendikmen.az'],
+            'ilkine2191@gmail.com',
+            ['ilkine2191@gmail.com'],
             fail_silently=False, # html_message=message
         )
 

@@ -21,6 +21,8 @@ ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
+SITE_ID = 1
+
 INSTALLED_APPS = [
     # 'modeltranslation',
     'django.contrib.admin',
@@ -30,9 +32,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'django.contrib.sitemaps',
-    'django.contrib.sites',
-
     'blog',
     'settings',
     'crispy_forms',
@@ -41,9 +40,14 @@ INSTALLED_APPS = [
     'corsheaders',
     # 'modeltranslation',
     'rosetta',
+
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+
+    # 'robots',
 ]
 
-SITE_ID = 1
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -168,7 +172,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 CSRF_TRUSTED_ORIGINS = ['https://gulshendikmen.az']
 
 
-
+"""
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_HOST_USER = 'info@gulshendikmen.az'
@@ -178,3 +182,11 @@ DEFAULT_FROM_EMAIL = "info@gulshendikmen.az"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 # EMAIL_PORT = 465
+"""
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'ilkine2191@gmail.com'
+EMAIL_HOST_PASSWORD = 'ankarailkinodessa'
