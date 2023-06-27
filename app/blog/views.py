@@ -8,6 +8,7 @@ from django.urls import translate_url
 from django.conf import settings
 from django.core.mail import send_mail
 # from settings import EMAIL_HOST_USER
+from django.template.loader import render_to_string
 
 
 def asd(request):
@@ -132,34 +133,22 @@ def contact(request):
         subject = request.POST.get('subject')
         message = request.POST.get('message')
 
-        data = {
-            'name': name,
-            'email': email,
-            'phone': phone,
-            'message': message,
-            'subject': subject,
-        }
-
-        data = f'Name: {name}, ' \
-               f'Email: {email}, ' \
-               f'Phone: {phone}, ' \
-               f'Message:{message}, ' \
-               f'Subject: {subject}'
-
+        data = f'Name: {name}, Email: {email}, Phone: {phone}, Message:{message}, Subject: {subject}'
         form = ContactForm()
-        print('2222222222222222222222222222222222222222222222222222222', data)
 
-        # message = render_to_string('mail-murciyyetelaqe.html', data)
+        message = render_to_string('to_mail.html', data)
         send_mail(
-            # "Sizə gulshendikmen.az saytından müraciət gəlib",
-            data,
+            "Sizə gulshendikmen.az saytından müraciət gəlib",
+            message,
+            # data,
             settings.EMAIL_HOST_USER,
             # 'info@gulshendikmen.az',
             # ['info@gulshendikmen.az'],
-            'ilkine2191@gmail.com',
+            # 'ilkine2191@gmail.com',
             ['ilkine2191@gmail.com'],
-            fail_silently=False, # html_message=message
+            fail_silently=False, html_message=message
         )
+
     context = {
         'form': form
                }
