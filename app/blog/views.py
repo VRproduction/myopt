@@ -154,9 +154,9 @@ def contact(request):
             # data,
             settings.EMAIL_HOST_USER,
             # 'info@gulshendikmen.az',
-            # ['info@gulshendikmen.az'],
+            ['info@gulshendikmen.az'],
             # 'ilkine2191@gmail.com',
-            ['ilkine2191@gmail.com'],
+            # ['ilkine2191@gmail.com'],
             fail_silently=False, html_message=text_to_doctor
         )
 

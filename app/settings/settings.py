@@ -172,19 +172,25 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 CSRF_TRUSTED_ORIGINS = ['https://gulshendikmen.az']
 
 
-"""
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_HOST_USER = 'info@gulshendikmen.az'
-EMAIL_HOST_PASSWORD = 'gulsendikmen123'
+# EMAIL_HOST_PASSWORD = 'gulsendikmen123'
+EMAIL_HOST_PASSWORD = 'MbuLeQTNrCxDtbfM0qXB'
+
 EMAIL_PORT = 2525
 DEFAULT_FROM_EMAIL = "info@gulshendikmen.az"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 # EMAIL_PORT = 465
+
+# password for app in mail.ru 'vupTwRY2sAEmUdD5AjCc'
+#  pass name 'passgulsenmail'
+# yeni pass 'MbuLeQTNrCxDtbfM0qXB'
+
+
 """
-
-
 # EMAIL_BACKEND = 'django.core.mail.console.smtp.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -193,3 +199,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'ilkine2191@gmail.com'
 # EMAIL_HOST_PASSWORD = 'ankarailkinodessa'
 EMAIL_HOST_PASSWORD = 'hcpkljyfxsmehfcl'
+"""
