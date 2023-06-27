@@ -125,9 +125,7 @@ def service_detail(request, slug):
 
 def contact(request):
     form = ContactForm(request.POST)
-
     if request.method == 'POST':
-
         name = request.POST.get('name')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
@@ -142,14 +140,13 @@ def contact(request):
             'subject': subject,
 
         }
-        print('dasdasdasdasd', data)
+        print('2222222222222222222222222222222222222222222222222222222', data)
 
         # message = render_to_string('mail-murciyyetelaqe.html', data)
         send_mail(
-            "Sizə gulshendikmen.az saytından müraciət gəlib",
+            # "Sizə gulshendikmen.az saytından müraciət gəlib",
             data,
-            # settings.EMAIL_HOST_USER,
-
+            settings.EMAIL_HOST_USER,
             # 'info@gulshendikmen.az',
             # ['info@gulshendikmen.az'],
             'ilkine2191@gmail.com',
