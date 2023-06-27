@@ -138,8 +138,11 @@ def contact(request):
             'phone': phone,
             'message': message,
             'subject': subject,
-
         }
+
+        data = f'Name: {name}, Email: {email}, Phone: {phone}, Message:{message}, Subject: {subject}'
+
+        form = ContactForm()
         print('2222222222222222222222222222222222222222222222222222222', data)
 
         # message = render_to_string('mail-murciyyetelaqe.html', data)
@@ -153,7 +156,6 @@ def contact(request):
             ['ilkine2191@gmail.com'],
             fail_silently=False, # html_message=message
         )
-
     context = {
         'form': form
                }
