@@ -140,7 +140,11 @@ def contact(request):
             'subject': subject,
         }
 
-        data = f'Name: {name}, Email: {email}, Phone: {phone}, Message:{message}, Subject: {subject}'
+        data = f'Name: {name}, ' \
+               f'Email: {email}, ' \
+               f'Phone: {phone}, ' \
+               f'Message:{message}, ' \
+               f'Subject: {subject}'
 
         form = ContactForm()
         print('2222222222222222222222222222222222222222222222222222222', data)
