@@ -30,8 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 'django.contrib.sites',
-    # 'django.contrib.sitemaps',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
 
     'blog',
     'settings',
@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     'corsheaders',
     # 'modeltranslation',
     'rosetta',
-
-
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
