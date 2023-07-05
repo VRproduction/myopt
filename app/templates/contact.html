@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 
 {% block body %}
@@ -14,11 +15,11 @@
 
             <div class="auto-container">
                 <div class="content-box">
-                    <h1>Əlaqə</h1>
+                    <h1>{% trans 'Əlaqə' %}</h1>
                     <ul class="bread-crumb clearfix">
 
-                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
-                        <li>Əlaqə</li>
+                        <li><a href="{% url 'index' %}">{% trans 'Ana Səhifə' %}</a></li>
+                        <li>{% trans 'Əlaqə' %}</li>
                     </ul>
                 </div>
             </div>
@@ -34,21 +35,21 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 info-column">
                         <div  class="single-item">
                             <div class="icon-box"><i class="icon-57"></i></div>
-                            <h3>Adres</h3>
+                            <h3>{% trans 'Adres' %}</h3>
                             <p>{{setting.adress}}</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 info-column">
                         <div class="single-item">
                             <div class="icon-box"><i class="icon-58"></i></div>
-                            <h3>E-poçt</h3>
+                            <h3>{% trans 'E-poçt' %}</h3>
                             <p><a href="mailto:{{setting.email}}">{{setting.email}}</a></p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 info-column">
                         <div class="single-item">
                             <div class="icon-box"><i class="icon-59"></i></div>
-                            <h3>Əlaqə nömrələri</h3>
+                            <h3>{% trans 'Əlaqə nömrələri' %}</h3>
 
                             <li><i class="icon-3"></i> {{ setting.number_2 }} {{ setting.number_3 }}</li>
 
@@ -72,27 +73,30 @@
                     <div class="col-lg-8 col-md-12 col-sm-12 big-column offset-lg-2">
                         <div class="form-inner">
 
-                            <h2>İndi Əlaqə Saxlayın</h2>
+
+
+
+                            <h2>{% trans 'İndi Əlaqə Saxlayın' %}</h2>
                             <form method="post"  id="contact-form">
                                 {% csrf_token %}
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        {{form.name}}
+                                        {{contact_form.name}}
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        {{form.email}}
+                                        {{contact_form.email}}
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        {{form.phone}}
+                                        {{contact_form.phone}}
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                        {{form.subject}}
+                                        {{contact_form.subject}}
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        {{form.message}}
+                                        {{contact_form.message}}
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn mr-0 centred">
-                                        <button class="theme-btn btn-one" type="submit" name="submit-form">Göndər</button>
+                                        <button class="theme-btn btn-one" type="submit" name="submit-form">{% trans 'Göndər' %}</button>
                                     </div>
                                 </div>
                             </form>

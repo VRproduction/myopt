@@ -31,9 +31,9 @@ class AppointmentForm(forms.ModelForm):
     date = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
 
         'type': 'text',
-        'name':'date',
-        'placeholder':'Görüş tarixi',
-        'id':'datepicker'
+        'name': 'date',
+        'placeholder': 'Görüş tarixi',
+        'id': 'datepicker'
     }))
 
 
@@ -49,17 +49,14 @@ class AppointmentForm(forms.ModelForm):
 
 
 
-
-
-
 class ContactForm(forms.ModelForm):
 
     name = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
 
 
         'type': 'text',
-        'name':'username',
-        'placeholder':'Ad, Soyad'
+        'name': 'username',
+        'placeholder': 'Ad, Soyad'
 
 
 
@@ -125,6 +122,9 @@ class ContactForm(forms.ModelForm):
 
 
 
+
+
+
 class Appointment2Form(forms.ModelForm):
 
     name = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
@@ -169,10 +169,7 @@ class Appointment2Form(forms.ModelForm):
         'id':'datepicker'
     }))
 
-
-
     message = forms.CharField(max_length=1200, widget=forms.Textarea(attrs={
-
 
 
         'name':'message',

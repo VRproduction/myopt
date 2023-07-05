@@ -1,11 +1,15 @@
+{% load i18n %}
+
+
 {% if messages %}
+
     {% for message in messages %}
         {% if message.tags == "success" %}
 
-                  
+
                         <div class="alert alert-success alert-dismissible">
                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                            <strong>Təbriklər!</strong> {{message}}
+                            <strong>{% trans 'Təbriklər!' %}</strong> {{message}}
                           </div>
 
         {% endif %}

@@ -17,8 +17,8 @@
                 <div class="content-box">
                     <h1>{% trans 'Haqqımda' %}</h1>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
-                        <li>Haqqımda</li>
+                        <li><a href="{% url 'index' %}">{% trans 'Ana Səhifə' %}</a></li>
+                        <li>{% trans 'Haqqımda' %}</li>
                     </ul>
                 </div>
             </div>
@@ -48,8 +48,8 @@
 
                                 <div class="text p_absolute r_0 b_0">
                                     <h2>{{data.experience}}</h2>
-                                    <h4><strong>illik</strong> təcrübə</h4>
-                                    {% comment %} <h4>Təcrübə</h4> {% endcomment %}
+                                    <h4><strong>{% trans 'illik' %}</strong> {% trans 'təcrübə' %} </h4>
+                                    {% comment %} <h4>{% trans 'Təcrübə' %}</h4> {% endcomment %}
                                 </div>
                                 {% endfor %}
                             </div>
@@ -62,7 +62,7 @@
                             {% for data in whoweare  %}
                             <div class="content-box ml_30">
                                 <div class="sec-title left p_relative d_block mb_25">
-                                    <span class="sub-title">Biz kimik?</span>
+                                    <span class="sub-title">{% trans 'Biz kimik?' %}</span>
                                     <h2>{{data.title}}</h2>
                                 </div>
                                 <div class="text p_relative d_block">
@@ -125,8 +125,8 @@
             </div>
             <div class="auto-container">
                 <div class="sec-title centred mb_50">
-                    <span class="sub-title">Bizim Xidmətlərimiz</span>
-                    <h2>Dünyaya sizin gözlərinizdən <br />baxırıq</h2>
+                    <span class="sub-title">{% trans 'Bizim Xidmətlərimiz' %}</span>
+                    <h2>{% trans 'Dünyaya sizin gözlərinizdən' %} <br />{% trans 'baxırıq' %}</h2>
                 </div>
                 <div class="row clearfix">
                     {% for service in services %}
@@ -141,7 +141,7 @@
                                     <div class="icon-box"><i class="icon-17"></i></div>
                                     <h3><a href="{{service.get_absolute_url}}">{{service.title}}</a></h3>
                                     <p class="p_relative d_block">{{service.text|truncatechars_html:50|safe}}</p>
-                                    <div class="link p_relative d_block"><a href="{{service.get_absolute_url}}">Davamını Oxu</a></div>
+                                    <div class="link p_relative d_block"><a href="{{service.get_absolute_url}}">{% trans 'Davamını Oxu' %}</a></div>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +195,7 @@
                             <div class="content-box mr_70">
 
                                 <div class="sec-title light mb_35">
-                                    <span class="sub-title">Niyə Biz ?</span>
+                                    <span class="sub-title">{% trans 'Niyə Biz ?' %}</span>
 
                                     <h2 class="mb_25">{{data.title}}</h2>
                                     <p class="pt_2">{{data.text|safe}}</p>
@@ -242,9 +242,9 @@
             <div class="auto-container">
                 <div class="sec-title centred mb_85">
 
-                    <span class="sub-title">Bu Necə Işləyir</span>
+                    <span class="sub-title">{% trans 'Bu Necə Işləyir' %}</span>
 
-                    <h2>Sağlamlığınızı Qorumağa Necə Kömək Edirik</h2>
+                    <h2>{% trans 'Sağlamlığınızı Qorumağa Necə Kömək Edirik' %}</h2>
                 </div>
 
 

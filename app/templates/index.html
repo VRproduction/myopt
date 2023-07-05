@@ -35,7 +35,7 @@
                                 <h2 class="p_relative d_block fs_70 lh_80 fw_bold">{{slider.big_title}}</h2>
                                 <p class="p_relative d_block fs_18">{{slider.description}}</p>
                                 <div class="btn-box">
-                                    <a href="{% url 'contact' %}" class="theme-btn btn-one">İndi Əlaqə Saxlayın</a>
+                                    <a href="{% url 'contact' %}" class="theme-btn btn-one">{% trans 'İndi Əlaqə Saxlayın' %}</a>
                                </div>
 
 
@@ -109,8 +109,8 @@
             </div>
             <div class="auto-container">
                 <div class="sec-title centred mb_50">
-                    <span class="sub-title">Bizim Xidmətlərimiz</span>
-                    <h2>Dünyaya sizin gözlərinizdən <br />baxırıq</h2>
+                    <span class="sub-title">{% trans 'Bizim Xidmətlərimiz' %}</span>
+                    <h2>{% trans 'Dünyaya sizin gözlərinizdən' %} <br />{% trans 'baxırıq' %}</h2>
                 </div>
                 <div class="tabs-box">
                     <div class="tab-btn-box p_relative d_block mb_70 centred">
@@ -140,12 +140,12 @@
 
 
                             {% comment %}
-                                <a href="{% url 'services' %}" class="default-btn"> <h5> <br> <br> <br> <br> Daha çox </h5> </a>
+                                <a href="{% url 'services' %}" class="default-btn"> <h5> <br> <br> <br> <br> {% trans 'Daha çox' %} </h5> </a>
                             {% endcomment %}
 
 
                             <a href="{% url 'services' %}" class="default-btn"> <br> <br>
-                                <button class="theme-btn btn-one" type="submit" name="submit-form"> Daha çox </button>
+                                <button class="theme-btn btn-one" type="submit" name="submit-form"> {% trans 'Daha çox' %} </button>
                             </a>
 
 
@@ -242,13 +242,11 @@
                                 {% for data in whoweare %}
                                 <figure class="image"><img style="width:470px ;height:470px;object-fit:cover;" src="{{data.image.url}}" alt=""></figure>
                                 <div class="text p_absolute r_0 b_0">
-                                    {% comment %}
-                                    <h4>Bu sahədə</h4>
-                                    {% endcomment %}
+
                                     <h2>{{data.experience}}</h2>
 
-                                    <h4><strong>illik</strong> Təcrübə</h4>
-                                    {% comment %} <h4>Təcrübə</h4> {% endcomment %}
+                                    <h4><strong>{% trans 'illik' %}</strong> {% trans 'Təcrübə' %}</h4>
+                                    {% comment %} <h4>{% trans 'Təcrübə' %}</h4> {% endcomment %}
                                 </div>
                                 {% endfor %}
                             </div>
@@ -262,7 +260,7 @@
                             {% for data in whoweare  %}
                             <div class="content-box ml_30">
                                 <div class="sec-title left p_relative d_block mb_25">
-                                    <span class="sub-title">Mən kiməm?</span>
+                                    <span class="sub-title">{% trans 'Mən kiməm?' %}</span>
                                     <h2>{{data.title}}</h2>
                                 </div>
                                 <div class="text p_relative d_block">
@@ -328,7 +326,7 @@
                                 <span>+</span>
 
                             </div>
-                            <p>İllik Təcrübə</p>
+                            <p>{% trans 'İllik Təcrübə' %}</p>
                         </div>
                     </div>
 
@@ -339,7 +337,7 @@
                             <div class="count-outer count-box">
                                 <span class="count-text" data-speed="1500" data-stop="9">0</span>
                             </div>
-                            <p>Xidmət Növü</p>
+                            <p>{% trans 'Xidmət Növü' %}</p>
                         </div>
                     </div>
 
@@ -350,7 +348,7 @@
                             <div class="count-outer count-box">
                                 <span class="count-text" data-speed="1500" data-stop="10000">0</span>
                             </div>
-                            <p>Məmnun Müştəri</p>
+                            <p>{% trans 'Məmnun Müştəri' %}</p>
                         </div>
                     </div>
 
@@ -361,7 +359,7 @@
                             <div class="count-outer count-box">
                                 <span class="count-text" data-speed="1500" data-stop="15">0</span>
                             </div>
-                            <p>Elmi Məqalə</p>
+                            <p>{% trans 'Elmi Məqalə' %}</p>
                         </div>
                     </div>
 
@@ -420,7 +418,7 @@
                             {% for data in whyus %}
                             <div class="content-box ml_30">
                                 <div class="sec-title left mb_25">
-                                    <span class="sub-title">Niyə Biz</span>
+                                    <span class="sub-title">{% trans 'Niyə Biz' %}</span>
                                     <h2>{{data.title}}</h2>
                                 </div>
                                 <div class="text">
@@ -462,9 +460,9 @@
             <div class="auto-container">
                 <div class="sec-title centred mb_85">
 
-                    <span class="sub-title">Bu Necə İşləyir</span>
+                    <span class="sub-title">{% trans 'Bu Necə İşləyir' %}</span>
 
-                    <h2>Sağlamlığınızı Qorumağa Necə Kömək Edirik</h2>
+                    <h2>{% trans 'Sağlamlığınızı Qorumağa Necə Kömək Edirik' %}</h2>
                 </div>
 
 
@@ -548,8 +546,8 @@
             {% endcomment %}
             <div class="auto-container">
                 <div class="sec-title mb_60">
-                    <span class="sub-title">Rəylər</span>
-                    <h2>Pasiyent Rəyləri</h2>
+                    <span class="sub-title">{% trans 'Rəylər' %}</span>
+                    <h2>{% trans 'Pasiyent Rəyləri' %}</h2>
                 </div>
 
                 <div class="two-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
@@ -653,22 +651,41 @@
                     <span class="sub-title">Operator Xidməti</span>
                     {% endcomment %}
 
-                    <h2>Əlaqə üçün:</h2>
+                    <h2>{% trans 'Əlaqə üçün:' %}</h2>
                 </div>
                 <div class="support-box p_relative centred">
                     <div class="icon-box"><img src="{% static 'images/icons/icon-2.png' %}" alt=""></div>
                     {% for setting in general_settings %}
 
 
+                            {% comment %}
+                                <h3>Zəng et: {{setting.number_2}} , {{setting.number_3}} </a></h3>
+                            {% endcomment %}
 
-                    {% comment %}
-                    <h3>Zəng et: {{setting.number_2}} , {{setting.number_3}} </a></h3>
-                    {% endcomment %}
+                    <h3>
+                        {{setting.number_2}}
+                        <br>
+                        {{setting.number_3}}
 
-                    <h3>Zəng et: {{setting.number_2}} , {{setting.number_3}} </a></h3>
-
+                    </h3>
                     {% endfor %}
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -682,7 +699,10 @@
                 <div class="row clearfix">
                     <div class="col-lg-4 col-md-12 col-sm-12 form-column">
                         <div class="form-inner">
-                            <h3><span>Konsultasiya</span> üçün formu doldur</h3>
+                            <h3><span>{% trans 'Konsultasiya' %}</span> {% trans 'üçün formu doldur' %}</h3>
+
+
+
                             <form method="post" class="default-form">
                                 {% csrf_token %}
                                 <div class="form-group">
@@ -696,21 +716,41 @@
                                     {{form.date|as_crispy_field}}
                                 </div>
                                 <div class="form-group message-btn">
-                                    <button type="submit" class="theme-btn btn-two">Görüşü Təyin Et</button>
+                                    <button type="submit" class="theme-btn btn-two">{% trans 'Görüşü Təyin Et' %}</button>
                                 </div>
                             </form>
+
                         </div>
                     </div>
-                    <div class="col-lg-8 col-md-12 col-sm-12 video-column">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-lg-8 col-md-12 col-sm-12 video-column">
 
                             <div class="video-inner" style="background-image: url({% static 'images/background/gulsenqaqas.jpg' %});">
 
                             <div class="video-btn">
-
-
-
-
 
 
                                 <a href="https://www.youtube.com/watch?v=uAbgUTw_lzk" class="lightbox-image" data-caption=""><i class="fas fa-play"></i></a>
@@ -751,8 +791,8 @@
         <section class="news-section p_relative">
             <div class="auto-container">
                 <div class="sec-title centred mb_50">
-                    <span class="sub-title">Bloqlar</span>
-                    <h2>Bloqları Oxu</h2>
+                    <span class="sub-title">{% trans 'Bloqlar' %}</span>
+                    <h2>{% trans 'Bloqları Oxu' %}</h2>
                 </div>
                 <div class="row clearfix">
                     {% for article in articles|slice:':3' %}
@@ -771,7 +811,7 @@
                                             <li><i class="icon-34"></i>{{article.date}}</li>
                                         </ul>
                                         <p>{{article.context|truncatechars_html:50|safe}}</p>
-                                        <div class="link"><a href="{{article.get_absolute_url}}">Davamını Oxu</a></div>
+                                        <div class="link"><a href="{{article.get_absolute_url}}">{% trans 'Davamını Oxu' %}</a></div>
                                     </div>
                                 </div>
                             </div>

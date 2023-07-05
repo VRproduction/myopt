@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 
 
@@ -12,7 +13,7 @@
                 <div class="content-box">
                     <h1>{{category.name}}</h1>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{% url 'index' %}">Ev</a></li>
+                        <li><a href="{% url 'index' %}">{% trans 'Ana Səhifə' %}</a></li>
                         <li>{{category.name}}</li>
                     </ul>
                 </div>
@@ -42,7 +43,7 @@
                                             <li><i class="icon-35"></i><a href="blog-details.html">{{blog.author}}</a></li>
                                         </ul>
                                         <p>{{blog.context|truncatechars_html:50|safe}}</p>
-                                        <div class="link"><a href="{{blog.get_absolute_url}}">Davamını Oxu</a></div>
+                                        <div class="link"><a href="{{blog.get_absolute_url}}">{% trans 'Davamını Oxu' %}</a></div>
                                     </div>
                                 </div>
                             </div>

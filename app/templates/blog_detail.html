@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 
 
@@ -8,18 +9,21 @@
 
         <!-- Page Title -->
         <section class="page-title">
+
             {% comment  %}
             <div class="bg-layer" style="background-image: url({% static 'images/baner_web.png' %});"></div>
             {% endcomment %}
+
             <div class="auto-container">
                 <div class="content-box">
-                    <h1>Daha Ətraflı</h1>
+                    <h1>{% trans 'Daha Ətraflı' %}</h1>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
-                        <li>Daha Ətraflı</li>
+                        <li><a href="{% url 'index' %}">{% trans 'Ana Səhifə' %}</a></li>
+                        <li>{% trans 'Daha Ətraflı' %}</li>
                     </ul>
                 </div>
             </div>
+
         </section>
         <!-- End Page Title -->
 
@@ -63,16 +67,19 @@
                                     </div>
                                 </div>
                             </div> {% endcomment %}
+
                             {% comment %} <blockquote>
                                 <div class="shape" style="background-image: url(images/shape/shape-54.png);"></div>
                                 <div class="icon-box"><i class="icon-29"></i></div>
                                 <p>Lorem ipsum dolor amet con sectur elitadicing elit sed do usmod tempor uincididunt <br />enim minim veniam nostrud.</p>
                                 <h5>Kevin Spacey</h5>
                             </blockquote> {% endcomment %}
+
                             {% comment %} <div class="content-two">
                                 <h3>Surgical Procedures</h3>
                                 <p>Consectur adipisicing elit sed do eiusmod tempor aliqua nisenim ad minim veniam quis nostrud exercitation ulamo laboris nisi aliquip ecommodo consequat duis aute reprehenderit in voluptate velit esse cillum dolore euga fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
                             </div> {% endcomment %}
+
                             {% comment %} <div class="post-tags">
                                 <ul class="tags-list clearfix">
                                     <li><h5>Tags:</h5></li>
@@ -97,7 +104,7 @@
 
 
                             <div class="comments-form-area">
-                                <h3>Şərh Yaz</h3>
+                                <h3>{% trans 'Şərh Yaz' %}</h3>
                                 <div class="form-inner">
                                     <form method="post" action="http://azim.commonsupport.com/Optcare/sendemail.php" id="contact-form">
                                         <div class="row clearfix">
@@ -124,7 +131,7 @@
 
 
                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn mr-0">
-                                                <button class="theme-btn btn-one" type="submit" name="submit-form">Göndər</button>
+                                                <button class="theme-btn btn-one" type="submit" name="submit-form">{% trans 'Göndər' %}</button>
                                             </div>
                                         </div>
                                     </form>
@@ -153,7 +160,7 @@
 
                             <div class="sidebar-widget category-widget">
                                 <div class="widget-title">
-                                    <h3>Kateqoriyalar</h3>
+                                    <h3>{% trans 'Kateqoriyalar' %}</h3>
                                 </div>
                                 <div class="widget-content">
                                     <ul class="category-list clearfix">
@@ -166,7 +173,7 @@
 
                             <div class="sidebar-widget post-widget">
                                 <div class="widget-title">
-                                    <h3>Son Postlar</h3>
+                                    <h3>{% trans 'Son Postlar' %}</h3>
                                 </div>
                                 <div class="post-inner">
                                     {% for latest in latests|slice:':3' %}
@@ -220,7 +227,7 @@
                             <div class="sidebar-widget tags-widget">
 
                                 <div class="widget-title">
-                                    <h3>Tags</h3>
+                                    <h3>{% trans 'Tags' %}</h3>
                                 </div>
                                 <div class="widget-content">
                                     <ul class="tags-list clearfix">
@@ -266,4 +273,4 @@
         {% endcomment %}
         <!-- subscribe-section end -->
 
-        {% endblock body %}
+{% endblock body %}

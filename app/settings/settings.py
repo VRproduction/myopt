@@ -24,7 +24,6 @@ ALLOWED_HOSTS = ["*"]
 SITE_ID = 1
 
 INSTALLED_APPS = [
-    # 'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,21 +37,24 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'ckeditor',
     'corsheaders',
-    # 'modeltranslation',
-    'rosetta',
+
+    # 'rosetta',
 
     'django.contrib.sites',
     'django.contrib.sitemaps',
 
+    # 'cuser',
+    # 'tinymce',
+    'modeltranslation'
     # 'robots',
 ]
-
 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
 
+    # + For Multiple Language
     'django.middleware.locale.LocaleMiddleware',
 
     'django.middleware.common.CommonMiddleware',
@@ -118,22 +120,28 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 
-LANGUAGE_CODE = 'az'
+LANGUAGES = [
+    ('az', 'Azerbaijan'),
+    ('ru', 'Russian')
+]
 
-LANGUAGES = (
-    ("az", _("Azerbaijani")),
-    ("ru", _("Russian")),
+
+MODELTRANSLATION_TRANSLATION_FILES = (
+    'blog.translation',
 )
 
+
 LOCALE_PATHS = [
-    BASE_DIR / 'locale/',
+    os.path.join(BASE_DIR, 'locale'),
 ]
 
 """
-LOCALE_PATHS = (
-    os.path.join(BASE_DIR, 'locale'),
-)
+LOCALE_PATHS = [
+    BASE_DIR / 'locale/',
+]
 """
+
+LANGUAGE_CODE = 'az'
 
 TIME_ZONE = 'UTC'
 
@@ -143,14 +151,9 @@ USE_TZ = True
 
 USE_L10N = True
 
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'az'
-
-MODELTRANSLATION_LANGUAGES = ('az', 'ru')
-
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static/'
-
 
 STATICFILES_DIRS = [
     BASE_DIR / 'apps-static',
@@ -172,31 +175,27 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 CSRF_TRUSTED_ORIGINS = ['https://gulshendikmen.az']
 
 
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_HOST_USER = 'info@gulshendikmen.az'
-# EMAIL_HOST_PASSWORD = 'gulsendikmen123'
 EMAIL_HOST_PASSWORD = 'MbuLeQTNrCxDtbfM0qXB'
-
 EMAIL_PORT = 2525
 DEFAULT_FROM_EMAIL = "info@gulshendikmen.az"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-# EMAIL_PORT = 465
 
-# password for app in mail.ru 'vupTwRY2sAEmUdD5AjCc'
-#  pass name 'passgulsenmail'
-# yeni pass 'MbuLeQTNrCxDtbfM0qXB'
 
+TRANSLATABLE_MODEL_MODULES = ["blog.models", ]
+
+
+# MODELTRANSLATION_DEFAULT_LANGUAGE = 'az'
+# MODELTRANSLATION_LANGUAGES = ('az', 'ru')
 
 """
-# EMAIL_BACKEND = 'django.core.mail.console.smtp.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'ilkine2191@gmail.com'
-# EMAIL_HOST_PASSWORD = 'ankarailkinodessa'
-EMAIL_HOST_PASSWORD = 'hcpkljyfxsmehfcl'
+IS_MONOLINGUAL = False
+TRANSLATABLE_MODEL_MODULES = ["blog.IndexSlider", "blog.WhoWeAre", "blog.WhoTitle1", "blog.WhoTitle2",
+                              "blog.Service", "blog.ServiceOffers", "blog.WhyUs", "blog.WhyOffers",
+                              "blog.Testimonial", "blog.Appointment", "blog.Gallery", "blog.ArticleCategory",
+                              "blog.Article", "blog.GeneralSettings", "blog.AboutOffers", "blog.Contact",
+                              ]
 """

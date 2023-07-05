@@ -2,9 +2,9 @@ from django.db import models
 from ckeditor.fields import RichTextField
 from .helper import seo
 from django.urls import reverse
-from datetime import date
 from django_resized import ResizedImageField
 from django.utils.translation import gettext_lazy as _
+from datetime import date
 
 
 class IndexSlider(models.Model):
@@ -20,7 +20,6 @@ class IndexSlider(models.Model):
 
 class WhoWeAre(models.Model):
     title = models.CharField(max_length=500)
-    # text = models.TextField()
     text = RichTextField()
 
     experience = models.IntegerField()
@@ -50,17 +49,18 @@ class WhoWeAre(models.Model):
 
 class WhoTitle1(models.Model):
     name = models.CharField(max_length=200)
-    who = models.ForeignKey(
+    who1 = models.ForeignKey(
         WhoWeAre, on_delete=models.CASCADE, related_name="title_1")
 
     class Meta:
         verbose_name = "Title 1"
-        verbose_name_plural = "Title 2"
+        # verbose_name_plural = "Title 2"
+        verbose_name_plural = "Title 1"
 
 
 class WhoTitle2(models.Model):
     name = models.CharField(max_length=200)
-    who = models.ForeignKey(
+    who2 = models.ForeignKey(
         WhoWeAre, on_delete=models.CASCADE, related_name="title_2")
 
     class Meta:
@@ -151,6 +151,7 @@ class Appointment(models.Model):
 
 
 class Gallery(models.Model):
+    # image = ResizedImageField(size=[410, 410], upload_to='galleries', blank=True, null=True)
     image = models.FileField(upload_to="galleries")
     link = models.CharField(max_length=3000)
     link_name = models.CharField(max_length=300)

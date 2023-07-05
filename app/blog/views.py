@@ -7,36 +7,56 @@ from blog.views import *
 from django.urls import translate_url
 from django.conf import settings
 from django.core.mail import send_mail
-# from settings import EMAIL_HOST_USER
-from django.template.loader import render_to_string, get_template
-
-
-def asd(request):
-    return render(request, 'asd.html')
+from django.template.loader import render_to_string
 
 
 def set_language(request, lang_code):
     url = request.META.get("HTTP_REFERER", None)
     response = redirect(translate_url(url, lang_code))
     response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
-
     return response
 
 
 def index(request):
-
     context = {}
-
     offers = AboutOffers.objects.all()
     whoweare = WhoWeAre.objects.all()
     sliders = IndexSlider.objects.all()
     services = Service.objects.all().order_by('order')[:4]
-
     whyus = WhyUs.objects.all()
     testimonials = Testimonial.objects.all()
     galleries = Gallery.objects.all()
     articles = Article.objects.all().order_by("-click")
 
+    form = AppointmentForm(request.POST)
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        date = request.POST.get('date')
+
+        data = {
+            'name': name,
+            'email': email,
+            'date': date,
+        }
+
+        # data = f'Name: {name}, Email: {email}, Date: {date}'
+        # form = AppointmentForm()
+
+        text_to_doctor = render_to_string('to_mail_2.html', data)
+
+        send_mail(
+            "Sizə gulshendikmen.az saytından müraciət gəlib",
+            # data,
+            text_to_doctor,
+            settings.EMAIL_HOST_USER,
+            ['info@gulshendikmen.az'],
+            fail_silently=False, html_message=text_to_doctor
+        )
+        messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
+        return redirect(request.META['HTTP_REFERER'])
+
+    """
     if request.method == 'POST':
         form = AppointmentForm(request.POST)
         if form.is_valid():
@@ -46,6 +66,7 @@ def index(request):
             return redirect(request.META['HTTP_REFERER'])
     else:
         form = AppointmentForm()
+    """
 
     context["form"] = form
     context["sliders"] = sliders
@@ -124,8 +145,29 @@ def service_detail(request, slug):
     return render(request, "service_detail.html", context)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def contact(request):
-    form = ContactForm(request.POST)
+    contact_form = ContactForm(request.POST)
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -143,60 +185,97 @@ def contact(request):
         }
 
         # data = f'Name: {name}, Email: {email}, Phone: {phone}, Message:{message}, Subject: {subject}'
-        form = ContactForm()
+        # form = ContactForm()
 
-        # message = render_to_string('to_mail.html', data)
         text_to_doctor = render_to_string('to_mail.html', data)
 
         send_mail(
             "Sizə gulshendikmen.az saytından müraciət gəlib",
             text_to_doctor,
-            # data,
             settings.EMAIL_HOST_USER,
-            # 'info@gulshendikmen.az',
             ['info@gulshendikmen.az'],
-            # 'ilkine2191@gmail.com',
-            # ['ilkine2191@gmail.com'],
             fail_silently=False, html_message=text_to_doctor
         )
+        messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
+        return redirect(request.META['HTTP_REFERER'])
 
     context = {
-        'form': form
+        'contact_form': contact_form
                }
-
-    """
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-
-            messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
-            return redirect(request.META['HTTP_REFERER'])
-    else:
-        form = ContactForm()
-    
-    context["form"] = form
-    """
 
     return render(request, "contact.html", context=context)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def appointment(request):
-    context = {}
-
+    # context = {}
+    form = Appointment2Form(request.POST)
     if request.method == 'POST':
-        form = Appointment2Form(request.POST)
-        if form.is_valid():
-            form.save()
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        date = request.POST.get('date')
+        message = request.POST.get('message')
 
-            messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
-            return redirect(request.META['HTTP_REFERER'])
-    else:
-        form = Appointment2Form()
+        data = {
+            'name': name,
+            'email': email,
+            'phone': phone,
+            'subject': date,
+            'message': message,
 
-    context["form"] = form
+        }
+
+        # data = f'Name: {name}, Email: {email}, Phone: {phone}, Message:{message}, Subject: {subject}'
+        # form = ContactForm()
+
+        text_to_doctor = render_to_string('to_mail_3.html', data)
+
+        send_mail(
+            "Sizə gulshendikmen.az saytından müraciət gəlib",
+            text_to_doctor,
+            settings.EMAIL_HOST_USER,
+            ['info@gulshendikmen.az'],
+            fail_silently=False, html_message=text_to_doctor
+        )
+        messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
+        return redirect(request.META['HTTP_REFERER'])
+
+    context = {
+        'form': form
+    }
 
     return render(request, "appointment.html", context)
+
+
+
+
+
+
 
 
 def blogs(request):
@@ -254,3 +333,42 @@ def categories(request):
     return HttpResponse('CATEGORIES ARE HERE')
 
 """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

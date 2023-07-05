@@ -19,6 +19,8 @@ class Title1Inline(admin.StackedInline):
     model = WhoTitle1
     max_num = 10
     extra = 1
+    who = "whotitle1"
+
 
 class Title2Inline(admin.StackedInline):
     model = WhoTitle2
@@ -27,6 +29,7 @@ class Title2Inline(admin.StackedInline):
 
 
 MAX_OBJECTS = 1
+
 
 @admin.register(WhoWeAre)
 class AdminWhoSettings(admin.ModelAdmin):

@@ -12,10 +12,10 @@
     {% endcomment %}
     <div class="auto-container">
         <div class="content-box">
-            <h1>Qalereya</h1>
+            <h1>{% trans 'Qalereya' %}</h1>
             <ul class="bread-crumb clearfix">
-                <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
-                <li>Qalereya</li>
+                <li><a href="{% url 'index' %}">{% trans 'Ana Səhifə' %}</a></li>
+                <li>{% trans 'Qalereya' %}</li>
             </ul>
         </div>
     </div>
@@ -38,10 +38,10 @@
                             {% endcomment %}
 
                             <li class="filter" data-filter="Galleries"><a
-                                    class="btn-gallery btn-secondary btn-lg shadow">Media</a></li>
+                                    class="btn-gallery btn-secondary btn-lg shadow">{% trans 'Media' %}</a></li>
 
                             <li class="filter" data-filter="Sertifikat"><a
-                                    class="btn-gallery btn-secondary btn-lg shadow">Sertifikat</a></li>
+                                    class="btn-gallery btn-secondary btn-lg shadow">{% trans 'Sertifikat' %}</a></li>
                         </ul>
                     </nav>
 
@@ -55,9 +55,12 @@
             <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column mix all Galleries">
                 <div class="project-block-one">
                     <div class="inner-box">
+
                         <figure class="image-box"><img style="object-fit:cover;" src="{{i.image.url}}" alt=""></figure>
+
                         <div class="view-btn"><a href="{{i.image.url}}" class="lightbox-image"
                                 data-fancybox="gallery"><i class="icon-33"></i></a></div>
+
                         <div class="text">
                             <h3><a href="{{i.link}}" target="_blank">{{i.link_name}}</a></h3>
 
@@ -67,6 +70,7 @@
             </div>
             {% endfor %}
             <!-- End single gallery -->
+
 
 
 
@@ -75,19 +79,23 @@
             <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column mix all Sertifikat">
                 <div class="project-block-one">
                     <div class="inner-box">
+
                         <figure class="image-box"><img style="object-fit:cover;" src="{{ i.certificate_image.url }}"
                                 alt=""></figure>
+
                         <div class="view-btn"><a href="{{ i.certificate_image.url }}" class="lightbox-image"
                                 data-fancybox="gallery"><i class="icon-33"></i></a></div>
+
                         <div class="text">
                             <h3><a href="{{i.link}}" target="_blank">{{i.link_name}}</a></h3>
-
                         </div>
+
                     </div>
                 </div>
             </div>
             {% endfor %}
             <!-- End single gallery -->
+
 
         </div>
     </div>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 {% load static %}
+{% load i18n %}
+
 <html lang="en">
 
 <head>
@@ -112,7 +114,7 @@
 
                         <div class="left-column">
                             <ul class="info clearfix">
-                                <li><i class="icon-1"></i>E-poçt: <a
+                                <li><i class="icon-1"></i>{% trans 'E-poçt:' %} <a
                                         href="mailto:{{setting.email}}">{{setting.email}}</a></li>
                                 <li><i class="icon-2"></i>{{setting.adress}}</li>
                                 <li><i class="icon-3"></i>{{ setting.number_2 }}</li>
@@ -204,22 +206,24 @@
                             <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
-                                        <li><a href="{% url 'about' %}">Haqqımda</a></li>
-                                        <li><a href="{% url 'services' %}">Xidmətlər</a></li>
-                                        <li><a href="{% url 'blogs' %}">Bloqlar</a></li>
-                                        <li><a href="{% url 'gallery' %}">Qalereya</a></li>
-                                        <li><a href="{% url 'contact' %}">Əlaqə</a></li>
+                                        <li><a href="{% url 'index' %}">{% trans 'Ana Səhifə' %}</a></li>
+                                        <li><a href="{% url 'about' %}">{% trans 'Haqqımda' %}</a></li>
+                                        <li><a href="{% url 'services' %}">{% trans 'Xidmətlər' %}</a></li>
+                                        <li><a href="{% url 'blogs' %}">{% trans 'Bloqlar' %}</a></li>
+                                        <li><a href="{% url 'gallery' %}">{% trans 'Qalereya' %}</a></li>
+                                        <li><a href="{% url 'contact' %}">{% trans 'Əlaqə' %}</a></li>
                                     </ul>
                                 </div>
                             </nav>
                         </div>
                         <div class="nav-right">
+
                             {% comment %} <div class="search-box-outer search-toggler">
                                 <i class="icon-5"></i>
                             </div> {% endcomment %}
+
                             <div class="btn-box">
-                                <a href="{% url 'appointment' %}" class="theme-btn btn-one">Görüş</a>
+                                <a href="{% url 'appointment' %}" class="theme-btn btn-one">{% trans 'Görüş' %}</a>
                             </div>
 
                         </div>
@@ -279,12 +283,13 @@
                         </div>
 
                         <div class="nav-right">
+
                             {% comment %} <div class="search-box-outer search-toggler">
                                 <i class="icon-5"></i>
                             </div> {% endcomment %}
 
                             <div class="btn-box">
-                                <a href="{% url 'appointment' %}" class="theme-btn btn-one">Görüş</a>
+                                <a href="{% url 'appointment' %}" class="theme-btn btn-one">{% trans 'Görüş' %}</a>
                             </div>
 
                         </div>
@@ -447,7 +452,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="about-widget footer-widget mr_40">
                                 <div class="widget-title">
-                                    <h3>Haqqımda</h3>
+                                    <h3>{% trans 'Haqqımda' %}</h3>
                                 </div>
 
 
@@ -509,12 +514,12 @@
                                 </div>
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
-                                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
-                                        <li><a href="{% url 'about' %}">Haqqımda</a></li>
-                                        <li><a href="{% url 'services' %}">Xidmətlər</a></li>
-                                        <li><a href="{% url 'blogs' %}">Bloqlar</a></li>
-                                        <li><a href="{% url 'gallery' %}">Qalereya</a></li>
-                                        <li><a href="{% url 'contact' %}">Əlaqə</a></li>
+                                        <li><a href="{% url 'index' %}">{% trans 'Ana Səhifə' %}</a></li>
+                                        <li><a href="{% url 'about' %}">{% trans 'Haqqımda' %}</a></li>
+                                        <li><a href="{% url 'services' %}">{% trans 'Xidmətlər' %}</a></li>
+                                        <li><a href="{% url 'blogs' %}">{% trans 'Bloqlar' %}</a></li>
+                                        <li><a href="{% url 'gallery' %}">{% trans 'Qalereya' %}</a></li>
+                                        <li><a href="{% url 'contact' %}">{% trans 'Əlaqə' %}</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -524,7 +529,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6  footer-column">
                             <div class="contact-widget footer-widget ml_50">
                                 <div class="widget-title">
-                                    <h3>Əlaqə</h3>
+                                    <h3>{% trans 'Əlaqə' %}</h3>
                                 </div>
                                 <div class="widget-content">
                                     <ul class="info clearfix">
@@ -550,7 +555,7 @@
             <div class="footer-bottom centred">
                 <div class="auto-container">
                     <div class="copyright">
-                        <p><a href="https://vrproduction.az/">VR Production</a> &copy; 2023 Bütün hüquqlar qorunur</p>
+                        <p><a href="https://vrproduction.az/">{% trans 'VR Production' %}</a> &copy; 2023 {% trans 'Bütün hüquqlar qorunur' %}</p>
                     </div>
                 </div>
             </div>

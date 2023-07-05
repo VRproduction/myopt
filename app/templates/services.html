@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 
 {% block body %}
@@ -20,10 +21,10 @@
                 {% endcomment %}
 
                 <div class="content-box">
-                    <h1>Xidmətlər</h1>
+                    <h1>{% trans 'Xidmətlər' %}</h1>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
-                        <li>Xidmətlər</li>
+                        <li><a href="{% url 'index' %}">{% trans 'Ana Səhifə' %}</a></li>
+                        <li>{% trans 'Xidmətlər' %}</li>
                     </ul>
                 </div>
             </div>
@@ -51,7 +52,7 @@
                                     <div class="icon-box"><i class="icon-17"></i></div>
                                     <h3><a href="{{service.get_absolute_url}}">{{service.title}}</a></h3>
                                     <p class="p_relative d_block">{{service.text|truncatechars_html:50|safe}}</p>
-                                    <div class="link p_relative d_block"><a href="{{service.get_absolute_url}}">Davamını Oxu</a></div>
+                                    <div class="link p_relative d_block"><a href="{{service.get_absolute_url}}">{% trans 'Davamını Oxu' %}</a></div>
                                 </div>
                             </div>
                         </div>
