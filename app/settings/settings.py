@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
     # 'cuser',
     # 'tinymce',
-    'modeltranslation'
+    # 'modeltranslation'
     # 'robots',
 ]
 
