@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 10:08+0000\n"
+"POT-Creation-Date: 2023-07-05 10:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,9 @@ msgstr "privet"
 
 #: templates/about.html:20 templates/appointment.html:17
 #: templates/base.html:210 templates/base.html:523 templates/blog.html:17
-#: templates/blog_detail.html:22
+#: templates/blog_detail.html:22 templates/category_detail.html:16
+#: templates/contact.html:22 templates/gallery.html:18
+#: templates/service_detail.html:35 templates/services.html:28
 msgid "Ana Səhifə"
 msgstr "qlavnaya stranitsa"
 
@@ -59,7 +61,8 @@ msgstr "mi smotrim na mir ot vawix qlaz"
 msgid "baxırıq"
 msgstr "smotrim"
 
-#: templates/about.html:145 templates/index.html:823
+#: templates/about.html:145 templates/category_detail.html:46
+#: templates/index.html:823 templates/services.html:57
 msgid "Davamını Oxu"
 msgstr "citay dalse"
 
@@ -97,6 +100,8 @@ msgid "E-poçt:"
 msgstr ""
 
 #: templates/base.html:212 templates/base.html:525
+#: templates/service_detail.html:51 templates/services.html:26
+#: templates/services.html:29
 #, fuzzy
 #| msgid "Bizim Xidmətlərimiz"
 msgid "Xidmətlər"
@@ -107,11 +112,13 @@ msgstr "nawi usluqi"
 msgid "Bloqlar"
 msgstr ""
 
-#: templates/base.html:214 templates/base.html:527
+#: templates/base.html:214 templates/base.html:527 templates/gallery.html:16
+#: templates/gallery.html:19
 msgid "Qalereya"
 msgstr ""
 
 #: templates/base.html:215 templates/base.html:528 templates/base.html:538
+#: templates/contact.html:19 templates/contact.html:23
 msgid "Əlaqə"
 msgstr ""
 
@@ -131,7 +138,7 @@ msgstr ""
 msgid "Şərh Yaz"
 msgstr ""
 
-#: templates/blog_detail.html:141
+#: templates/blog_detail.html:141 templates/contact.html:100
 msgid "Göndər"
 msgstr ""
 
@@ -143,8 +150,28 @@ msgstr ""
 msgid "Son Postlar"
 msgstr ""
 
-#: templates/index.html:38
+#: templates/contact.html:39
+msgid "Adres"
+msgstr ""
+
+#: templates/contact.html:46
+msgid "E-poçt"
+msgstr ""
+
+#: templates/contact.html:53
+msgid "Əlaqə nömrələri"
+msgstr ""
+
+#: templates/contact.html:80 templates/index.html:38
 msgid "İndi Əlaqə Saxlayın"
+msgstr ""
+
+#: templates/gallery.html:43
+msgid "Media"
+msgstr ""
+
+#: templates/gallery.html:46
+msgid "Sertifikat"
 msgstr ""
 
 #: templates/index.html:150
@@ -216,3 +243,13 @@ msgstr "napisite dannie"
 #: templates/index.html:804
 msgid "Bloqları Oxu"
 msgstr ""
+
+#: templates/messages.html:12
+msgid "Təbriklər!"
+msgstr ""
+
+#: templates/service_detail.html:56
+#, fuzzy
+#| msgid "Bizim Xidmətlərimiz"
+msgid "Bütün Xidmətlər"
+msgstr "nawi usluqi"
