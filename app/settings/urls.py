@@ -6,7 +6,8 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemap import ArticleSitemap, ServiceSitemap, ArticleCategorySitemap, StaticSitemap
 from django.views.generic import TemplateView
-# from blog.views import set_language
+from blog.views import set_language
+
 
 sitemaps = {
     'article_sitemap': ArticleSitemap,
@@ -19,6 +20,8 @@ sitemaps = {
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
+    path('set_language/<str:lang_code>/', set_language, name="set_lang"),
+
 ]
 
 
@@ -31,13 +34,6 @@ urlpatterns += i18n_patterns(
     prefix_default_language=False
 )
 
-
-"""
-if 'rosetta' in settings.INSTALLED_APPS:
-    urlpatterns += [
-        re_path(r'^rosetta', include('rosetta.urls'))
-    ]
-"""
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

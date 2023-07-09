@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
     # 'cuser',
     # 'tinymce',
-    # 'modeltranslation'
+    'modeltranslation'
     # 'robots',
 ]
 
@@ -97,6 +97,16 @@ DATABASES = {
     }
 }
 
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'depo.sqlite3',
+    }
+}
+"""
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -122,7 +132,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGES = [
     ('az', 'Azerbaijan'),
-    ('ru', 'Russian')
+    ('ru', 'Russian'),
 ]
 
 
@@ -186,16 +196,3 @@ EMAIL_USE_SSL = False
 
 
 TRANSLATABLE_MODEL_MODULES = ["blog.models", ]
-
-
-# MODELTRANSLATION_DEFAULT_LANGUAGE = 'az'
-# MODELTRANSLATION_LANGUAGES = ('az', 'ru')
-
-"""
-IS_MONOLINGUAL = False
-TRANSLATABLE_MODEL_MODULES = ["blog.IndexSlider", "blog.WhoWeAre", "blog.WhoTitle1", "blog.WhoTitle2",
-                              "blog.Service", "blog.ServiceOffers", "blog.WhyUs", "blog.WhyOffers",
-                              "blog.Testimonial", "blog.Appointment", "blog.Gallery", "blog.ArticleCategory",
-                              "blog.Article", "blog.GeneralSettings", "blog.AboutOffers", "blog.Contact",
-                              ]
-"""

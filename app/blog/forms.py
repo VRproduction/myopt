@@ -2,16 +2,14 @@ from django import forms
 from .models import *
 
 
+
 class AppointmentForm(forms.ModelForm):
 
     name = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
 
-
         'type': 'text',
         'name':'name',
         'placeholder':'Ad, Soyad'
-
-
 
     }))
 

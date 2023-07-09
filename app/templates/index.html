@@ -260,7 +260,7 @@
                             {% for data in whoweare  %}
                             <div class="content-box ml_30">
                                 <div class="sec-title left p_relative d_block mb_25">
-                                    <span class="sub-title">{% trans 'Mən kiməm?' %}</span>
+                                    <span class="sub-title">{% trans 'Mən kiməm ?' %}</span>
                                     <h2>{{data.title}}</h2>
                                 </div>
                                 <div class="text p_relative d_block">
@@ -348,7 +348,7 @@
                             <div class="count-outer count-box">
                                 <span class="count-text" data-speed="1500" data-stop="10000">0</span>
                             </div>
-                            <p>{% trans 'Məmnun Müştəri' %}</p>
+                            <p>{% trans 'Məmnun Pasiyent' %}</p>
                         </div>
                     </div>
 
@@ -418,7 +418,7 @@
                             {% for data in whyus %}
                             <div class="content-box ml_30">
                                 <div class="sec-title left mb_25">
-                                    <span class="sub-title">{% trans 'Niyə Biz' %}</span>
+                                    <span class="sub-title">{% trans 'Niyə Biz ?' %}</span>
                                     <h2>{{data.title}}</h2>
                                 </div>
                                 <div class="text">
@@ -460,11 +460,11 @@
             <div class="auto-container">
                 <div class="sec-title centred mb_85">
 
-                    <span class="sub-title">{% trans 'Bu Necə İşləyir' %}</span>
+                    <span class="sub-title">{% trans 'Bu Necə İşləyir ?' %}</span>
 
-                    <h2>{% trans 'Sağlamlığınızı Qorumağa Necə Kömək Edirik' %}</h2>
+                    <h2>{% trans 'Sağlamlığınızı Qorumağa Necə Kömək Edirik ?' %}</h2>
                 </div>
-
+s
 
 
 
@@ -702,8 +702,8 @@
                             <h3><span>{% trans 'Konsultasiya' %}</span> {% trans 'üçün formu doldur' %}</h3>
 
 
-
-                            <form method="post" class="default-form">
+                            {% comment %}
+                                <form method="post" class="default-form">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     {{form.name|as_crispy_field}}
@@ -714,6 +714,24 @@
                                 <div class="form-group">
                                     <div class="icon"><i style="font-family: 'Font Awesome 5 Pro'!important;" class="far fa-angle-down"></i></div>
                                     {{form.date|as_crispy_field}}
+                                </div>
+                                <div class="form-group message-btn">
+                                    <button type="submit" class="theme-btn btn-two">{% trans 'Görüşü Təyin Et' %}</button>
+                                </div>
+                            </form>
+                            {% endcomment %}
+
+                            <form method="post" class="default-form">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    {{form.name}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.email}}
+                                </div>
+                                <div class="form-group">
+                                    <div class="icon"><i style="font-family: 'Font Awesome 5 Pro'!important;" class="far fa-angle-down"></i></div>
+                                    {{form.date}}
                                 </div>
                                 <div class="form-group message-btn">
                                     <button type="submit" class="theme-btn btn-two">{% trans 'Görüşü Təyin Et' %}</button>

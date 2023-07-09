@@ -17,6 +17,8 @@ urlpatterns = [
     path('blog_detail/<slug>', blog_detail, name="blog_detail"),
 
     path('category_detail/<slug>', category_detail, name="category_detail"),
+    # path('select-language', select_language_view, name='select_language_view'),
+
 ]
 
 

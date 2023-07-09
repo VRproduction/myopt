@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
 {% load static %}
+{% load i18n %}
 
 {% block body %}
 
 
 <!-- Page Title -->
 <section class="page-title">
+
     {% comment %}
     <div class="bg-layer" style="background-image: url({% static 'images/mobilbaneraxirinci.png' %});"></div>
     {% endcomment %}
+
     <div class="auto-container">
         <div class="content-box">
             <h1>{% trans 'Qalereya' %}</h1>
@@ -19,6 +22,7 @@
             </ul>
         </div>
     </div>
+
 </section>
 <!-- End Page Title -->
 

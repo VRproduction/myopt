@@ -8,6 +8,21 @@ from django.urls import translate_url
 from django.conf import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from django.shortcuts import render, redirect, HttpResponse, HttpResponseRedirect, get_object_or_404
+
+
+"""
+def select_language_view(request):
+    if request.method == 'POST':
+        cur_language = translation.get_language()
+        last_url = request.META.get('HTTP_REFERED')
+        lang = request.POST.get('language')
+        if lang == 'az':
+            return HttpResponseRedirect('/')
+        translation.activate(lang)
+        request.session[translation.LANGUAGE_SESSION_KEY] = lang
+        return HttpResponseRedirect("/"+lang)
+"""
 
 
 def set_language(request, lang_code):

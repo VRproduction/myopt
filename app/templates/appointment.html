@@ -34,10 +34,21 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
+
+
+                    {% comment %}
                     <div class="col-lg-6 col-md-12 col-sm-12 form-column">
                         <div class="form-inner ml_40">
                             <h3>{% trans 'Görüş Formunu Doldurun' %}</h3>
+
                             <form method="post">
+
                                 {% csrf_token %}
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -65,10 +76,56 @@
                             </form>
                         </div>
                     </div>
+                    {% endcomment %}
+
+
+
+
+
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner ml_40">
+                            <h3>{% trans 'Görüş Formunu Doldurun' %}</h3>
+
+                            <form method="post"  id="contact-form_2">
+
+                                {% csrf_token %}
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        {{form.name}}
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        {{form.email}}
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        {{form.phone}}
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <div class="icon"><i class="icon-42"></i></div>
+                                        {{form.date}}
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        {{form.message}}
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                        <button type="submit" class="theme-btn btn-one">{% trans 'Görüşü Təyin Et' %}</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </section>
         <!-- appointment-section end -->
+
+
+
+
 
 
         {% comment %} <!-- subscribe-section -->
