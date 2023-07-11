@@ -26,6 +26,7 @@
                         <div class="pattern-2" style="background-image: url(images/shape/shape-3.png);"></div>
                         <div class="eye-icon rotate-me" style="background-image: url(images/icons/icon-1.png);"></div>
                     </div>
+
                     <div class="auto-container">
                         <div class="banner-content p_relative ">
                             <div class="content-box p_relative  z_5">
@@ -40,13 +41,7 @@
 
 
                                 </div>
-
                                  <img class="mainimg"  src="{% static 'images/formobile2.png' %}">
-
-                                        {% comment %}
-                                 <img class="mainimg"  src="{% static 'images/ddd.png' %}">
-                                    {% endcomment %}
-
                                     </div>
 
                                 <div>
@@ -138,10 +133,6 @@
                             {% endif %}
                             {% endfor %}
 
-
-                            {% comment %}
-                                <a href="{% url 'services' %}" class="default-btn"> <h5> <br> <br> <br> <br> {% trans 'Daha çox' %} </h5> </a>
-                            {% endcomment %}
 
 
                             <a href="{% url 'services' %}" class="default-btn"> <br> <br>
@@ -701,25 +692,6 @@
                         <div class="form-inner">
                             <h3><span>{% trans 'Konsultasiya' %}</span> {% trans 'üçün formu doldur' %}</h3>
 
-
-                            {% comment %}
-                                <form method="post" class="default-form">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    {{form.name|as_crispy_field}}
-                                </div>
-                                <div class="form-group">
-                                    {{form.email|as_crispy_field}}
-                                </div>
-                                <div class="form-group">
-                                    <div class="icon"><i style="font-family: 'Font Awesome 5 Pro'!important;" class="far fa-angle-down"></i></div>
-                                    {{form.date|as_crispy_field}}
-                                </div>
-                                <div class="form-group message-btn">
-                                    <button type="submit" class="theme-btn btn-two">{% trans 'Görüşü Təyin Et' %}</button>
-                                </div>
-                            </form>
-                            {% endcomment %}
 
                             <form method="post" class="default-form">
                                 {% csrf_token %}

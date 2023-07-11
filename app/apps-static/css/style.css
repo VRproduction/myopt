@@ -1593,6 +1593,7 @@ div#mCSB_1_container {
 
 .banner-carousel .content-box {
   position: relative;
+
   max-width: 650px;
   padding: 87px 0px 93px 0px;
   z-index: 5;
