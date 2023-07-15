@@ -83,7 +83,7 @@ msgstr "Читать дальше"
 
 #: templates/about.html:199 templates/index.html:418
 msgid "Niyə Biz ?"
-msgstr "Почему мы ?"
+msgstr "Почему мы?"
 
 #: templates/about.html:246
 msgid "Bu Necə Işləyir"
