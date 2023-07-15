@@ -156,7 +156,7 @@
 }
 
 .news-block-one .inner-box .lower-content h3 a:hover{
-  color: #f17732;
+  color: #FA027A;
 }
 
 .news-block-one .inner-box .lower-content .post-info li a:hover{
@@ -239,7 +239,7 @@
 }
 
 .service-block-one .inner-box .lower-content h3 a:hover{
-  color: #03c0b4;
+  color: #FA027A;
 }
 
 .service-block-one .inner-box .lower-content .link a:hover{
@@ -340,7 +340,7 @@
 
 .service-sidebar .category-list li a:hover,
 .service-sidebar .category-list li a.current{
-  color: #f17732;
+  color: #FA027A;
 }
 
 .service-sidebar .category-list li a:before{
@@ -378,7 +378,7 @@
 
 .shop-sidebar .category-widget .category-list li a:hover{
   color: #03c0b4;
-}
+}sidebar
 
 .range-slider .ui-state-default, .range-slider .ui-widget-content .ui-state-default {
   background: #f17732;
@@ -405,7 +405,7 @@
 }
 
 .shop-block-one .inner-box .lower-content h5 a:hover{
-	color: #03c0b4;
+	color: #;
 }
 
 .pagination li a:hover,
@@ -474,7 +474,7 @@
 
 .blog-sidebar .search-widget .form-group input:focus + button,
 .blog-sidebar .search-widget .form-group button:hover{
-	color: #03c0b4;
+	color: #;
 }
 
 .blog-sidebar .search-widget .form-group input:focus{
@@ -486,15 +486,15 @@
 }
 
 .blog-sidebar .category-list li a:hover{
-	color: #f17732;
+	color: #FA027A;
 }
 
 .blog-sidebar .post-widget .post h4 a:hover{
-  color: #f17732;
+  color: #FA027A;
 }
 
 .blog-sidebar .post-widget .post .post-thumb{
-	background: #f17732;
+	background: #FA027A;
 }
 
 .blog-sidebar .archives-widget .archives-list li a:hover{

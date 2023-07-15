@@ -1966,6 +1966,9 @@ div#mCSB_1_container {
 
 
 /** feature-section **/
+
+
+
 .ilkin.icon-box {
 margin-left: -16px;
 margin-top: -10px;
@@ -1979,7 +1982,7 @@ margin-top: -10px;
 }
 
 .ilkin3.icon-box {
-margin-left: 10px;
+margin-left: 18px;
 margin-top: -10px;
 }
 
@@ -1988,6 +1991,33 @@ margin-left: -27px;
 margin-top: -10px;
 
 }
+
+
+/******
+.ilkin.icon-box {
+margin-left: -16px;
+margin-top: -10px;
+
+}
+
+.ilkin2.icon-box {
+margin-left: -21px;
+margin-top: -10px;
+
+}
+
+.ilkin3.icon-box {
+margin-left: 38px;
+margin-top: -10px;
+}
+
+.ilkin4.icon-box{
+margin-left: -12px;
+margin-top: -10px;
+
+}
+******/
+
 
 .feature-section .inner-container {
   background: #fff;
