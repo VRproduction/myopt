@@ -5,21 +5,29 @@ from django.utils.translation import gettext_lazy as _
 
 class AppointmentForm(forms.ModelForm):
 
-    name = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
-                                                                          'name': 'name',
-                                                                          'placeholder': 'Ad, Soyad'
-                                                                          }))
+    name = forms.CharField(label=_('Ad, Soyad'), max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
+                                                                                                'name': 'name',
+                                                                                                'placeholder': 'Ad, Soyad'
+                                                                                                }))
 
-    email = forms.EmailField(label=_('Email'), max_length=100, widget=forms.EmailInput(attrs={'type': 'email',
-                                                                                              'name': 'email',
-                                                                                              'placeholder': 'E-mail'}))
+    email = forms.EmailField(label=_('E-mail'), max_length=100, widget=forms.EmailInput(attrs={'type': 'email',
+                                                                                               'name': 'email',
+                                                                                               'placeholder': 'E-mail'
+                                                                                               }))
 
-    date = forms.CharField(label=_('Görüş tarixi'), max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
+    date = forms.CharField(label=_("Görüş tarixi"), max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
                                                                                                    'name': 'date',
                                                                                                    'placeholder': 'Görüş tarixi',
                                                                                                    # 'id': 'datepicker'
                                                                                                    }))
 
+    """
+    date = forms.CharField(label=_('Görüş tarixi'), max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
+                                                                                                   'name': 'date',
+                                                                                                   'placeholder': 'Görüş tarixi',
+                                                                                                   # 'id': 'datepicker'
+                                                                                                   }))
+    """
 
     class Meta:
         model = Appointment
@@ -29,14 +37,12 @@ class AppointmentForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.fields['name'].widget.attrs['placeholder'] = 'Ad, Soyad'
-        self.fields['email'].widget.attrs['placeholder'] = 'E-mail'
-        self.fields['date'].widget.attrs['placeholder'] = 'Görüş tarixi'
+        # self.fields['name'].widget.attrs['placeholder'] = 'Ad, Soyad'
+        # self.fields['email'].widget.attrs['placeholder'] = 'E-mail'
+        # self.fields['date'].widget.attrs['placeholder'] = 'Görüş tarixi'
 
         for key, field in self.fields.items():
             field.label = ""
-
-
 
 
 class ContactForm(forms.ModelForm):

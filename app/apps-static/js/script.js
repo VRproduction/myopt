@@ -637,6 +637,7 @@
 		enableMasonry();
 	});
 
+
 	$("#gallery-filter").mixitup({
 		effects: ['fade', 'rotateZ'],
 		easing: 'snap'

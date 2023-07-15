@@ -45,6 +45,9 @@
 
 /***
 
+
+
+
 ====================================================================
   Reset
 ====================================================================
@@ -55,6 +58,11 @@
   padding: 0px;
   border: none;
   outline: none;
+}
+
+.inner-box services-container {
+    max-width: 33.3%
+
 }
 
 
@@ -79,6 +87,11 @@ burani men deyisdim
 
 
 
+
+  .page-title .content-box h1 {
+    margin-bottom: 6px;
+  }
+
 /***
 
 ====================================================================
@@ -86,6 +99,16 @@ burani men deyisdim
 ====================================================================
 
  ***/
+
+@media screen and (min-width: 550px) and (max-width: 900px) {
+
+  .col-md-6 col-sm-12 service-block {
+    flex: 0 0 33.3% !important;
+    max-width: 33.3% !important;
+  }
+}
+
+
 
 
 body {

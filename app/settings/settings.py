@@ -2,7 +2,6 @@ from pathlib import Path
 import os
 from django.utils.translation import gettext_lazy as _
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -59,7 +58,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-# + For Multiple Language
+
+    # + For Multiple Language
     'django.middleware.locale.LocaleMiddleware',
 ]
 
@@ -96,14 +96,6 @@ DATABASES = {
 }
 
 
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'depo.sqlite3',
-    }
-}
-"""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -129,6 +121,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 LANGUAGES = [
+    # ('az', '{}'.format(ugettext('az'))),
+    # ('ru', '{}'.format(ugettext('ru'))),
     ('az', 'Azerbaijan'),
     ('ru', 'Russian'),
 ]
@@ -138,9 +132,11 @@ MODELTRANSLATION_TRANSLATION_FILES = (
     'blog.translation',
 )
 
+# LOCALE_PATHS = ( os.path.join(SITE_ROOT, 'locale'), )
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
+
 ]
 
 """
