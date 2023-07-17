@@ -45,66 +45,55 @@ class AppointmentForm(forms.ModelForm):
             field.label = ""
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ContactForm(forms.ModelForm):
 
-    name = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
-
-
+    name = forms.CharField(label=_('Ad, Soyad'), max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
         'name': 'username',
         'placeholder': 'Ad, Soyad'
-
-
-
     }))
 
-    email = forms.EmailField(max_length=100, widget=forms.EmailInput(attrs={
-
-
-
+    email = forms.EmailField(label=_('E-mail'), max_length=100, widget=forms.EmailInput(attrs={
         'type': 'email',
         'name':'email',
         'placeholder':'E-mail'
+    }))
 
-
-    }
-    ))
-
-    phone = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
-
-
+    phone = forms.CharField(label=_('Nömrə'), max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
         'name':'phone',
         'placeholder':'Nömrə'
-
-
-
     }))
 
-    subject = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
-
-
+    subject = forms.CharField(label=_('Mövzu başlığı'), max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
         'name':'subject',
         'placeholder':'Mövzu başlığı'
-
-
-
     }))
 
-
-    message = forms.CharField(max_length=1200, widget=forms.Textarea(attrs={
-
-
-
+    message = forms.CharField(label=_('Mesajınız'), max_length=1200, widget=forms.Textarea(attrs={
         'name':'message',
         'placeholder':'Mesajınız'
-
-
-
     }))
-
-
 
     class Meta:
         model = Contact
@@ -121,60 +110,46 @@ class ContactForm(forms.ModelForm):
 
 
 
+
+
+
+
+
+
+
+
+
 class Appointment2Form(forms.ModelForm):
 
-    name = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
-
-
+    name = forms.CharField(label=_('Ad, Soyad'), max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
         'name':'phone',
         'placeholder':'Ad, Soyad'
-
-
-
     }))
 
-    email = forms.EmailField(max_length=100, widget=forms.EmailInput(attrs={
-
-
-
+    email = forms.EmailField(label=_('E-mail'), max_length=100, widget=forms.EmailInput(attrs={
         'type': 'email',
         'name':'email',
         'placeholder':'E-mail'
+    }))
 
-
-    }
-    ))
-
-    phone = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
-
-
+    phone = forms.CharField(label=_('Nömrə'), max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
         'name':'phone',
         'placeholder':'Nömrə'
-
-
-
     }))
 
-    date = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
-
+    date = forms.CharField(label=_('Görüş tarixi'), max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
         'name':'date',
         'placeholder':'Görüş tarixi',
         'id':'datepicker'
     }))
 
-    message = forms.CharField(max_length=1200, widget=forms.Textarea(attrs={
-
-
-        'name':'message',
-        'placeholder':'Mesajınız'
-
-
-
+    message = forms.CharField(label=_('Mesajınız'), max_length=1200, widget=forms.Textarea(attrs={
+        'name': 'message',
+        'placeholder': 'Mesajınız'
     }))
-
 
 
     class Meta:

@@ -38,7 +38,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box;   /** burani komente almisdim evvelce footer da duzelis olsun deye ama sora gordum ki basqa yerlerde problemler yaranib , ona gore de geri qaytardim.. **/
 }
 
 html {

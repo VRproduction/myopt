@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-15 11:44+0000\n"
+"POT-Creation-Date: 2023-07-17 10:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,19 +20,30 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: blog/forms.py:8
+#: blog/forms.py:8 blog/forms.py:69 blog/forms.py:124
 msgid "Ad, Soyad"
-msgstr "mamed ve soyad"
+msgstr "1"
 
-#: blog/forms.py:13
+#: blog/forms.py:13 blog/forms.py:75 blog/forms.py:130
 msgid "E-mail"
-msgstr "maamed ve mail"
+msgstr "2"
 
-#: blog/forms.py:18
+#: blog/forms.py:18 blog/forms.py:142
 #, fuzzy
-#| msgid "Görüş"
 msgid "Görüş tarixi"
-msgstr "Прием tarixi"
+msgstr "3"
+
+#: blog/forms.py:81 blog/forms.py:136
+msgid "Nömrə"
+msgstr "4"
+
+#: blog/forms.py:87
+msgid "Mövzu başlığı"
+msgstr "5"
+
+#: blog/forms.py:93 blog/forms.py:149
+msgid "Mesajınız"
+msgstr "6"
 
 #: blog/models.py:31
 msgid "Slug"
@@ -51,7 +62,7 @@ msgstr "О враче"
 msgid "Ana Səhifə"
 msgstr "Главная страница"
 
-#: templates/about.html:51 templates/index.html:242
+#: templates/about.html:51 templates/index.html:243
 msgid "illik"
 msgstr "лет"
 
@@ -63,25 +74,25 @@ msgstr "опыта"
 msgid "Biz kimik ?"
 msgstr "Кто мы ?"
 
-#: templates/about.html:129 templates/index.html:108
+#: templates/about.html:129 templates/index.html:109
 msgid "Bizim Xidmətlərimiz"
 msgstr "Наши Услуги"
 
-#: templates/about.html:130 templates/index.html:109
+#: templates/about.html:130 templates/index.html:110
 msgid "Dünyaya sizin gözlərinizdən"
 msgstr "Смотрим на мир вашими"
 
-#: templates/about.html:130 templates/index.html:109
+#: templates/about.html:130 templates/index.html:110
 msgid "baxırıq"
 msgstr "глазами"
 
 #: templates/about.html:145 templates/blog.html:42
-#: templates/category_detail.html:46 templates/index.html:833
+#: templates/category_detail.html:46 templates/index.html:847
 #: templates/services.html:57
 msgid "Davamını Oxu"
 msgstr "Читать дальше"
 
-#: templates/about.html:199 templates/index.html:418
+#: templates/about.html:199 templates/index.html:438
 msgid "Niyə Biz ?"
 msgstr "Почему мы ?"
 
@@ -106,7 +117,7 @@ msgstr "Прием"
 msgid "Görüş Formunu Doldurun"
 msgstr "Заполните форум для приема"
 
-#: templates/appointment.html:114 templates/index.html:718
+#: templates/appointment.html:114 templates/index.html:732
 msgid "Görüşü Təyin Et"
 msgstr "Назначить день приема"
 
@@ -117,7 +128,7 @@ msgid "Xidmətlər"
 msgstr "Услуги"
 
 #: templates/base.html:219 templates/base.html:589 templates/blog.html:15
-#: templates/blog.html:18 templates/index.html:813
+#: templates/blog.html:18 templates/index.html:827
 msgid "Bloqlar"
 msgstr "Блоги"
 
@@ -177,75 +188,75 @@ msgstr "э-почта"
 msgid "Əlaqə nömrələri"
 msgstr "Номера для связи"
 
-#: templates/contact.html:85 templates/index.html:40
+#: templates/contact.html:85 templates/index.html:41
 msgid "İndi Əlaqə Saxlayın"
 msgstr "Связаться сейчас"
 
-#: templates/gallery.html:51
+#: templates/gallery.html:55
 msgid "Media"
 msgstr "Медиа"
 
-#: templates/gallery.html:54
+#: templates/gallery.html:58
 msgid "Sertifikat"
 msgstr "Сертификаты"
 
-#: templates/index.html:142
+#: templates/index.html:143
 msgid "Daha çox"
 msgstr "Подробнее"
 
-#: templates/index.html:242
+#: templates/index.html:243
 msgid "Təcrübə"
 msgstr "опыта"
 
-#: templates/index.html:258
+#: templates/index.html:259
 msgid "Mən kiməm ?"
 msgstr "Кто я ?"
 
-#: templates/index.html:324
+#: templates/index.html:333
 msgid "İllik Təcrübə"
 msgstr "Лет опыта"
 
-#: templates/index.html:335
+#: templates/index.html:345
 msgid "Xidmət Növü"
 msgstr "Видов услуг"
 
-#: templates/index.html:346
+#: templates/index.html:359
 msgid "Məmnun Pasiyent"
 msgstr "Довольных пациентов"
 
-#: templates/index.html:357
+#: templates/index.html:371
 msgid "Elmi Məqalə"
 msgstr "Научных статей"
 
-#: templates/index.html:460
+#: templates/index.html:480
 msgid "Bu Necə İşləyir ?"
 msgstr "Как это работает ?"
 
-#: templates/index.html:462
+#: templates/index.html:482
 msgid "Sağlamlığınızı Qorumağa Necə Kömək Edirik ?"
 msgstr "Как мы помогаем защитить ваше здоровье ?"
 
-#: templates/index.html:547
+#: templates/index.html:567
 msgid "Rəylər"
 msgstr "Отзывы"
 
-#: templates/index.html:548
+#: templates/index.html:568
 msgid "Pasiyent Rəyləri"
 msgstr "Отзывы пациентов"
 
-#: templates/index.html:653
+#: templates/index.html:673
 msgid "Əlaqə üçün:"
 msgstr "Для связи:"
 
-#: templates/index.html:702
+#: templates/index.html:716
 msgid "Konsultasiya"
 msgstr "Заполните форум для"
 
-#: templates/index.html:702
+#: templates/index.html:716
 msgid "üçün formu doldur"
 msgstr "консультации"
 
-#: templates/index.html:814
+#: templates/index.html:828
 msgid "Bloqları Oxu"
 msgstr "Читать блоги"
 
@@ -256,6 +267,3 @@ msgstr "Поздравляем !"
 #: templates/service_detail.html:56
 msgid "Bütün Xidmətlər"
 msgstr "Все услуги"
-
-#~ msgid "E-poçt:"
-#~ msgstr "э-почта"

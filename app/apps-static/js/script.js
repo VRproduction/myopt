@@ -157,6 +157,8 @@
 	}
 
 
+
+
 	//Tabs Box
 	if ($('.tabs-box').length) {
 		$('.tabs-box .tab-buttons .tab-btn').on('click', function (e) {
@@ -175,6 +177,8 @@
 			}
 		});
 	}
+
+
 
 
 
@@ -495,6 +499,8 @@
 			});
 
 
+
+
 			winDow.on('resize', function () {
 				var selector = $filter.find('li.active').attr('data-filter');
 
@@ -507,6 +513,8 @@
 					}
 				});
 			});
+
+
 
 
 			var filterItemA = $('.filter-btns li');

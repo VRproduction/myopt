@@ -28,6 +28,7 @@
                         <div class="eye-icon rotate-me" style="background-image: url(images/icons/icon-1.png);"></div>
                     </div>
 
+
                     <div class="auto-container">
                         <div class="banner-content p_relative ">
                             <div class="content-box p_relative  z_5">
@@ -351,6 +352,7 @@
                             <div class="count-outer count-box">
 
                             <span class="count-text" data-speed="1500" data-stop="10000">0</span>
+                            <span>+</span>
 
                             </div>
                             <p>{% trans 'Məmnun Pasiyent' %}</p>
@@ -668,11 +670,6 @@
                 <div class="support-box p_relative centred">
                     <div class="icon-box"><img src="{% static 'images/icons/icon-2.png' %}" alt=""></div>
                     {% for setting in general_settings %}
-
-
-                            {% comment %}
-                                <h3>Zəng et: {{setting.number_2}} , {{setting.number_3}} </a></h3>
-                            {% endcomment %}
 
                     <h3>
                         {{setting.number_2}}

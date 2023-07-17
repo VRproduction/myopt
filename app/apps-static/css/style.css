@@ -1617,7 +1617,7 @@ div#mCSB_1_container {
 .banner-carousel .content-box {
   position: relative;
 
-  max-width: 650px;
+  max-width: 650px;  /** burani komente almisdim ama tam netice vermedi **/
 
   padding: 87px 0px 93px 0px;
   z-index: 5;
@@ -2109,13 +2109,13 @@ margin-top: -10px;
 .image_block_one .image-box .image {
   position: relative;
   display: block;
-  overflow: hidden;
+  overflow: hidden;     /** burani comente alanda sekil yumru forma alir ama altindaki balaca sekil sagda ayrica qalir **/
   border-radius: 50%;
 }
 
 .image_block_one .image-box .image img {
   width: 100%;
-  border-radius: 50%;
+  border-radius: 0%;
   transition: all 500ms ease;
 }
 
