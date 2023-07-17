@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-17 10:27+0000\n"
+"POT-Creation-Date: 2023-07-17 21:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,30 +20,29 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: blog/forms.py:8 blog/forms.py:69 blog/forms.py:124
+#: blog/forms.py:10 blog/forms.py:64 blog/forms.py:119
 msgid "Ad, Soyad"
-msgstr "1"
+msgstr "Имя, Фамилия"
 
-#: blog/forms.py:13 blog/forms.py:75 blog/forms.py:130
+#: blog/forms.py:15 blog/forms.py:70 blog/forms.py:125
 msgid "E-mail"
-msgstr "2"
+msgstr "Э-почта"
 
-#: blog/forms.py:18 blog/forms.py:142
-#, fuzzy
+#: blog/forms.py:20 blog/forms.py:137
 msgid "Görüş tarixi"
-msgstr "3"
+msgstr "Дата встречи"
 
-#: blog/forms.py:81 blog/forms.py:136
+#: blog/forms.py:76 blog/forms.py:131
 msgid "Nömrə"
-msgstr "4"
+msgstr "Телефон"
 
-#: blog/forms.py:87
+#: blog/forms.py:82
 msgid "Mövzu başlığı"
-msgstr "5"
+msgstr "Название темы"
 
-#: blog/forms.py:93 blog/forms.py:149
+#: blog/forms.py:87 blog/forms.py:143
 msgid "Mesajınız"
-msgstr "6"
+msgstr "Ваше сообщение"
 
 #: blog/models.py:31
 msgid "Slug"
@@ -137,16 +136,14 @@ msgstr "Блоги"
 msgid "Qalereya"
 msgstr "Галерея"
 
-#: templates/base.html:221 templates/base.html:591 templates/base.html:601
-#: templates/contact.html:19 templates/contact.html:23
+#: templates/base.html:221 templates/base.html:385 templates/base.html:591
+#: templates/base.html:601 templates/contact.html:19 templates/contact.html:23
 msgid "Əlaqə"
 msgstr "Контакты"
 
 #: templates/base.html:581
-#, fuzzy
-#| msgid "Təbriklər!"
 msgid "Linklər"
-msgstr "Поздравляем !"
+msgstr "Ссылки"
 
 #: templates/base.html:627
 msgid "VR Production"
@@ -182,7 +179,7 @@ msgstr "Адрес"
 
 #: templates/contact.html:46
 msgid "E-poçt"
-msgstr "э-почта"
+msgstr "Э-почта"
 
 #: templates/contact.html:53
 msgid "Əlaqə nömrələri"
@@ -262,7 +259,7 @@ msgstr "Читать блоги"
 
 #: templates/messages.html:12
 msgid "Təbriklər!"
-msgstr "Поздравляем !"
+msgstr "Поздравляем!"
 
 #: templates/service_detail.html:56
 msgid "Bütün Xidmətlər"

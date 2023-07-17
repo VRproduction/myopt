@@ -5,29 +5,21 @@ from django.utils.translation import gettext_lazy as _
 
 class AppointmentForm(forms.ModelForm):
 
-    name = forms.CharField(label=_('Ad, Soyad'), max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
+    name = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
                                                                                                 'name': 'name',
-                                                                                                'placeholder': 'Ad, Soyad'
+                                                                                                'placeholder': _('Ad, Soyad')
                                                                                                 }))
 
-    email = forms.EmailField(label=_('E-mail'), max_length=100, widget=forms.EmailInput(attrs={'type': 'email',
+    email = forms.EmailField(max_length=100, widget=forms.EmailInput(attrs={'type': 'email',
                                                                                                'name': 'email',
-                                                                                               'placeholder': 'E-mail'
+                                                                                               'placeholder': _('E-mail')
                                                                                                }))
 
-    date = forms.CharField(label=_("Görüş tarixi"), max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
+    date = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
                                                                                                    'name': 'date',
-                                                                                                   'placeholder': 'Görüş tarixi',
+                                                                                                   'placeholder': _("Görüş tarixi"),
                                                                                                    # 'id': 'datepicker'
                                                                                                    }))
-
-    """
-    date = forms.CharField(label=_('Görüş tarixi'), max_length=1200, widget=forms.TextInput(attrs={'type': 'text',
-                                                                                                   'name': 'date',
-                                                                                                   'placeholder': 'Görüş tarixi',
-                                                                                                   # 'id': 'datepicker'
-                                                                                                   }))
-    """
 
     class Meta:
         model = Appointment
@@ -66,33 +58,33 @@ class AppointmentForm(forms.ModelForm):
 
 class ContactForm(forms.ModelForm):
 
-    name = forms.CharField(label=_('Ad, Soyad'), max_length=1200, widget=forms.TextInput(attrs={
+    name = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
         'name': 'username',
-        'placeholder': 'Ad, Soyad'
+        'placeholder': _('Ad, Soyad')
     }))
 
-    email = forms.EmailField(label=_('E-mail'), max_length=100, widget=forms.EmailInput(attrs={
+    email = forms.EmailField(max_length=100, widget=forms.EmailInput(attrs={
         'type': 'email',
-        'name':'email',
-        'placeholder':'E-mail'
+        'name': 'email',
+        'placeholder': _('E-mail')
     }))
 
-    phone = forms.CharField(label=_('Nömrə'), max_length=1200, widget=forms.TextInput(attrs={
+    phone = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
-        'name':'phone',
-        'placeholder':'Nömrə'
+        'name': 'phone',
+        'placeholder': _('Nömrə')
     }))
 
-    subject = forms.CharField(label=_('Mövzu başlığı'), max_length=1200, widget=forms.TextInput(attrs={
+    subject = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
-        'name':'subject',
-        'placeholder':'Mövzu başlığı'
+        'name': 'subject',
+        'placeholder': _('Mövzu başlığı')
     }))
 
-    message = forms.CharField(label=_('Mesajınız'), max_length=1200, widget=forms.Textarea(attrs={
-        'name':'message',
-        'placeholder':'Mesajınız'
+    message = forms.CharField(max_length=1200, widget=forms.Textarea(attrs={
+        'name': 'message',
+        'placeholder': _('Mesajınız')
     }))
 
     class Meta:
@@ -121,34 +113,34 @@ class ContactForm(forms.ModelForm):
 
 class Appointment2Form(forms.ModelForm):
 
-    name = forms.CharField(label=_('Ad, Soyad'), max_length=1200, widget=forms.TextInput(attrs={
+    name = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
-        'name':'phone',
-        'placeholder':'Ad, Soyad'
+        'name': 'phone',
+        'placeholder': _('Ad, Soyad')
     }))
 
-    email = forms.EmailField(label=_('E-mail'), max_length=100, widget=forms.EmailInput(attrs={
+    email = forms.EmailField(max_length=100, widget=forms.EmailInput(attrs={
         'type': 'email',
-        'name':'email',
-        'placeholder':'E-mail'
+        'name': 'email',
+        'placeholder': _('E-mail')
     }))
 
-    phone = forms.CharField(label=_('Nömrə'), max_length=1200, widget=forms.TextInput(attrs={
+    phone = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
-        'name':'phone',
-        'placeholder':'Nömrə'
+        'name': 'phone',
+        'placeholder': _('Nömrə')
     }))
 
-    date = forms.CharField(label=_('Görüş tarixi'), max_length=1200, widget=forms.TextInput(attrs={
+    date = forms.CharField(max_length=1200, widget=forms.TextInput(attrs={
         'type': 'text',
-        'name':'date',
-        'placeholder':'Görüş tarixi',
-        'id':'datepicker'
+        'name': 'date',
+        'placeholder': _('Görüş tarixi'),
+        'id': 'datepicker'
     }))
 
-    message = forms.CharField(label=_('Mesajınız'), max_length=1200, widget=forms.Textarea(attrs={
+    message = forms.CharField(max_length=1200, widget=forms.Textarea(attrs={
         'name': 'message',
-        'placeholder': 'Mesajınız'
+        'placeholder': _('Mesajınız')
     }))
 
 
