@@ -2102,14 +2102,16 @@ margin-top: -10px;
 }
 
 .image_block_one .image-box {
+  inline-size: fit-content;
   position: relative;
   display: block;
 }
 
 .image_block_one .image-box .image {
   position: relative;
-  display: block;
-  overflow: hidden;     /** burani comente alanda sekil yumru forma alir ama altindaki balaca sekil sagda ayrica qalir **/
+  /** display: block; **/
+  display:inline-flex;
+  overflow: hidden;       /** burani comente alanda sekil yumru forma alir ama altindaki balaca sekil sagda ayrica qalir **/
   border-radius: 50%;
 }
 
