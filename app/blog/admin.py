@@ -12,7 +12,8 @@ admin.site.register(Contact)
 # admin.site.register(Article)
 # admin.site.register(Author)
 admin.site.register(Certificate)
-
+admin.site.register(HeadSeoContent)
+admin.site.register(BodySeoContent)
 
 ####################################################################
 class Title1Inline(admin.StackedInline):

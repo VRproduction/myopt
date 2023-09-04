@@ -71,7 +71,10 @@ def index(request):
     else:
         form = AppointmentForm()
     """
-
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     context["form"] = form
     context["sliders"] = sliders
     context["whoweare"] = whoweare
@@ -102,7 +105,10 @@ def gallery(request):
     except EmptyPage:
 
         galleries = paginator.page(paginator.num_pages)
-
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     context["galleries"] = galleries
     context["certificates"] = certificates
 
@@ -116,7 +122,10 @@ def about(request):
     services = Service.objects.all()
     whyus = WhyUs.objects.all()
     offers = AboutOffers.objects.all()
-
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     context["whyus"] = whyus
     context["whoweare"] = whoweare
     context["services"] = services
@@ -129,7 +138,10 @@ def about(request):
 
 def services(request):
     context = {}
-
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     services = Service.objects.all()
 
     context["services"] = services
@@ -139,7 +151,10 @@ def services(request):
 
 def service_detail(request, slug):
     context = {}
-
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     service = get_object_or_404(Service, slug=slug)
 
     services = Service.objects.all()
@@ -203,7 +218,10 @@ def contact(request):
         )
         messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
         return redirect(request.META['HTTP_REFERER'])
-
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     context = {
         'contact_form': contact_form
                }
@@ -269,7 +287,10 @@ def appointment(request):
         )
         messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
         return redirect(request.META['HTTP_REFERER'])
-
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     context = {
         'form': form
     }
@@ -286,13 +307,20 @@ def appointment(request):
 def blogs(request):
     context = {}
     blogs = Article.objects.all()
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     context["blogs"] = blogs
     return render(request, "blog.html", context)
 
 
 def blog_detail(request, slug):
     context = {}
-
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     blog = get_object_or_404(Article, slug=slug)
     latests = Article.objects.all().order_by("-date").exclude(id=blog.id)
     categories = ArticleCategory.objects.all()
@@ -307,7 +335,10 @@ def blog_detail(request, slug):
 def category_detail(request, slug):
 
     context = {}
-
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     category = get_object_or_404(ArticleCategory, slug=slug)
     blogs = Article.objects.filter(category_id=category.id)
 

@@ -40,6 +40,13 @@ class WhoWeAre(models.Model):
         verbose_name_plural = "Who We Are"
 
 
+class HeadSeoContent(models.Model):
+    text = models.TextField()
+
+
+class BodySeoContent(models.Model):
+    text = models.TextField()
+
 
 
 
