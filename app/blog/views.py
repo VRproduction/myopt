@@ -187,6 +187,8 @@ def service_detail(request, slug):
 
 
 def contact(request):
+    head_seo_content = HeadSeoContent.objects.all()
+    body_seo_content = BodySeoContent.objects.all()
     contact_form = ContactForm(request.POST)
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -218,14 +220,13 @@ def contact(request):
         )
         messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
         return redirect(request.META['HTTP_REFERER'])
-    head_seo_content = HeadSeoContent.objects.all()
-    body_seo_content = BodySeoContent.objects.all()
-    context["head_seo_content"] = head_seo_content
-    context["body_seo_content"] = body_seo_content
+    
+    
     context = {
         'contact_form': contact_form
                }
-
+    context["head_seo_content"] = head_seo_content
+    context["body_seo_content"] = body_seo_content
     return render(request, "contact.html", context=context)
 
 
@@ -287,14 +288,14 @@ def appointment(request):
         )
         messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
         return redirect(request.META['HTTP_REFERER'])
+    
+    context = {
+        'form': form
+    }
     head_seo_content = HeadSeoContent.objects.all()
     body_seo_content = BodySeoContent.objects.all()
     context["head_seo_content"] = head_seo_content
     context["body_seo_content"] = body_seo_content
-    context = {
-        'form': form
-    }
-
     return render(request, "appointment.html", context)
 
 
