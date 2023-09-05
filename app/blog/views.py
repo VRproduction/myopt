@@ -54,7 +54,7 @@ def index(request):
             # data,
             text_to_doctor,
             settings.EMAIL_HOST_USER,
-            ['info@gulshendikmen.az'],
+            ['nicat254memmedov@gmail.com'],
             fail_silently=False, html_message=text_to_doctor
         )
         messages.success(request, 'Sizin müraciətiniz uğurla göndərildi !')
