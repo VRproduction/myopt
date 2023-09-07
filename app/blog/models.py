@@ -17,7 +17,18 @@ class IndexSlider(models.Model):
         verbose_name = "Index Slider"
         verbose_name = "Index Sliders"
 
+class ContactSeo(models.Model):
+    title = models.CharField(max_length=1000,null=True,blank=True)
+    description = models.TextField(max_length=50000,null=True,blank=True)
+    keyword = models.TextField(max_length=50000,null=True,blank=True)
 
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Əlaqə SEO'
+        verbose_name_plural = 'Əlaqə SEO'
+        
 class WhoWeAre(models.Model):
     title = models.CharField(max_length=500)
     text = RichTextField()

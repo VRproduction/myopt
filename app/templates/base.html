@@ -21,6 +21,13 @@
     <meta name="description" content="{{ blog.description }}">
     <meta name="keywords" content="{{ blog.keyword }}">
     {% endif %}
+    {% if contact_form %}
+    <meta name="description" content="{{ contact_seo.description }}">
+    <meta name="keywords" content="{{ contact_seo.keyword }}">
+    {% endif }
+    <meta name="description" content="{{ blog.description }}">
+    <meta name="keywords" content="{{ blog.keyword }}">
+    {% endif %}
     {% if service %}
     <meta name="keywords" content="{{ service.keyword }}">
     {% endif %}

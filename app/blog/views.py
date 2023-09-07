@@ -201,6 +201,7 @@ def contact(request):
     head_seo_content = HeadSeoContent.objects.all()
     body_seo_content = BodySeoContent.objects.all()
     contact_form = ContactForm(request.POST)
+    contact_seo = ContactSeo.objects.last()
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -236,6 +237,7 @@ def contact(request):
     context = {
         'contact_form': contact_form
                }
+    context['contact_seo'] = contact_seo
     context["head_seo_content"] = head_seo_content
     context["body_seo_content"] = body_seo_content
     return render(request, "contact.html", context=context)

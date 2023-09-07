@@ -1,6 +1,7 @@
 from django.contrib import admin
 from blog.models import *
 
+admin.site.register(ContactSeo)
 admin.site.register(HomePage_Description_Edit)
 admin.site.register(HomePage_Keyword_Edit)
 admin.site.register(HomePage_Title_Edit)
