@@ -33,7 +33,7 @@
     <meta name="keywords" content="{{ i.keyword }}">
     {% endfor %} 
 
-    {% else if request.resolver_match.url_name == 'index'  %}
+    {% elif request.resolver_match.url_name == 'index'%}
     
     {% for i in home_title %}
     <meta property="og:title" content="{{ i.title }}"/>
@@ -45,7 +45,7 @@
     <meta name="keywords" content="{{ i.keyword }}">
     {% endfor %}    
 
-    {% else if request.resolver_match.url_name == 'services'  %}
+    {% elif request.resolver_match.url_name == 'services'  %}
     
     {% for i in services_title %}
     <meta property="og:title" content="{{ i.title }}"/>
