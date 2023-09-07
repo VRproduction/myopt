@@ -222,7 +222,7 @@ class Article(models.Model):
     order = models.IntegerField(('sıra'), default=0, )
     # date = models.DateField(auto_now_add=True)
     date = models.DateField()
-    keyword = models.CharField(max=120,null=True,blank=True)
+    keyword = models.CharField(max_length=120,null=True,blank=True)
     alt_for_foto = models.TextField(max_length=500,null=True,blank=True)
     def __str__(self):
         return self.title
