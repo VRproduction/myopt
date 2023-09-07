@@ -1,6 +1,15 @@
 from django.contrib import admin
 from blog.models import *
 
+admin.site.register(HomePage_Description_Edit)
+admin.site.register(HomePage_Keyword_Edit)
+admin.site.register(HomePage_Title_Edit)
+admin.site.register(Bloq_Description_Edit)
+admin.site.register(Bloq_Keyword_Edit)
+admin.site.register(Bloq_Title_Edit)
+admin.site.register(Services_Description_Edit)
+admin.site.register(Services_Keyword_Edit)
+admin.site.register(Services_Title_Edit)
 # Register your models here.
 admin.site.register(IndexSlider)
 admin.site.register(Testimonial)

@@ -12,10 +12,52 @@
     {% for x in head_seo_content %}
     {{ x.text|safe }}
     {% endfor %}
+   
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    {% if blog %}
+    <meta name="description" content="{{ blog.description }}">
+    <meta name="keywords" content="{{ blog.keyword }}">
+    {% endif %}
+    {% if request.resolver_match.url_name == 'blogs' %}
+
+    {% for i in bloq_title %}
+    <meta property="og:title" content="{{ i.title }}"/>
+    {% endfor %}
+    {% for i in bloq_description %}
+    <meta property="og:description" content="{{ i.description }}"/>
+    {% endfor %}
+    {% for i in bloq_keyword %}
+    <meta name="keywords" content="{{ i.keyword }}">
+    {% endfor %} 
+
+    {% else if request.resolver_match.url_name == 'index'  %}
+    
+    {% for i in home_title %}
+    <meta property="og:title" content="{{ i.title }}"/>
+    {% endfor %}
+    {% for i in home_description %}
+    <meta property="og:description" content="{{ i.description }}"/>
+    {% endfor %}
+    {% for i in home_keyword %}
+    <meta name="keywords" content="{{ i.keyword }}">
+    {% endfor %}    
+
+    {% else if request.resolver_match.url_name == 'services'  %}
+    
+    {% for i in services_title %}
+    <meta property="og:title" content="{{ i.title }}"/>
+    {% endfor %}
+    {% for i in services_description %}
+    <meta property="og:description" content="{{ i.description }}"/>
+    {% endfor %}
+    {% for i in services_keyword %}
+    <meta name="keywords" content="{{ i.keyword }}">
+    {% endfor %}    
+
+    {% endif %}
 
 
 

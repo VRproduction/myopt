@@ -47,7 +47,32 @@ class HeadSeoContent(models.Model):
 class BodySeoContent(models.Model):
     text = models.TextField()
 
+class Services_Title_Edit(models.Model):
+    title = models.CharField(max_length=5000)
 
+class Services_Description_Edit(models.Model):
+    description = models.TextField(max_length=50000)
+
+class Services_Keyword_Edit(models.Model):
+    keyword = models.TextField(max_length=50000)
+
+class HomePage_Title_Edit(models.Model):
+    title = models.CharField(max_length=5000)
+
+class HomePage_Description_Edit(models.Model):
+    description = models.TextField(max_length=50000)
+
+class HomePage_Keyword_Edit(models.Model):
+    keyword = models.TextField(max_length=50000)
+
+class Bloq_Title_Edit(models.Model):
+    title = models.CharField(max_length=5000)
+
+class Bloq_Description_Edit(models.Model):
+    description = models.TextField(max_length=50000)
+
+class Bloq_Keyword_Edit(models.Model):
+    keyword = models.TextField(max_length=50000)
 
 
 
@@ -81,10 +106,11 @@ class Service(models.Model):
     title = models.CharField(max_length=300)
     slug = models.SlugField(editable=False, null=True, unique=True)
     text = RichTextField()
-
+    keyword = models.CharField(max=120,null=True,blank=True)
     service_banner = models.ImageField(upload_to="service_banner", null=True)
     order = models.IntegerField(('sıra'), default=0, )
-
+    alt_for_foto = models.TextField(max_length=500,null=True,blank=True)
+    
     def __str__(self):
         return self.name
 
@@ -196,7 +222,8 @@ class Article(models.Model):
     order = models.IntegerField(('sıra'), default=0, )
     # date = models.DateField(auto_now_add=True)
     date = models.DateField()
-
+    keyword = models.CharField(max=120,null=True,blank=True)
+    alt_for_foto = models.TextField(max_length=500,null=True,blank=True)
     def __str__(self):
         return self.title
 

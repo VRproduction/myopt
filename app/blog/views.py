@@ -71,6 +71,9 @@ def index(request):
     else:
         form = AppointmentForm()
     """
+    homePage_Description_Edit = HomePage_Description_Edit.objects.all()
+    homePage_Keyword_Edit = HomePage_Keyword_Edit.objects.all()
+    homePage_Title_Edit = HomePage_Title_Edit.objects.all()
     head_seo_content = HeadSeoContent.objects.all()
     body_seo_content = BodySeoContent.objects.all()
     context["head_seo_content"] = head_seo_content
@@ -84,7 +87,9 @@ def index(request):
     context["galleries"] = galleries
     context["articles"] = articles
     context["offers"] = offers
-
+    context['home_title'] = homePage_Title_Edit
+    context['home_description'] = homePage_Description_Edit
+    context['home_keyword'] = homePage_Keyword_Edit
     return render(request, "index.html", context)
 
 
@@ -138,10 +143,16 @@ def about(request):
 
 def services(request):
     context = {}
+    services_title = Services_Title_Edit.objects.all()
+    services_description = Services_Description_Edit.objects.all()
+    services_keyword = Services_Keyword_Edit.objects.all()
     head_seo_content = HeadSeoContent.objects.all()
     body_seo_content = BodySeoContent.objects.all()
     context["head_seo_content"] = head_seo_content
     context["body_seo_content"] = body_seo_content
+    context["services_title"] = services_title
+    context["services_description"] = services_description
+    context["services_keyword"] = services_keyword
     services = Service.objects.all()
 
     context["services"] = services
@@ -308,10 +319,19 @@ def appointment(request):
 def blogs(request):
     context = {}
     blogs = Article.objects.all()
+    bloq_keyword = Bloq_Keyword_Edit.objects.all()
+    bloq_title = Bloq_Title_Edit.objects.all()
+    bloq_description = Bloq_Description_Edit.objects.all()
     head_seo_content = HeadSeoContent.objects.all()
     body_seo_content = BodySeoContent.objects.all()
+    Bloq_Description_Edit=Bloq_Description_Edit.objects.all()
+    Bloq_Keyword_Edit=Bloq_Keyword_Edit.objects.all()
+    Bloq_Title_Edit=Bloq_Title_Edit.objects.all()
     context["head_seo_content"] = head_seo_content
     context["body_seo_content"] = body_seo_content
+    context["bloq_keyword"] = bloq_keyword
+    context["bloq_title"] = bloq_title
+    context["bloq_description"] = bloq_description
     context["blogs"] = blogs
     return render(request, "blog.html", context)
 

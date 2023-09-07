@@ -3,9 +3,6 @@
 {% load crispy_forms_tags %}
 {% load i18n %}
 {% load l10n %}
-
-<meta name="google-site-verification" content="sBwTQ0bPMnAOgvWGy2FP-zYyQldM-88xi8D0Hq96ifg" />
-
 {% block body %}
 
 
@@ -173,7 +170,7 @@
                                     <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                         <div class="image_block_two">
                                             <div class="image-box p_relative d_block">
-                                                <figure class="image p_relative d_block"><img src="{{service.image.url}}" alt=""></figure>
+                                                <figure class="image p_relative d_block"><img src="{{service.image.url}}" alt="{{service.alt_for_foto}}"></figure>
                                             </div>
                                         </div>
                                     </div>
@@ -203,7 +200,7 @@
                                     <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                         <div class="image_block_two">
                                             <div class="image-box p_relative d_block">
-                                                <figure class="image p_relative d_block"><img src="{{service.image.url}}" alt=""></figure>
+                                                <figure class="image p_relative d_block"><img src="{{service.image.url}}" alt="{{service.alt_for_foto}}"></figure>
                                             </div>
                                         </div>
                                     </div>
@@ -826,7 +823,7 @@
                         <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <figure class="image-box">
-                                    <img style="width:410px ;height:300px;object-fit:cover;" src="{{article.image.url}}" alt="">
+                                    <img style="width:410px ;height:300px;object-fit:cover;" src="{{article.image.url}}" alt="{{article.alt_for_foto}}">
                                     <a href="{{article.get_absolute_url}}"><i class="fas fa-link"></i></a>
                                 </figure>
                                 <div class="lower-content">
