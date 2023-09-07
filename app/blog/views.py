@@ -324,9 +324,7 @@ def blogs(request):
     bloq_description = Bloq_Description_Edit.objects.all()
     head_seo_content = HeadSeoContent.objects.all()
     body_seo_content = BodySeoContent.objects.all()
-    Bloq_Description_Edit=Bloq_Description_Edit.objects.all()
-    Bloq_Keyword_Edit=Bloq_Keyword_Edit.objects.all()
-    Bloq_Title_Edit=Bloq_Title_Edit.objects.all()
+
     context["head_seo_content"] = head_seo_content
     context["body_seo_content"] = body_seo_content
     context["bloq_keyword"] = bloq_keyword
