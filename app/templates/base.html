@@ -21,6 +21,9 @@
     <meta name="description" content="{{ blog.description }}">
     <meta name="keywords" content="{{ blog.keyword }}">
     {% endif %}
+    {% if service %}
+    <meta name="keywords" content="{{ service.keyword }}">
+    {% endif %}
     {% if request.resolver_match.url_name == 'blogs' %}
 
     {% for i in bloq_title %}
