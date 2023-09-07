@@ -237,6 +237,7 @@ def contact(request):
     context = {
         'contact_form': contact_form
                }
+    context['seo'] = 'seo'
     context['contact_seo'] = contact_seo
     context["head_seo_content"] = head_seo_content
     context["body_seo_content"] = body_seo_content
