@@ -106,7 +106,7 @@ class Service(models.Model):
     title = models.CharField(max_length=300)
     slug = models.SlugField(editable=False, null=True, unique=True)
     text = RichTextField()
-    keyword = models.CharField(max=120,null=True,blank=True)
+    keyword = models.CharField(max_length=120,null=True,blank=True)
     service_banner = models.ImageField(upload_to="service_banner", null=True)
     order = models.IntegerField(('sıra'), default=0, )
     alt_for_foto = models.TextField(max_length=500,null=True,blank=True)
