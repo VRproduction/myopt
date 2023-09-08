@@ -10,6 +10,9 @@ class ArticleSitemap(Sitemap):
     def items(self):
         return Article.objects.all()
 
+    def lastmod(self, obj):
+        return obj.date
+    
     def location(self, obj: Article) -> str:
         return obj.get_absolute_url()
 
