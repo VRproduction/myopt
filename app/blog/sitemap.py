@@ -30,13 +30,13 @@ class ServiceSitemap(Sitemap):
 
 class ArticleCategorySitemap(Sitemap):
     changefreq = "monthly"
-    priorty = 0.6
+    priority = 0.6
 
     def items(self):
         return ArticleCategory.objects.all()
 
-    def location(self, obj: ArticleCategory) -> str:
-        return obj.get_absolute_url()
+    def location(self, obj):
+        return '/bloq_detail/%s' % (obj.slug)
 
 
 class StaticSitemap(Sitemap):
