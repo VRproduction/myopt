@@ -35,8 +35,8 @@ class ArticleCategorySitemap(Sitemap):
     def items(self):
         return ArticleCategory.objects.all()
 
-    def location(self, obj):
-        return '/bloq_detal/%s' % (obj.slug)
+    def location(self, obj: ArticleCategory) -> str:
+        return obj.get_absolute_url()
 
 
 class StaticSitemap(Sitemap):
