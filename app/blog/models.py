@@ -112,6 +112,7 @@ class WhoTitle2(models.Model):
 
 
 class Service(models.Model):
+    description = models.TextField(null=True,blank=True)
     image = models.ImageField(upload_to="Services", null=True)
     name = models.CharField(max_length=200, unique=True)
     title = models.CharField(max_length=300)
@@ -234,6 +235,7 @@ class Article(models.Model):
     # date = models.DateField(auto_now_add=True)
     date = models.DateField()
     keyword = models.CharField(max_length=120,null=True,blank=True)
+    description = models.TextField(null=True,blank=True)
     alt_for_foto = models.TextField(max_length=500,null=True,blank=True)
     def __str__(self):
         return self.title
