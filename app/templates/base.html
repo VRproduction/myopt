@@ -89,7 +89,7 @@
     
     {% for setting in general_settings %}
     
-    {% if not blog and not service and not seo and request.resolver_match.url_name != 'gallery' and request.resolver_match.url_name != 'services' and request.resolver_match.url_name != 'index'  request.resolver_match.url_name != 'blogs'%}
+    {% if not blog and not service and not seo and request.resolver_match.url_name != 'gallery' and request.resolver_match.url_name != 'services' and request.resolver_match.url_name != 'index' and request.resolver_match.url_name != 'blogs'%}
     <title>{{setting.site_title}}</title>
     {% endif %}
     <!-- Fav Icon -->
