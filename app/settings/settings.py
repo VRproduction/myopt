@@ -16,7 +16,7 @@ DEBUG = True
 # DEBUG = False
 ALLOWED_HOSTS = ['gulshendikmen.az', 'www.gulshendikmen.az']
 
-
+BASE_URL = 'https://gulshendikmen.az/'
 
 # Application definition
 
