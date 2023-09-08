@@ -15,7 +15,11 @@ SECRET_KEY = 'django-insecure-^%*=oc7$g77yio7=w-=vb+od%sp@22m5de^+-c=uacbz=)$lmh
 DEBUG = True
 # DEBUG = False
 ALLOWED_HOSTS = ['*']
-
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    },
+}
 BASE_URL = 'https://gulshendikmen.az/'
 
 # Application definition
@@ -47,16 +51,7 @@ INSTALLED_APPS = [
     'modeltranslation'
     # 'robots',
 ]
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'full',
-        'height': 300,
-        'width': 960,
-        'skin': 'moono-lisa',
-        'uiColor': '#b7d6ec',
-        'extraPlugins': 'numberedlist',
-    },
-}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
