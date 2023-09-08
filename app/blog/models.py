@@ -166,7 +166,6 @@ class WhyOffers(models.Model):
     title = models.CharField(max_length=300)
     # text = models.TextField()
     text = RichTextField()
-
     why = models.ForeignKey(
         WhyUs, on_delete=models.CASCADE, related_name="offers")
 

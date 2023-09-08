@@ -47,7 +47,15 @@ INSTALLED_APPS = [
     'modeltranslation'
     # 'robots',
 ]
-
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 960,
+        'skin': 'moono-lisa',
+        'uiColor': '#b7d6ec',
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
