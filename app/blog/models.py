@@ -209,6 +209,7 @@ class Gallery(models.Model):
     image = models.FileField(upload_to="galleries")
     link = models.CharField(max_length=3000)
     link_name = models.CharField(max_length=300)
+    alt_for_foto = models.TextField(null=True,blank=True)
 
     def __str__(self):
         return self.link_name
