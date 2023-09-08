@@ -5,7 +5,7 @@ from django.urls import reverse
 
 class ArticleSitemap(Sitemap):
     changefreq = "monthly"
-    priorty = 0.6
+    priority = 0.6
 
     def items(self):
         return Article.objects.all()
@@ -13,13 +13,13 @@ class ArticleSitemap(Sitemap):
     def lastmod(self, obj):
         return obj.date
     
-    def location(self, obj: Article) -> str:
-        return obj.get_absolute_url()
+    def location(self, obj):
+        return '/bloq_detail/%s' % (obj.slug)
 
 
 class ServiceSitemap(Sitemap):
     changefreq = "monthly"
-    priorty = 0.6
+    priority = 0.6
 
     def items(self):
         return Service.objects.all()
