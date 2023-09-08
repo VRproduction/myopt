@@ -18,10 +18,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     {% if blog %}
+    <title>{{blog.title}}</title>
     <meta name="description" content="{{ blog.description }}">
     <meta name="keywords" content="{{ blog.keyword }}">
     {% endif %}
     {% if seo %}
+    <title>{{contact_seo.title}}</title>
     <meta name="description" content="{{ contact_seo.description }}">
     <meta name="keywords" content="{{ contact_seo.keyword }}">
     {% endif %}
@@ -29,6 +31,7 @@
 
   
     {% if service %}
+    <title>{{service.title}}</title>
     <meta name="description" content="{{ service.description }}">
     <meta name="keywords" content="{{ service.keyword }}">
     {% endif %}
@@ -74,7 +77,7 @@
 
 
 
-
+    {% if not blog and not service and not seo %}
     {% for setting in general_settings %}
     <title>{{setting.site_title}}</title>
 
@@ -83,8 +86,9 @@
     {% if setting.favicon %}
     <link rel="icon" href="{{setting.favicon.url}}" type="image/x-icon">
     {% endif %}
-    {% endfor %}
 
+    {% endfor %}
+    {% endif %}
 
 
     <!-- Google Fonts -->
