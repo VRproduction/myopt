@@ -37,7 +37,7 @@
                                 <div class="lower-content">
                                     <div class="inner">
                                         <h3><a href="{{blog.get_absolute_url}}">{{blog.title}}</a></h3>
-                                         <p class="p_relative d_block">{{blog.context|truncatechars_html:50|striptags}}</p>
+                                         <p class="p_relative d_block">{{blog.context|striptags|slice:50}}</p>
                                         <div class="link p_relative d_block"><a href="{{blog.get_absolute_url}}">{% trans 'Davamını Oxu' %}</a></div>
                                         <ul class="post-info clearfix">
                                             <li><i class="icon-34"></i>{{ blog.date }}</li>
