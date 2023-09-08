@@ -4,9 +4,10 @@ from django.urls import reverse
 
 
 class ArticleSitemap(Sitemap):
-    changefreq = "monthly"
+    changefreq = "daily"
     priority = 0.6
-
+    protocol = 'https'
+    
     def items(self):
         return Article.objects.all()
 
