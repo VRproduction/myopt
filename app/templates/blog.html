@@ -35,9 +35,9 @@
                                     <img style="width:352px ;height:244px;object-fit:cover;" src="{{blog.image.url}}" alt="{{bloq.alt_for_foto}}">
                                     <a href="{{blog.get_absolute_url}}"><i class="fas fa-link"></i></a></figure>
                                 <div class="lower-content">
-                                    <div style="font-size:16px !important; font-weight:400 !important" class="inner">
-                                        <h3><a style="font-size:24px !important; font-weight:600 !important" href="{{blog.get_absolute_url}}">{{blog.title}}</a></h3>
-                                         <p style="font-size:16px !important; font-weight:400 !important" class="p_relative d_block">{{blog.context|truncatechars_html:50|safe}}</p>
+                                    <div  class="inner">
+                                        <h3><a  href="{{blog.get_absolute_url}}">{{blog.title}}</a></h3>
+                                         <p  class="p_relative d_block">{{blog.context|truncatechars_html:50|safe}}</p>
                                         <div class="link p_relative d_block"><a href="{{blog.get_absolute_url}}">{% trans 'Davamını Oxu' %}</a></div>
                                         <ul class="post-info clearfix">
                                             <li><i class="icon-34"></i>{{ blog.date }}</li>
@@ -61,5 +61,11 @@
         </section>
         <!-- news-section end -->
 
-
+<style>
+    .inner h3{
+        font-size:20px !important;
+        font-weight: 400 !important;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
 {% endblock body %}
