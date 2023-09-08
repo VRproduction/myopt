@@ -15,7 +15,8 @@ class ArticleSitemap(Sitemap):
         return obj.date
     
     def location(self, obj):
-        return '/bloq_detail/%s' % (obj.slug)
+        return 'https://gulshendikmen.az/bloq_detail/%s' % obj.slug
+
 
 
 class ServiceSitemap(Sitemap):
