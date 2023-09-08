@@ -15,8 +15,7 @@ class ArticleSitemap(Sitemap):
         return obj.date
     
     def location(self, obj):
-        return 'https://gulshendikmen.az/bloq_detail/%s' % obj.slug
-
+        return obj.get_absolute_url()
 
 
 class ServiceSitemap(Sitemap):
