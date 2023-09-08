@@ -14,8 +14,8 @@ SECRET_KEY = 'django-insecure-^%*=oc7$g77yio7=w-=vb+od%sp@22m5de^+-c=uacbz=)$lmh
 
 DEBUG = True
 # DEBUG = False
+ALLOWED_HOSTS = ['gulshendikmen.az', 'www.gulshendikmen.az']
 
-ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
