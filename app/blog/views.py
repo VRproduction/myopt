@@ -116,7 +116,12 @@ def gallery(request):
     context["body_seo_content"] = body_seo_content
     context["galleries"] = galleries
     context["certificates"] = certificates
-
+    gallery_keyword = Gallery_Keyword_Edit.objects.all()
+    gallery_title = Gallery_Title_Edit.objects.all()
+    gallery_description = Gallery_Description_Edit.objects.all()
+    context["gallery_keyword"] = gallery_keyword
+    context["gallery_title"] = gallery_title
+    context["gallery_description"] = gallery_description
     return render(request, "gallery.html", context)
 
 

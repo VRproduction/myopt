@@ -72,12 +72,21 @@
     {% for i in services_keyword %}
     <meta name="keywords" content="{{ i.keyword }}">
     {% endfor %}    
-
+    {% elif request.resolver_match.url_name == 'gallery'  %}
+    {% for i in gallery_title %}
+    <meta property="og:title" content="{{ i.title }}"/>
+    {% endfor %}
+    {% for i in gallery_description %}
+    <meta property="og:description" content="{{ i.description }}"/>
+    {% endfor %}
+    {% for i in gallery_keyword %}
+    <meta name="keywords" content="{{ i.keyword }}">
+    {% endfor %}    
     {% endif %}
 
 
 
-    {% if not blog and not service and not seo %}
+    {% if not blog and not service and not seo and request.resolver_match.url_name != 'gallery' and request.resolver_match.url_name != 'services' and request.resolver_match.url_name != 'index'  request.resolver_match.url_name != 'blogs'%}
     {% for setting in general_settings %}
     <title>{{setting.site_title}}</title>
 

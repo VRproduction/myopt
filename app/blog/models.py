@@ -76,6 +76,15 @@ class HomePage_Description_Edit(models.Model):
 class HomePage_Keyword_Edit(models.Model):
     keyword = models.TextField(max_length=50000)
 
+class Gallery_Title_Edit(models.Model):
+    title = models.CharField(max_length=5000)
+
+class Gallery_Description_Edit(models.Model):
+    description = models.TextField(max_length=50000)
+
+class Gallery_Keyword_Edit(models.Model):
+    keyword = models.TextField(max_length=50000)
+
 class Bloq_Title_Edit(models.Model):
     title = models.CharField(max_length=5000)
 
