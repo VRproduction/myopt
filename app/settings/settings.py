@@ -54,6 +54,7 @@ CKEDITOR_CONFIGS = {
         'width': 960,
         'skin': 'moono-lisa',
         'uiColor': '#b7d6ec',
+        'extraPlugins': 'numberedlist',
     },
 }
 
