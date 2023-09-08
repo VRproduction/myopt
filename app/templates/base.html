@@ -86,18 +86,19 @@
 
 
 
-    {% if not blog and not service and not seo and request.resolver_match.url_name != 'gallery' and request.resolver_match.url_name != 'services' and request.resolver_match.url_name != 'index'  request.resolver_match.url_name != 'blogs'%}
+    
     {% for setting in general_settings %}
+    
+    {% if not blog and not service and not seo and request.resolver_match.url_name != 'gallery' and request.resolver_match.url_name != 'services' and request.resolver_match.url_name != 'index'  request.resolver_match.url_name != 'blogs'%}
     <title>{{setting.site_title}}</title>
-
-
+    {% endif %}
     <!-- Fav Icon -->
     {% if setting.favicon %}
     <link rel="icon" href="{{setting.favicon.url}}" type="image/x-icon">
     {% endif %}
 
     {% endfor %}
-    {% endif %}
+  
 
 
     <!-- Google Fonts -->
