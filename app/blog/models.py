@@ -124,10 +124,10 @@ class Service(models.Model):
     description = models.TextField(null=True,blank=True)
     image = models.ImageField(upload_to="Services", null=True)
     name = models.CharField(max_length=200, unique=True)
-    title = models.CharField(max_length=300)
+    title = models.CharField(max_length=3000)
     slug = models.SlugField(editable=False, null=True, unique=True)
     text = RichTextField()
-    keyword = models.CharField(max_length=120,null=True,blank=True)
+    keyword = models.CharField(max_length=1200,null=True,blank=True)
     service_banner = models.ImageField(upload_to="service_banner", null=True)
     order = models.IntegerField(('sıra'), default=0, )
     alt_for_foto = models.TextField(max_length=500,null=True,blank=True)
@@ -243,9 +243,9 @@ class Article(models.Model):
     order = models.IntegerField(('sıra'), default=0, )
     # date = models.DateField(auto_now_add=True)
     date = models.DateField()
-    keyword = models.CharField(max_length=120,null=True,blank=True)
+    keyword = models.CharField(max_length=1200,null=True,blank=True)
     description = models.TextField(null=True,blank=True)
-    alt_for_foto = models.TextField(max_length=500,null=True,blank=True)
+    alt_for_foto = models.TextField(max_length=5000,null=True,blank=True)
     def __str__(self):
         return self.title
 
