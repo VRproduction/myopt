@@ -80,6 +80,9 @@ def index(request):
     context["body_seo_content"] = body_seo_content
     context["form"] = form
     context["sliders"] = sliders
+    if sliders.exists():
+        context['slider1'] = sliders[0]
+    
     context["whoweare"] = whoweare
     context["services"] = services
     context["whyus"] = whyus
