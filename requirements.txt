@@ -12,7 +12,7 @@ drf-spectacular==0.22.1
 gunicorn==20.1.0
 inflection==0.5.1
 jsonschema==4.17.3
-Pillow==9.1.1
+Pillow
 pyrsistent==0.19.3
 pytz==2023.3
 PyYAML==6.0
@@ -24,7 +24,7 @@ django-modeltranslation
 scipy
 nltk
 pandas
-
+psycopg2-binary
 
 
 
